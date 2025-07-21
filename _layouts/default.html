@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
-  <body>
-    <header>
-      <h1>{{ site.title }}</h1>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <main>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <script>
+    // Theme-Switcher
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="{{ '/assets/img/mirko.jpg' | relative_url }}" alt="Mirko" class="profile-img">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Start</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      </ul>
+      <button onclick="toggleTheme()">🌓 Theme wechseln</button>
+    </aside>
+
+    <main class="content">
       {{ content }}
+      <div class="toc">
+        <h3>Inhalt:</h3>
+        <ul id="toc-list"></ul>
+      </div>
     </main>
+  </div>
 
-    <footer>
-      <p>© {{ site.time | date: "%Y" }} - Mirko</p>
-    </footer>
-  </body>
+  <script>
+    // TOC-Generator
+    const toc = document.getElementById("toc-list");
+    document.querySelectorAll("h2, h3").forEach(el => {
+      const id = el.id || el.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+      el.id = id;
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="#${id}">${el.tagName === "H3" ? "↳ " : ""}${el.textContent}</a>`;
+      toc.appendChild(li);
+    });
+  </script>
+</body>
 </html>
 
