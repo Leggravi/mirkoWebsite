@@ -1,2 +1,14 @@
 title: Mirko in Brasilien
 theme: minima
+plugins:
+  - jekyll-feed
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      css: "assets/css/style.css"
