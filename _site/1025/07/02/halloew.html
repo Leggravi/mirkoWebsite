@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script>
+    function switchTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    window.onload = () => {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.body.setAttribute('data-theme', saved);
+    }
+  </script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-nav">
+      <a href="/">🏠</a>
+      <a href="/blog/">✍️</a>
+    </div>
+    <div class="topbar-themes theme-switcher" role="group" aria-label="Theme Switcher">
+      <button title="Light" onclick="switchTheme('light')" aria-label="Light"><span>☀️</span></button>
+      <button title="Dark" onclick="switchTheme('dark')" aria-label="Dark"><span>🌑</span></button>
+      <button title="Blue" onclick="switchTheme('blue')" aria-label="Blue"><span>🔵</span></button>
+      <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
+      <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
+    </div>
+  </div>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <img src="/assets/img/mirko.jpg" alt="Mirko" class="profile-img">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="/">🏠 Start</a></li>
+        <li><a href="/blog/">✍️ Blog</a></li>
+      </ul>
+
+      <h3 style="margin-top:2em;">Theme wechseln</h3>
+      <div class="theme-switcher" role="group" aria-label="Theme Switcher">
+        <button title="Light" onclick="switchTheme('light')" aria-label="Light"><span>☀️</span></button>
+        <button title="Dark" onclick="switchTheme('dark')" aria-label="Dark"><span>🌑</span></button>
+        <button title="Blue" onclick="switchTheme('blue')" aria-label="Blue"><span>🔵</span></button>
+        <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
+        <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Test</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="1025-07-02T00:00:56+00:53" itemprop="datePublished">Jul 2, 1025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="test">Test</h2>
+<h1 id="test-1">Test</h1>
+
+<h2 id="gegenderte-sprache-trägt-nicht-zu-mehr-gleichberechtigung-bei">gegenderte Sprache trägt nicht zu mehr Gleichberechtigung bei!</h2>
+
+<p>Die Frage, ob gendergerechte Sprache zu mehr Geschlechtergerechtigkeit führt oder ob sie eher die Unterschiede zwischen den Geschlechtern betont, ist ein zentrales Thema in der Debatte um das Gendern. Dazu gibt es unterschiedliche Positionen und Studien, die teils widersprüchliche Ergebnisse liefern.</p>
+
+<h3 id="mögliche-positive-effekte-des-genderns">Mögliche positive Effekte des Genderns</h3>
+
+<ol>
+  <li>
+    <p><strong>Sichtbarmachung und Inklusion:</strong><br />
+Gendergerechte Sprache hat das Ziel, alle Geschlechter sichtbar zu machen, insbesondere Frauen und nicht-binäre Personen, die in vielen traditionellen Sprachformen oft unsichtbar bleiben. Studien zeigen, dass die Verwendung von geschlechtergerechter Sprache dazu beitragen kann, stereotype Vorstellungen zu reduzieren und das Bewusstsein für die Gleichstellung der Geschlechter zu schärfen. Wenn z. B. Frauen sprachlich sichtbarer werden, kann dies auch ihre Präsenz in sozialen, politischen und beruflichen Kontexten fördern.</p>
+  </li>
+  <li>
+    <p><strong>Förderung von Geschlechtergerechtigkeit:</strong><br />
+Es gibt Hinweise darauf, dass gendergerechte Sprache das Bewusstsein für Ungleichheiten stärkt und dadurch einen Beitrag zu ihrer Reduktion leisten kann. Wenn z. B. Berufsbezeichnungen sowohl in der männlichen als auch in der weiblichen Form verwendet werden (z. B. „Ärztinnen und Ärzte“), kann dies dazu führen, dass Menschen weniger geneigt sind, bestimmte Berufe als „männlich“ oder „weiblich“ zu klassifizieren. Dadurch können auch die Vorstellungen davon, was für wen „geeignet“ ist, aufgebrochen werden.</p>
+  </li>
+</ol>
+
+<h2 id="kritik-am-gendern">Kritik am Gendern</h2>
+
+<ol>
+  <li>
+    <p><strong>Verstärkung der Unterschiede:</strong><br />
+Kritiker des Genderns argumentieren, dass die explizite Nennung verschiedener Geschlechter in der Sprache die Unterschiede zwischen den Geschlechtern stärker betont, anstatt sie zu überwinden. Dadurch könnten alte Stereotype und geschlechtsspezifische Rollenbilder eher verstärkt als abgeschwächt werden. Ein häufiger Kritikpunkt ist, dass die ständige Hervorhebung des Geschlechts den Fokus auf das unterscheidende Merkmal „Geschlecht“ legt, anstatt es zu relativieren.</p>
+  </li>
+  <li>
+    <p><strong>Pragmatische und ästhetische Bedenken:</strong><br />
+Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer lesbar. Diese ästhetische Kritik kann dazu führen, dass das Gendern als aufdringlich oder übertrieben wahrgenommen wird, was wiederum Widerstände hervorruft und die Akzeptanz in der breiten Bevölkerung mindern kann. Dies könnte dazu führen, dass die eigentliche Intention – nämlich die Förderung von Gleichstellung – in den Hintergrund tritt.</p>
+  </li>
+</ol>
+
+<h3 id="wissenschaftliche-befunde">Wissenschaftliche Befunde</h3>
+
+<ul>
+  <li>
+    <p><strong>Untersuchungen zur Wirkung von Gendern:</strong> Einige Studien haben gezeigt, dass gendergerechte Sprache die Wahrnehmung von Geschlechtergleichheit positiv beeinflusst und dazu beitragen kann, Stereotype abzubauen. Andere Studien legen jedoch nahe, dass die Wirkung des Genderns auf tief verwurzelte Denkmuster und gesellschaftliche Strukturen begrenzt ist und allein durch sprachliche Veränderungen keine umfassende Geschlechtergerechtigkeit erreicht werden kann.</p>
+  </li>
+  <li>
+    <p><strong>Empirische Belege und Meinungen:</strong> Studien von Sozialwissenschaftlern wie Sabine Sczesny und anderen zeigen, dass gendergerechte Sprache dazu beiträgt, das Bewusstsein für Geschlechtergerechtigkeit zu erhöhen. Allerdings gibt es auch Untersuchungen, die nahelegen, ==dass die positiven Effekte gering sind, wenn sie nicht durch andere Maßnahmen zur Förderung der Gleichstellung begleitet werden.==</p>
+  </li>
+</ul>
+
+<h3 id="fazit">Fazit</h3>
+
+<p>Gendergerechte Sprache kann durchaus zu einer neuen Sicht auf Geschlechterrollen beitragen und das Bewusstsein für Geschlechtergerechtigkeit schärfen. Sie macht Unterschiede sichtbar, was sowohl als Stärke (sichtbare Inklusion) als auch als Schwäche (Verstärkung der Unterschiede) interpretiert werden kann. Ob diese sprachlichen Veränderungen tatsächlich zu mehr Gerechtigkeit führen oder ob sie eher den Blick auf Unterschiede lenken und damit das Problem der Geschlechterungleichheit verschärfen, bleibt eine offene und kontroverse Frage. Es scheint, dass Sprache allein nicht ausreicht, um tiefgreifende gesellschaftliche Veränderungen herbeizuführen; sie muss von weiteren strukturellen und kulturellen Maßnahmen begleitet werden.</p>
+
+  </div><a class="u-url" href="/1025/07/02/halloew.html" hidden></a>
+</article>
+
+    </main>
+    <div class="toc">
+      <h3>Inhalt</h3>
+      <ul id="toc-list"></ul>
+    </div>
+  </div>
+
+  <script>
+  const toc = document.getElementById("toc-list");
+  const headers = Array.from(document.querySelectorAll("h2, h3"));
+  let h2Map = {};
+
+  headers.forEach(el => {
+    const id = el.id || el.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+    el.id = id;
+    if (el.tagName === "H2") {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="#${id}">${el.textContent}</a>`;
+      toc.appendChild(li);
+      h2Map[id] = li;
+    } else if (el.tagName === "H3") {
+      // Finde das vorherige H2
+      const prevH2 = headers.slice(0, headers.indexOf(el)).reverse().find(h => h.tagName === "H2");
+      if (prevH2) {
+        const h2Id = prevH2.id;
+        const h2Li = h2Map[h2Id];
+        let sublist = h2Li.querySelector('.toc-sublist');
+        if (!sublist) {
+          sublist = document.createElement('ul');
+          sublist.className = 'toc-sublist';
+          h2Li.appendChild(sublist);
+          // Toggle-Button nur einmal pro H2
+          const toggle = document.createElement('span');
+          toggle.className = 'toc-toggle';
+          toggle.textContent = '▸';
+          toggle.onclick = () => {
+            h2Li.classList.toggle('open');
+            toggle.textContent = h2Li.classList.contains('open') ? '▾' : '▸';
+          };
+          h2Li.insertBefore(toggle, h2Li.firstChild);
+        }
+        const subli = document.createElement("li");
+        subli.innerHTML = `<a href="#${id}">↳ ${el.textContent}</a>`;
+        sublist.appendChild(subli);
+      }
+    }
+  });
+
+  function markActiveTOC() {
+    let activeId = null;
+    headers.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < 120) activeId = el.id;
+    });
+    document.querySelectorAll('#toc-list a').forEach(a => {
+      a.parentElement.classList.toggle('active', a.getAttribute('href').slice(1) === activeId);
+    });
+    // Öffne die aktuelle H2-Gruppe
+    document.querySelectorAll('#toc-list li').forEach(li => {
+      if (li.querySelector('.active')) li.classList.add('open');
+      else li.classList.remove('open');
+      const toggle = li.querySelector('.toc-toggle');
+      if (toggle) toggle.textContent = li.classList.contains('open') ? '▾' : '▸';
+    });
+  }
+  window.addEventListener('scroll', markActiveTOC);
+  markActiveTOC();
+  </script>
+</body>
+</html>
+

@@ -20,6 +20,19 @@
   </script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="topbar-nav">
+      <a href="{{ '/' | relative_url }}">🏠</a>
+      <a href="{{ '/blog/' | relative_url }}">✍️</a>
+    </div>
+    <div class="topbar-themes theme-switcher" role="group" aria-label="Theme Switcher">
+      <button title="Light" onclick="switchTheme('light')" aria-label="Light"><span>☀️</span></button>
+      <button title="Dark" onclick="switchTheme('dark')" aria-label="Dark"><span>🌑</span></button>
+      <button title="Blue" onclick="switchTheme('blue')" aria-label="Blue"><span>🔵</span></button>
+      <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
+      <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
+    </div>
+  </div>
   <div class="wrapper">
     <aside class="sidebar">
       <img src="{{ '/assets/img/mirko.jpg' | relative_url }}" alt="Mirko" class="profile-img">
@@ -41,24 +54,73 @@
 
     <main class="content">
       {{ content }}
-
-      <div class="toc">
-        <h3>Inhalt</h3>
-        <ul id="toc-list"></ul>
-      </div>
     </main>
+    <div class="toc">
+      <h3>Inhalt</h3>
+      <ul id="toc-list"></ul>
+    </div>
   </div>
 
   <script>
-    // TOC erstellen
-    const toc = document.getElementById("toc-list");
-    document.querySelectorAll("h2, h3").forEach(el => {
-      const id = el.id || el.textContent.trim().toLowerCase().replace(/\s+/g, "-");
-      el.id = id;
+  const toc = document.getElementById("toc-list");
+  const headers = Array.from(document.querySelectorAll("h2, h3"));
+  let h2Map = {};
+
+  headers.forEach(el => {
+    const id = el.id || el.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+    el.id = id;
+    if (el.tagName === "H2") {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="#${id}">${el.tagName === "H3" ? "↳ " : ""}${el.textContent}</a>`;
+      li.innerHTML = `<a href="#${id}">${el.textContent}</a>`;
       toc.appendChild(li);
+      h2Map[id] = li;
+    } else if (el.tagName === "H3") {
+      // Finde das vorherige H2
+      const prevH2 = headers.slice(0, headers.indexOf(el)).reverse().find(h => h.tagName === "H2");
+      if (prevH2) {
+        const h2Id = prevH2.id;
+        const h2Li = h2Map[h2Id];
+        let sublist = h2Li.querySelector('.toc-sublist');
+        if (!sublist) {
+          sublist = document.createElement('ul');
+          sublist.className = 'toc-sublist';
+          h2Li.appendChild(sublist);
+          // Toggle-Button nur einmal pro H2
+          const toggle = document.createElement('span');
+          toggle.className = 'toc-toggle';
+          toggle.textContent = '▸';
+          toggle.onclick = () => {
+            h2Li.classList.toggle('open');
+            toggle.textContent = h2Li.classList.contains('open') ? '▾' : '▸';
+          };
+          h2Li.insertBefore(toggle, h2Li.firstChild);
+        }
+        const subli = document.createElement("li");
+        subli.innerHTML = `<a href="#${id}">↳ ${el.textContent}</a>`;
+        sublist.appendChild(subli);
+      }
+    }
+  });
+
+  function markActiveTOC() {
+    let activeId = null;
+    headers.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < 120) activeId = el.id;
     });
+    document.querySelectorAll('#toc-list a').forEach(a => {
+      a.parentElement.classList.toggle('active', a.getAttribute('href').slice(1) === activeId);
+    });
+    // Öffne die aktuelle H2-Gruppe
+    document.querySelectorAll('#toc-list li').forEach(li => {
+      if (li.querySelector('.active')) li.classList.add('open');
+      else li.classList.remove('open');
+      const toggle = li.querySelector('.toc-toggle');
+      if (toggle) toggle.textContent = li.classList.contains('open') ? '▾' : '▸';
+    });
+  }
+  window.addEventListener('scroll', markActiveTOC);
+  markActiveTOC();
   </script>
 </body>
 </html>
