@@ -1,37 +1,99 @@
 ---
 ---
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$dark-theme: (
+  bg: linear-gradient(135deg, #232526 0%, #414345 100%),
+  text: #eeeeee,
+  link: #80cbc4,
+  sidebar: #222222,
+  btn-bg: #232526,
+  btn-text: #eeeeee,
+  btn-border: #80cbc4,
+  btn-hover-bg: #414345,
+  btn-hover-text: #80cbc4,
+  btn-hover-border: #eeeeee,
+  btn-shadow: rgba(0,0,0,0.3),
+  btn-hover-shadow: rgba(0,0,0,0.5)
+);
+
+$light-theme: (
+  bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%),
+  text: #222222,
+  link: #1976d2,
+  sidebar: #e0e0e0,
+  btn-bg: #e0e0e0,
+  btn-text: #222222,
+  btn-border: #1976d2,
+  btn-hover-bg: #1976d2,
+  btn-hover-text: #fff,
+  btn-hover-border: #222222,
+  btn-shadow: rgba(0,0,0,0.08),
+  btn-hover-shadow: rgba(0,0,0,0.18)
+);
+
+$blue-theme: (
+  bg: linear-gradient(135deg, #1fa2ff 0%, #12d8fa 50%, #a6ffcb 100%),
+  text: #0d1b2a,
+  link: #0d1b2a,
+  sidebar: #1b263b,
+  btn-bg: #12d8fa,
+  btn-text: #0d1b2a,
+  btn-border: #1fa2ff,
+  btn-hover-bg: #a6ffcb,
+  btn-hover-text: #0d1b2a,
+  btn-hover-border: #0d1b2a,
+  btn-shadow: rgba(31,162,255,0.2),
+  btn-hover-shadow: rgba(31,162,255,0.4)
+);
+
+$forest-theme: (
+  bg: linear-gradient(135deg, #5a7d5a 0%, #a8e063 100%),
+  text: #1b2e1b,
+  link: #388e3c,
+  sidebar: #264d26,
+  btn-bg: #388e3c,
+  btn-text: #e6ffe6,
+  btn-border: #4caf50,
+  btn-hover-bg: #a8e063,
+  btn-hover-text: #388e3c,
+  btn-hover-border: #e6ffe6,
+  btn-shadow: rgba(76,175,80,0.2),
+  btn-hover-shadow: rgba(76,175,80,0.4)
+);
+
+$game-theme: (
+  bg: radial-gradient(ellipse at center, #373737 0%, #000 100%),
+  text: #fff,
+  link: #0ff,
+  sidebar: #222,
+  btn-bg: #0ff,
+  btn-text: #111,
+  btn-border: #0ff,
+  btn-hover-bg: #0cc,
+  btn-hover-text: #111,
+  btn-hover-border: #0ff,
+  btn-shadow: 0 0 8px #0ff,
+  btn-hover-shadow: 0 0 16px #0ff,
+  font: 'Press Start 2P' cursive
+);
+
 $themes: (
-  light: (
-    bg: #ffffff,
-    text: #111111,
-    link: #007acc,
-    sidebar: #f5f5f5
-  ),
-  dark: (
-    bg: #111111,
-    text: #eeeeee,
-    link: #80cbc4,
-    sidebar: #222222
-  ),
-  blue: (
-    bg: #e3f2fd,
-    text: #0d47a1,
-    link: #1e88e5,
-    sidebar: #bbdefb
-  ),
-  forest: (
-    bg: #e8f5e9,
-    text: #1b5e20,
-    link: #388e3c,
-    sidebar: #c8e6c9
-  )
+  light: $light-theme,
+  dark: $dark-theme,
+  blue: $blue-theme,
+  forest: $forest-theme,
+  game: $game-theme
 );
 
 @each $theme, $colors in $themes {
   body[data-theme="#{$theme}"] {
     background: map-get($colors, bg);
     color: map-get($colors, text);
+    @if map-has-key($colors, font) {
+      font-family: map-get($colors, font);
+    }
 
     a {
       color: map-get($colors, link);
@@ -39,6 +101,26 @@ $themes: (
 
     .sidebar {
       background: map-get($colors, sidebar);
+    }
+
+    .theme-switcher button {
+      background: map-get($colors, btn-bg);
+      color: map-get($colors, btn-text);
+      border: 2px solid map-get($colors, btn-border);
+      box-shadow: 0 2px 8px map-get($colors, btn-shadow);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .theme-switcher button:hover,
+    .theme-switcher button:focus {
+      background: map-get($colors, btn-hover-bg);
+      color: map-get($colors, btn-hover-text);
+      border-color: map-get($colors, btn-hover-border);
+      box-shadow: 0 4px 16px map-get($colors, btn-hover-shadow);
+      outline: 2px solid map-get($colors, btn-hover-border);
+      outline-offset: 2px;
     }
   }
 }
@@ -59,6 +141,7 @@ body {
   width: 240px;
   padding: 1em;
   flex-shrink: 0;
+  background: #222222;
 }
 
 .profile-img {
@@ -74,13 +157,75 @@ body {
   padding: 2em;
 }
 
+/* Default Button Style (falls kein Theme gesetzt) */
 .theme-switcher button {
   display: block;
   width: 100%;
   margin: 4px 0;
-  padding: 5px;
+  padding: 8px 0;
   cursor: pointer;
+  background: #222222;
+  color: #eeeeee;
+  border: 2px solid #80cbc4;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+  outline: none;
 }
+
+.theme-switcher {
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+}
+
+.theme-switcher button {
+  width: 2.2em;
+  height: 2.2em;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
+  outline: none;
+  position: relative;
+}
+
+.theme-switcher button:hover,
+.theme-switcher button:focus {
+  opacity: 1;
+  transform: scale(1.15);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.theme-switcher button span {
+  pointer-events: none;
+}
+
+body[data-theme="game"] .theme-switcher button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.1em;
+}
+
+body[data-theme="game"] .theme-switcher button span {
+  text-shadow: 0 0 4px #0ff, 1px 1px #222;
+}
+
+.theme-switcher button[aria-label="Light"] span { color: #f5c518; }
+.theme-switcher button[aria-label="Dark"] span { color: #222; }
+.theme-switcher button[aria-label="Blue"] span { color: #1fa2ff; }
+.theme-switcher button[aria-label="Forest"] span { color: #4caf50; }
+.theme-switcher button[aria-label="Game"] span { color: #0ff; }
 
 @media (max-width: 768px) {
   .wrapper {

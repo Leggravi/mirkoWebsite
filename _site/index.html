@@ -2,10 +2,10 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <title>Willkommen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   <script>
     function switchTheme(theme) {
@@ -22,11 +22,11 @@
 <body>
   <div class="wrapper">
     <aside class="sidebar">
-      <img src="{{ '/assets/img/mirko.jpg' | relative_url }}" alt="Mirko" class="profile-img">
+      <img src="/assets/img/mirko.jpg" alt="Mirko" class="profile-img">
       <h2>Navigation</h2>
       <ul>
-        <li><a href="{{ '/' | relative_url }}">🏠 Start</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">✍️ Blog</a></li>
+        <li><a href="/">🏠 Start</a></li>
+        <li><a href="/blog/">✍️ Blog</a></li>
       </ul>
 
       <h3 style="margin-top:2em;">Theme wechseln</h3>
@@ -40,7 +40,10 @@
     </aside>
 
     <main class="content">
-      {{ content }}
+      <h1 id="willkommen-auf-meinem-brasilien-blog">Willkommen auf meinem Brasilien-Blog</h1>
+
+<p>Hier werde ich regelmäßig Rundbriefe und Eindrücke posten!</p>
+
 
       <div class="toc">
         <h3>Inhalt</h3>
