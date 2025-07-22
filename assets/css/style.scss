@@ -2,11 +2,37 @@
 ---
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;700&family=Quicksand:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+@font-face {
+  font-family: 'A Bug s Life';
+  src: url('../fonts/A Bug s Life.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Brightwater';
+  src: url('../fonts/Brightwater.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'homespun';
+  src: url('../fonts/homespun.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
 
 $dark-theme: (
   bg: linear-gradient(135deg, #232526 0%, #414345 100%),
@@ -41,35 +67,39 @@ $light-theme: (
 );
 
 $blue-theme: (
-  bg: linear-gradient(135deg, #0d1b2a 0%, #2b7a92 100%),
-  text: #e0e1dd,
-  link: #1fa2ff,
-  sidebar: #0e253a,
-  btn-bg: #274472,
-  btn-text: #e0e1dd,
-  btn-border: #1fa2ff,
-  btn-hover-bg: #1fa2ff,
-  btn-hover-text: #0d1b2a,
-  btn-hover-border: #e0e1dd,
-  btn-shadow: rgba(31,162,255,0.18),
-  btn-hover-shadow: rgba(31,162,255,0.35),
-  font: 'Montserrat', Arial: sans-serif
+   bg: linear-gradient(135deg, #a0f7e0 0%, #3ed7c5 100%),
+  text: #003c3c,
+  link: #008b8b,
+  sidebar: #6cd3bc,
+  btn-bg: #4bc4b2,
+  btn-text: #003c3c,
+  btn-border: #008b8b,
+  btn-hover-bg: #00c2a8,
+  btn-hover-text: #ffffff,
+  btn-hover-border: #ffffff,
+  btn-shadow: rgba(0, 194, 168, 0.2),
+  btn-hover-shadow: rgba(0, 194, 168, 0.4),
+  font: 'Quicksand' ,
+  heading-font-size: 1.5,
+  heading-font: 'Brightwater'
 );
 
 $forest-theme: (
-  bg: linear-gradient(135deg, #183a1d 0%, #22543d 100%),
-  text: #e6ffe6,
-  link: #81c784,
-  sidebar: #264d26,
-  btn-bg: #22543d,
-  btn-text: #e6ffe6,
-  btn-border: #81c784,
-  btn-hover-bg: #388e3c,
-  btn-hover-text: #e6ffe6,
-  btn-hover-border: #e6ffe6,
-  btn-shadow: rgba(76,175,80,0.18),
-  btn-hover-shadow: rgba(76,175,80,0.35),
-  font: 'Fira Mono' monospace
+  bg: linear-gradient(135deg, #193821 0%, #3e7552 100%),
+  text: #e6f6e6,
+  link: #89e49c,
+  sidebar: #1f3c2a,
+  btn-bg: #366849,
+  btn-text: #e6f6e6,
+  btn-border: #89e49c,
+  btn-hover-bg: #4ac06b,
+  btn-hover-text: #ffffff,
+  btn-hover-border: #ffffff,
+  btn-shadow: rgba(137, 231, 167, 0.2),
+  btn-hover-shadow: rgba(137, 231, 167, 0.4),
+  heading-font: 'A Bug s Life',
+  //heading-font-size: 1.5,
+  font: 'Indie Flower'
 );
 
 $game-theme: (
@@ -85,7 +115,8 @@ $game-theme: (
   btn-hover-border: #0ff,
   btn-shadow: 0 0 8px #0ff,
   btn-hover-shadow: 0 0 16px #0ff,
-  font: 'Press Start 2P'
+  heading-font: 'Press Start 2P',
+  font: 'homespun'
 );
 
 $themes: (
@@ -101,10 +132,20 @@ $themes: (
     background: map-get($colors, bg);
     color: map-get($colors, text);
     font-family: map-get($colors, font); // Immer setzen!
-
-    a {
-      color: map-get($colors, link);
+    
+    h1, h2, h3, h4 {
+      font-family: map-get($colors, heading-font);
+      font-weight: 700;
     }
+    $heading-scale: if(map-has-key($colors, heading-font-size), map-get($colors, heading-font-size), 1);
+      h1 {font-size: calc(2em * #{$heading-scale});}
+      h2 {font-size: calc(1.6em * #{$heading-scale}); }
+      h3 {font-size: calc(1.3em * #{$heading-scale}); }
+      h4 {font-size: calc(1.1em * #{$heading-scale});}
+
+      a {
+        color: map-get($colors, link);
+      }
 
     .sidebar {
       background: map-get($colors, sidebar);
@@ -131,12 +172,52 @@ $themes: (
     }
   }
 }
+/*
+.btn {
+  font-family: inherit;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 2px solid;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+@each $name, $theme in $themes {
+  body[data-theme="#{$name}"] .btn {
+    background-color: map-get($theme, btn-bg);
+    color: map-get($theme, btn-text);
+    border-color: map-get($theme, btn-border);
+    box-shadow: 0 4px 6px map-get($theme, btn-shadow);
+
+    &:hover {
+      background-color: map-get($theme, btn-hover-bg);
+      color: map-get($theme, btn-hover-text);
+      border-color: map-get($theme, btn-hover-border);
+      box-shadow: 0 6px 10px map-get($theme, btn-hover-shadow);
+    }
+  }
+}
+*/
 
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
+
+/*body {
+  font-family: map-get($current-theme, font);
+  color: map-get($current-theme, text);
+  background: map-get($current-theme, bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: map-get($current-theme, heading-font);
+  font-weight: 700;
+}*/
 
 .wrapper {
   display: flex;
@@ -306,57 +387,72 @@ body[data-theme="game"] .theme-switcher button span {
   user-select: none;
 }
 
-body[data-theme="light"] .toc {
-  background: #f5f5f5;
-  color: #222;
-  border-left: 2px solid #ccc;
-}
-body[data-theme="light"] #toc-list li.active > a {
-  background: #e0e0e0;
-  color: #1976d2;
-}
-body[data-theme="light"] #toc-list li .toc-toggle {
-  color: #1976d2;
-}
+@each $name, $theme in $themes {
+  body[data-theme="#{$name}"] {
+    .toc {
+      background: map-get($theme, sidebar);
+      color: map-get($theme, text);
+      border-left: 2px solid map-get($theme, link);
+    }
 
+    #toc-list li.active > a {
+      background: lighten(map-get($theme, btn-hover-bg), 5%);
+      color: map-get($theme, btn-hover-text);
+    }
+
+    #toc-list li .toc-toggle {
+      color: map-get($theme, link);
+    }
+  }
+}
 .topbar {
   display: none;
-}
+} // finden
 
 @media (max-width: 900px) {
   .sidebar {
     display: none;
   }
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 1.5em;
-    background: #222;
-    color: #eee;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .topbar-nav a {
-    color: #eee;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin-right: 1em;
-    transition: color 0.2s;
-  }
-  .topbar-nav a:last-child {
-    margin-right: 0;
-  }
-  .topbar-nav a:hover {
-    color: #80cbc4;
-  }
-  .topbar-themes {
-    display: flex;
-    gap: 0.5em;
+
+  @each $name, $theme in $themes {
+    body[data-theme="#{$name}"] {
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1.5em;
+        background: map-get($theme, sidebar);
+        color: map-get($theme, text);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px map-get($theme, btn-shadow);
+      }
+
+      .topbar-nav a {
+        color: map-get($theme, text);
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-right: 1em;
+        transition: color 0.2s;
+      }
+
+      .topbar-nav a:last-child {
+        margin-right: 0;
+      }
+
+      .topbar-nav a:hover {
+        color: map-get($theme, btn-hover-text);
+      }
+
+      .topbar-themes {
+        display: flex;
+        gap: 0.5em;
+      }
+    }
   }
 }
+
 
 @media (max-width: 1100px) {
   .toc {

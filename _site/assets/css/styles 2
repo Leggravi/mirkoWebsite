@@ -1,0 +1,29 @@
+$sand-theme: (
+  bg: linear-gradient(135deg, #fcecc9 0%, #fff4dd 100%),
+  text: #5b4a2f,
+  link: #00bcd4,
+  sidebar: #e5d6af,
+  btn-bg: #f6d99b,
+  btn-text: #5b4a2f,
+  btn-border: #00bcd4,
+  btn-hover-bg: #00bcd4,
+  btn-hover-text: #ffffff,
+  btn-hover-border: #ffffff,
+  btn-shadow: rgba(0, 188, 212, 0.2),
+  btn-hover-shadow: rgba(0, 188, 212, 0.4)
+);
+
+$dark-sea-theme: (
+  bg: linear-gradient(135deg, #001c2e 0%, #004e64 100%),
+  text: #d7f9ff,
+  link: #4fd2ff,
+  sidebar: #00141f,
+  btn-bg: #00384a,
+  btn-text: #d7f9ff,
+  btn-border: #4fd2ff,
+  btn-hover-bg: #4fd2ff,
+  btn-hover-text: #001c2e,
+  btn-hover-border: #d7f9ff,
+  btn-shadow: rgba(79, 210, 255, 0.18),
+  btn-hover-shadow: rgba(79, 210, 255, 0.35)
+);
