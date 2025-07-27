@@ -2,11 +2,19 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Test</title>
+  <title>
+  Test | Mirko in Brasilien
+</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- Fallback für alte Browser -->
+<link rel="alternate icon" href="/assets/favicon.ico" type="image/x-icon">
+
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1fa2ff">
   <script>
     function switchTheme(theme) {
       document.body.setAttribute('data-theme', theme);
@@ -122,8 +130,10 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
   </div>
 
   <script>
+  // NUR Überschriften aus dem Content-Bereich für den TOC verwenden!
   const toc = document.getElementById("toc-list");
-  const headers = Array.from(document.querySelectorAll("h2, h3"));
+  const content = document.querySelector(".content");
+  const headers = Array.from(content.querySelectorAll("h2, h3"));
   let h2Map = {};
 
   headers.forEach(el => {
@@ -182,6 +192,25 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
   window.addEventListener('scroll', markActiveTOC);
   markActiveTOC();
   </script>
+  <script>
+  const originalTitle = document.title;
+  let timeout;
+
+  window.addEventListener('blur', () => {
+    timeout = setTimeout(() => {
+      document.title = "👋 Vermisst du mich?";
+    }, 1000);
+  });
+
+  window.addEventListener('focus', () => {
+    clearTimeout(timeout);
+    document.title = originalTitle;
+  });
+</script>
+  <footer>
+    <p>© 2023 Mirko in Brasilien</p>
+    <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p>
+  </footer>
 </body>
 </html>
 
