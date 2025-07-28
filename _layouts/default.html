@@ -13,8 +13,8 @@
 <!-- Fallback für alte Browser -->
 <link rel="alternate icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
 
-<!--link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}"-->
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+<link rel="manifest" href="/manifest.webmanifest">
 
 <script>
   if ('serviceWorker' in navigator) {
@@ -195,6 +195,9 @@ function clearCache() {
   }
 }
 </script>
+  <div style="text-align:center; margin:2em 0;">
+    <a href="/about.html">ℹ️ Mehr Infos & Offline-Hilfe</a>
+  </div>
 </body>
 </html>
 

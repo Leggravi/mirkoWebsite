@@ -1,0 +1,56 @@
+---
+layout: default
+title: Über diese Website & Offline-Nutzung
+---
+
+<h1>Über diese Website</h1>
+<p>Diese Website kann als App installiert und offline verwendet werden.<br>
+Damit das funktioniert, musst du die Seite einmal mit Internet besuchen.<br>
+Danach werden die wichtigsten Seiten und Bilder automatisch gespeichert.</p>
+
+<h2>Offline-Fehlermeldung</h2>
+<p>Wenn du eine Seite besuchst, die noch nicht gespeichert wurde, zeigt dein Browser eine Standard-Offline-Meldung.<br>
+Das ist bei GitHub Pages leider nicht anders möglich.</p>
+
+<h2>Cache leeren</h2>
+<p>Du kannst den Cache jederzeit über den Button <b>Cache leeren</b> im Footer löschen.<br>
+Danach werden die Seiten beim nächsten Besuch neu gespeichert.</p>
+
+<div id="installPrompt" style="display:none; text-align:center; margin:2em 0; border:2px solid #1fa2ff; border-radius:1em; padding:1em; background:#e0f7fa;">
+  <h2>App installieren</h2>
+  <p>Du kannst diese Website als App installieren!<br>
+  Tippe unten auf „Installieren“.</p>
+  <button id="installBtn" style="font-size:1.2em; padding:0.5em 2em;">Installieren</button>
+</div>
+
+<footer>
+  <p>© 2364 qwertzuiopü</p>
+  <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and GitHub Pages</p>
+  <button onclick="clearCache()">Cache leeren</button>
+</footer>
+
+<script>
+function clearCache() {
+  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage('clear-cache');
+    alert('Cache wurde geleert! Seite wird neu geladen.');
+    window.location.reload();
+  }
+}
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('installPrompt').style.display = 'block';
+});
+document.getElementById('installBtn').onclick = function() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      document.getElementById('installPrompt').style.display = 'none';
+      deferredPrompt = null;
+    });
+  }
+};
+</script>
