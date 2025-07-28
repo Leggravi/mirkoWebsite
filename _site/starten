@@ -11,3 +11,10 @@ todo: offline möcglich machen
 
 "src": "{{ site.baseurl }}/assets/icon-192.png"
 !!!
+
+
+
+kannst du es einrichten, dass:
+die website gecached wird, so dass man sie offline verwenden kann (va, wenn man das ganze als app installiert)
+(und der cache muss sich leeren, wenn ich es will (also mal was ändere an der website))
+und wenn die seite dann noch nciht gecached wurde, soll eine lustige fehlermeldung kommen und man die möglichkeit haebn wieder zurück zu kommen
