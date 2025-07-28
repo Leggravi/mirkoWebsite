@@ -492,3 +492,26 @@ body[data-theme="game"] .theme-switcher button span {
   }
 }
 
+.notification-banner {
+  font-family: sans-serif !important;
+  color: #111 !important;
+  border: 2px solid #2222;
+}
+.notification-banner a {
+  color: #222 !important;
+  text-decoration: underline;
+  margin-left: 1em;
+}
+.notification-banner button {
+  background: none;
+  border: none;
+  color: #222 !important;
+  font-size: 1.2em;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.notification-history {
+  font-family: sans-serif !important;
+  color: #222 !important;
+}
+

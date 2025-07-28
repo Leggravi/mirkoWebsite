@@ -1,0 +1,45 @@
+---
+layout: default
+title: Alle Benachrichtigungen
+permalink: /notes/
+---
+
+<h1>Alle Benachrichtigungen</h1>
+<div id="all-notes"></div>
+<script src="/assets/js/notifications.js"></script>
+<script>
+const typeIcons = {
+  info: "ℹ️",
+  success: "✅",
+  warning: "⚠️",
+  error: "❌"
+};
+const typeColors = {
+  info: "#1fa2ff",
+  success: "#4caf50",
+  warning: "#ff9800",
+  error: "#e53935"
+};
+
+const notes = (window.NOTIFICATIONS || []).slice().sort((a, b) => b.id.localeCompare(a.id));
+const container = document.getElementById('all-notes');
+container.innerHTML = `<ul style="list-style:none;padding:0;">` +
+  notes.map(n => `<li style="
+    margin:1em 0;
+    padding:1em 1.5em;
+    border-radius:1em;
+    background:${typeColors[n.type] || '#eee'};
+    color:#111;
+    display:flex;
+    align-items:center;
+    box-shadow:0 2px 8px #0001;
+    position:relative;
+  ">
+    <span style="font-size:1.5em;margin-right:1em;">${typeIcons[n.type] || "🔔"}</span>
+    <div>
+      <div>${n.message} <a href="${n.url}">Link</a></div>
+      <div style="font-size:0.8em;color:#333;margin-top:0.5em;">ID: ${n.id}</div>
+    </div>
+  </li>`).join('') +
+  `</ul>`;
+</script>

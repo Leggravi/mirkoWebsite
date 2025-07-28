@@ -34,22 +34,20 @@
 
 <link rel="manifest" href="/manifest.json">
 
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<!--<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
     await OneSignal.init({
-      appId: "46aa880d-6c8c-4792-aa75-855ad3946f58",
-      safari_web_id: "web.onesignal.auto.31ba082c-c81b-42a5-be17-ec59d526e60e",
-      notifyButton: { enable: true },
-      serviceWorkerParam: { scope: '/mirkoWebsite/' },
-      serviceWorkerPath: '/mirkoWebsite/OneSignalSDKWorker.js',
-      serviceWorkerUpdaterPath: '/mirkoWebsite/OneSignalSDKUpdaterWorker.js',
-      serviceWorkerRegistration: 'auto',
-      path: '/mirkoWebsite/' // <--- WICHTIG: erzwingt das Verzeichnis!
+      appId: "dbff754e-f042-45ca-a0a1-ccfb8ed9cf4d",
+      safari_web_id: "web.onesignal.auto.514888af-c9d7-482b-90d4-9de98d872128",
+      notifyButton: {
+        enable: true,
+      },
+      allowLocalhostAsSecureOrigin: true,
     });
   });
-</script>
+</script> -->
 
 
 <script>
@@ -249,8 +247,59 @@ function clearCache() {
 }
 </script>
   <div style="text-align:center; margin:2em 0;">
-    <a href="/about/">ℹ️ Mehr Infos & Offline-Hilfe</a>
+    <a href="/about/">ℹ️ Mehr Infos & Offline-Hilfe</a> |
+    <a href="/notes/">🔔 Alle Benachrichtigungen</a>
   </div>
+
+<script src="/assets/js/notifications.js"></script>
+<script>
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? decodeURIComponent(match[2]) : "";
+}
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days*864e5).toUTCString();
+  document.cookie = name + "=" + encodeURIComponent(value) + ";path=/;expires=" + expires;
+}
+
+// Typen mit Farbe und Dauer
+const typeStyles = {
+  info:    { color: "#1fa2ff", duration: 0 },
+  success: { color: "#4caf50", duration: 4000 },
+  warning: { color: "#ff9800", duration: 6000 },
+  error:   { color: "#e53935", duration: 8000 }
+};
+
+const seen = getCookie("seenNotifications") ? getCookie("seenNotifications").split(",") : [];
+const allNotes = window.NOTIFICATIONS || [];
+const newNotes = allNotes.filter(n => !seen.includes(n.id));
+
+// Zeige alle neuen Nachrichten als Banner untereinander
+newNotes.forEach(n => {
+  const style = typeStyles[n.type] || typeStyles.info;
+  const div = document.createElement("div");
+  div.className = "notification-banner";
+  div.innerHTML = `<span>${n.message}</span> <a href="${n.url}">Ansehen</a> <button onclick="this.parentElement.remove()">×</button>`;
+  div.style = `
+    position:fixed;left:50%;transform:translateX(-50%);
+    background:${style.color};color:#111;font-weight:bold;
+    padding:1em 2em;border-radius:1em;z-index:9999;
+    box-shadow:0 2px 8px #0002;
+    font-family:sans-serif;
+    bottom:${2 + 4 * Array.from(document.querySelectorAll('.notification-banner')).length}em;
+    margin-bottom:1em;
+  `;
+  document.body.appendChild(div);
+  if (style.duration > 0) {
+    setTimeout(() => div.remove(), style.duration);
+  }
+});
+
+// Nach Anzeige als gesehen speichern
+if (newNotes.length) {
+  setCookie("seenNotifications", seen.concat(newNotes.map(n=>n.id)).join(","), 365);
+}
+</script>
 </body>
 </html>
 
