@@ -7,6 +7,25 @@
 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  
+
+  <meta name="theme-color" content="#1fa2ff">
+  <script>
+    function switchTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    window.onload = () => {
+      const saved = localStorage.getItem('theme');
+      if (saved) {
+        document.body.setAttribute('data-theme', saved);
+      } else {
+        document.body.setAttribute('data-theme', 'light'); // Standard-Theme setzen
+      }
+    }
+  </script>
+
   <link rel="stylesheet" href="/assets/css/style.css">
 
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -25,9 +44,13 @@
       notifyButton: {
         enable: true,
       },
+      serviceWorkerParam: { scope: '/mirkoWebsite/' },
+      serviceWorkerPath: '/mirkoWebsite/OneSignalSDKWorker.js',
+      serviceWorkerUpdaterPath: '/mirkoWebsite/OneSignalSDKUpdaterWorker.js',
     });
   });
 </script>
+
 
 <script>
   if ('serviceWorker' in navigator) {
@@ -37,22 +60,7 @@
   }
 </script>
 
-<meta name="theme-color" content="#1fa2ff">
-  <script>
-    function switchTheme(theme) {
-      document.body.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    }
 
-    window.onload = () => {
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.body.setAttribute('data-theme', saved);
-      } else {
-        document.body.setAttribute('data-theme', 'light'); // Standard-Theme setzen
-      }
-    }
-  </script>
   
 </head>
 <body>
