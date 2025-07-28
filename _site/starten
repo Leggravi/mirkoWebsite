@@ -7,6 +7,7 @@ zum starten
 todo: offline möcglich machen
 -> service worker usw richtig einrichten
 - nachrichten und push nachrichten
+- als app installieren -> links relativ machen
 
 
 "src": "{{ site.baseurl }}/assets/icon-192.png"
