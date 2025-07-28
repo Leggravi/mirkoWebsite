@@ -1,12 +1,16 @@
+---
+layout: null
+permalink: /service-worker.js
+---
+
 const CACHE_NAME = 'mirko-cache-v1';
-const OFFLINE_URL = '/offline.html';
+const OFFLINE_URL = '{{ "/offline.html" | relative_url }}';
 
 const urlsToCache = [
-  '/',
-  '/assets/css/style.css',
-  '/assets/img/mirko.jpg',
+  '{{ "/" | relative_url }}',
+  '{{ "/assets/css/style.scss" | relative_url }}',
+  '{{ "/assets/img/mirko.jpg" | relative_url }}',
   OFFLINE_URL,
-  // weitere wichtige Dateien hier ergänzen!
 ];
 
 self.addEventListener('install', event => {
