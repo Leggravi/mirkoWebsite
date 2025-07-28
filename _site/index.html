@@ -15,6 +15,20 @@
 
 <link rel="manifest" href="/manifest.json">
 
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "46aa880d-6c8c-4792-aa75-855ad3946f58",
+      safari_web_id: "web.onesignal.auto.31ba082c-c81b-42a5-be17-ec59d526e60e",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
