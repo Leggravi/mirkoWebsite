@@ -4,7 +4,7 @@ plugins:
   - jekyll-feed
 sass:
   style: compressed
-service_worker_enabled: true
+service_worker_enabled: false
 
 defaults:
   -

@@ -1,13 +1,19 @@
+---
+layout: null
+
+permalink: /service-worker.js
+---
+
 const CACHE_NAME = 'mirko-cache-v1';
-const OFFLINE_URL = '/offline.html'; // offline fallback
+const OFFLINE_URL = '{{ site.baseurl }}/offline.html'; // offline fallback
 const ENABLE_SW = true; // Schalter für SW aktiv/inaktiv
 
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/main.css',
-  '/assets/icon-192.png',
-  '/assets/icon-512.png',
+  '{{ site.baseurl }}/',
+  '{{ site.baseurl }}/index.html',
+  '{{ site.baseurl }}/main.css',
+  '{{ site.baseurl }}/assets/icon-192.png',
+  '{{ site.baseurl }}/assets/icon-512.png',
   OFFLINE_URL
 ];
 

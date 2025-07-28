@@ -16,9 +16,9 @@
 <!--link rel="manifest" href="/manifest.webmanifest"-->
 <link rel="manifest" href="/manifest.json">
 
-<!---->
+<!--
 
-<!---->
+-->
 
 <meta name="theme-color" content="#1fa2ff">
   <script>
@@ -29,9 +29,14 @@
 
     window.onload = () => {
       const saved = localStorage.getItem('theme');
-      if (saved) document.body.setAttribute('data-theme', saved);
+      if (saved) {
+        document.body.setAttribute('data-theme', saved);
+      } else {
+        document.body.setAttribute('data-theme', 'light'); // Standard-Theme setzen
+      }
     }
   </script>
+  
 </head>
 <body>
   <div class="topbar">
@@ -205,7 +210,7 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
   window.addEventListener('blur', () => {
     timeout = setTimeout(() => {
       document.title = "👋 Vermisst du mich?";
-    }, 1000);
+    }, 5000);
   });
 
   window.addEventListener('focus', () => {
@@ -216,7 +221,7 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
 
 
 
-<button onclick="updateCache()">Cache erneuern</button>
+<!--<button onclick="updateCache()">Cache erneuern</button>
 <script>
   function updateCache() {
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
@@ -229,7 +234,7 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
       });
     }
   }
-</script>
+</script>-->
 
 
   <footer>
