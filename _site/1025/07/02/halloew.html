@@ -13,13 +13,13 @@
 <!-- Fallback für alte Browser -->
 <link rel="alternate icon" href="/assets/favicon.ico" type="image/x-icon">
 
-<link rel="manifest" href="/manifest.webmanifest">
+<!--link rel="manifest" href="/manifest.webmanifest"-->
 <link rel="manifest" href="/manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-  }
-</script>
+
+<!---->
+
+<!---->
+
 <meta name="theme-color" content="#1fa2ff">
   <script>
     function switchTheme(theme) {
@@ -213,9 +213,28 @@ Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer le
     document.title = originalTitle;
   });
 </script>
+
+
+
+<button onclick="updateCache()">Cache erneuern</button>
+<script>
+  function updateCache() {
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (let reg of regs) {
+          reg.unregister().then(() => {
+            window.location.reload();
+          });
+        }
+      });
+    }
+  }
+</script>
+
+
   <footer>
-    <p>© 2023 Mirko in Brasilien</p>
-    <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p>
+    <p>© 2364 qwertzuiopü</p>
+    <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and GitHub Pages</p>
   </footer>
 </body>
 </html>

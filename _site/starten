@@ -1,0 +1,6 @@
+bundle exec jekyll serve
+
+zum starten 
+
+"src": "{{ site.baseurl }}/assets/icon-192.png"
+!!!
