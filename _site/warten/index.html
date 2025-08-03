@@ -3,82 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bald geht's los!</title>
+  <title>Mirko in Brasilien – Countdown</title>
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #80deea);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      color: #004d40;
-    }
-    .container {
-      max-width: 600px;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 1.5rem;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      background: #f1f8ff;
+      color: #003153;
     }
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
-    #countdown {
+    .countdown {
       font-size: 1.5rem;
       margin: 1rem 0;
       font-weight: bold;
     }
     a.button {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #00796b;
+      margin: 1rem 1rem 1rem 0;
+      padding: 0.8rem 1.2rem;
+      background: #007e99;
       color: white;
-      border-radius: 0.5rem;
       text-decoration: none;
-      transition: background 0.3s;
+      border-radius: 0.5rem;
     }
-    a.button:hover {
-      background-color: #004d40;
+    section {
+      max-width: 800px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Die Website ist fast fertig!</h1>
-    <p>Noch ein bisschen Geduld…</p>
-    <div id="countdown">Lädt...</div>
-    <p>Trag dich hier ein, um informiert zu werden:</p>
-    <a class="button" href="https://forms.gle/kDLjBrFRAX2mfBYA9" target="_blank">Zum Rundbrief-Formular</a>
-  </div>
+  <section>
+    <h1>Es geht bald los! ✈️</h1>
+    <p class="countdown" id="countdown">Noch XX Tage, XX Stunden...</p>
+
+    <p>Im Oktober beginnt mein Abenteuer: Ich fliege am <strong>2. Oktober um 19:00 Uhr</strong> nach Brasilien und werde dort in <strong>Alves de Barros</strong> mitarbeiten – einer kleinen Missionsstation mit Schule im Bundesstaat Mato Grosso, ca. 600 km nördlich von Campo Grande.</p>
+
+    <p>Dort befindet sich ein Ausbildungszentrum für indigene Christen, das ihnen hilft, selbst Verantwortung zu übernehmen und das Evangelium in ihre Heimatdörfer zu bringen. Ich werde vor Ort ganz praktisch mithelfen und den dortigen Missionar unterstützen.</p>
+
+    <h2>Gebetsanliegen 🙏</h2>
+    <ul>
+      <li>Gute und vollständige Vorbereitung</li>
+      <li>Erfolgreiche Impfungen &amp; Erhalt des Reisepasses</li>
+      <li>Gottes Leitung in den letzten Monaten vor dem Abflug</li>
+    </ul>
+
+    <h2>Mehr Infos &amp; Mitmachen 📬</h2>
+    <a href="https://forms.gle/kDLjBrFRAX2mfBYA9" class="button" target="_blank">Für Rundbriefe anmelden</a>
+    <a href="https://www.youtube.com/watch?v=rGSmI5A3ASI" class="button" target="_blank">Station kennenlernen (Video)</a>
+    <a href="https://dipm.de/" class="button" target="_blank">DIPM – Organisation</a>
+  </section>
 
   <script>
-    const countdownEl = document.getElementById("countdown");
-    const targetDate = new Date("2025-08-20T00:00:00+02:00");
-
     function updateCountdown() {
+      const departure = new Date("2025-10-02T19:00:00+02:00");
       const now = new Date();
-      const diff = targetDate - now;
+      const diff = departure - now;
 
       if (diff <= 0) {
-        countdownEl.textContent = "Es geht los!";
+        document.getElementById("countdown").textContent = "Ich bin bereits unterwegs!";
         return;
       }
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
 
-      countdownEl.textContent = `${days} Tage, ${hours} Stunden, ${minutes} Minuten, ${seconds} Sekunden`;
+      document.getElementById("countdown").textContent = `Noch ${days} Tage, ${hours} Stunden und ${minutes} Minuten`;
     }
 
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 60000); // jede Minute aktualisieren
   </script>
 </body>
 </html>
