@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "_posts/2025-07-28-Station.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "2025-07-28-Station"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "_posts/2025-07-28-Station.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for 2025-07-28-Station"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "_posts/2025-07-28-Station.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from 2025-07-28-Station"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "_posts/2025-07-28-Station.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of 2025-07-28-Station"
             }
           }
         ]
@@ -171,21 +171,44 @@
   },
   "active": "0a3ea29d458d1af3",
   "lastOpenFiles": [
-    "about.md",
-    "blog.md",
-    "warten.md",
+    "_site/2025/08/28/Station.html",
+    "_site/2025/08/28",
+    "_site/2025/08",
+    "_site/2025",
+    "_site/mission/brasilien/alves de barros/reisetagebuch/2024/03/07/Station.html",
+    "_site/mission/brasilien/alves de barros/reisetagebuch/2024/03/07",
+    "_site/mission/brasilien/alves de barros/reisetagebuch/2024/03",
+    "_site/mission/brasilien/alves de barros/reisetagebuch/2024",
+    "_site/mission/brasilien/alves de barros/reisetagebuch",
+    "_site/mission/brasilien/alves de barros",
+    "_site/mission/brasilien",
+    "_posts/2025-08-02-hallo.md",
+    "_posts/2025-07-28-Station.md",
+    "_posts/2025-07-28 Statio.md",
+    "_site/Untitled.md",
+    "_posts/2025-04-02-hallo copy.md",
+    "_posts/2025-09-10-titel (copy).md",
+    "_posts/2025-09-10-titel.md",
+    "_posts/2025-04-02-halloew.md",
+    "Spenden.md",
+    "_site/assets/img/dipm-logo.png",
+    "assets/img/dipm-logo.png",
+    "_site/assets/img/unnamed.png",
+    "assets/img/unnamed.png",
+    "_site/Pasted image 20250828180741.png",
+    "Pasted image 20250828180741.png",
     "index.md",
+    "warten.md",
+    "_site/Spenden.md",
+    "blog.md",
+    "about.md",
     "about 2.md",
     "about 1.md",
     "blog 1.md",
     "blog 2.md",
     "_site/blog 2.md",
-    "_site/blog 2.html",
     "_site/blog 1.md",
-    "_site/blog 1.html",
     "_site/about 2.md",
-    "_site/about 2.html",
-    "_site/about 1.md",
-    "_site/about 1.html"
+    "_site/about 1.md"
   ]
 }

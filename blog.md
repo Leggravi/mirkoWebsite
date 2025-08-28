@@ -5,4 +5,3 @@ permalink: /blog/
 ---
 
 Willkommen auf meinem Blog über meine Zeit in Brasilien 🇧🇷
-# 
