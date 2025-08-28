@@ -20,21 +20,23 @@
   
 
   <meta name="theme-color" content="#1fa2ff">
-  <script>
-    function switchTheme(theme) {
-      document.body.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    }
+ <script>
+  function switchTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (window.handleStarfieldTheme) handleStarfieldTheme();
+  }
 
-    window.onload = () => {
-      const saved = localStorage.getItem('theme');
-      if (saved) {
-        document.body.setAttribute('data-theme', saved);
-      } else {
-        document.body.setAttribute('data-theme', 'light'); // Standard-Theme setzen
-      }
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      document.body.setAttribute('data-theme', saved);
+    } else {
+      document.body.setAttribute('data-theme', 'light');
     }
-  </script>
+    if (window.handleStarfieldTheme) handleStarfieldTheme();
+  });
+</script>
 
   <link rel="stylesheet" href="/assets/css/style.css">
 
@@ -73,6 +75,17 @@
   
 </head>
 <body>
+  <!-- STERNENHIMMEL CANVAS (nur für Game Theme sichtbar) -->
+<canvas class="starfield-bg"></canvas>
+<!-- SONNENSTRAHLEN (nur für Forest Theme sichtbar) -->
+<div class="forest-rays">
+  <div class="ray ray1"></div>
+  <div class="ray ray2"></div>
+  <div class="ray ray3"></div>
+  <div class="ray ray4"></div>
+</div>
+<div class="forest-fog"></div>
+
   <div class="topbar">
     <div class="topbar-nav">
       <a href="/">🏠</a>
@@ -286,6 +299,229 @@ if (newNotes.length) {
   setCookie("seenNotifications", seen.concat(newNotes.map(n=>n.id)).join(","), 365);
 }
 </script>
+<script>
+// --- STERNENHIMMEL ANIMATION MIT PARALLAX UND BLINKEN ---
+
+let starfieldAnimationId = null;
+let starfieldActive = false;
+let lastScrollY = window.scrollY;
+
+function startStarfield() {
+  const canvas = document.querySelector('.starfield-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = window.innerWidth, h = window.innerHeight;
+  canvas.width = w;
+  canvas.height = h;
+
+  // Parallax-Faktor (0.3 = 30% der Scrollgeschwindigkeit)
+  const PARALLAX = 0.3;
+
+  // Sterne erzeugen
+  const STAR_COUNT = 120;
+  function newStar() {
+    return {
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 1.2 + 0.3,
+      blink: Math.random() * Math.PI * .1,
+      speed: Math.random() * 0.2 + 0.15,
+      life: Math.random() * 1.5 + 0.5, // Sekunden sichtbar
+      age: 0
+    };
+  }
+  let stars = Array.from({length: STAR_COUNT}, newStar);
+
+  let lastTime = performance.now();
+
+  function draw(now) {
+    if (!starfieldActive) return;
+    const dt = (now - lastTime) / 1000;
+    lastTime = now;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Parallax-Offset berechnen
+    const scrollY = window.scrollY;
+    const parallaxOffset = scrollY * PARALLAX;
+
+    for (let i = 0; i < stars.length; ++i) {
+      let s = stars[i];
+      s.age += dt;
+      s.blink += s.speed * 0.25 + Math.random() * .3;
+      // Wenn Lebensdauer vorbei: neuen Stern erzeugen
+      if (s.age > s.life) {
+        stars[i] = newStar();
+        stars[i].y += parallaxOffset; // damit neue Sterne nicht "springen"
+        continue;
+      }
+      // Alpha: schnelles Blinken
+      const blinkAlpha = 0.3 + 0.7 * Math.abs(Math.sin(s.blink * 2));
+      // Fade-in/out am Lebensanfang/-ende
+      let fade = 1;
+      if (s.age < 0.2) fade = s.age / 0.2;
+      if (s.life - s.age < 0.2) fade = (s.life - s.age) / 0.2;
+      const alpha = blinkAlpha * Math.max(0, fade);
+
+      ctx.beginPath();
+      ctx.arc(s.x, s.y - parallaxOffset, s.r, 0, 2 * Math.PI);
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.shadowColor = "#0ff";
+      ctx.shadowBlur = 8 * alpha;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+    starfieldAnimationId = requestAnimationFrame(draw);
+  }
+
+  starfieldActive = true;
+  lastTime = performance.now();
+  draw(lastTime);
+
+  function resize() {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+    // Sterne neu verteilen
+    stars = Array.from({length: STAR_COUNT}, newStar);
+  }
+  window.addEventListener('resize', resize);
+
+  window.addEventListener('scroll', () => {
+    // Kein Neuzeichnen nötig, da draw() sowieso läuft und scrollY abfragt
+  });
+}
+
+function stopStarfield() {
+  starfieldActive = false;
+  if (starfieldAnimationId) {
+    cancelAnimationFrame(starfieldAnimationId);
+    starfieldAnimationId = null;
+  }
+  const canvas = document.querySelector('.starfield-bg');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    ctx && ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+}
+
+function handleStarfieldTheme() {
+  const body = document.body;
+  const canvas = document.querySelector('.starfield-bg');
+  if (body.getAttribute('data-theme') === 'game') {
+    canvas && (canvas.style.display = '');
+    stopStarfield(); // Falls noch eine alte Animation läuft
+    startStarfield();
+  } else {
+    stopStarfield();
+    canvas && (canvas.style.display = 'none');
+  }
+}
+
+// Theme-Wechsel erkennen (auch bei Button-Klicks)
+document.addEventListener('DOMContentLoaded', handleStarfieldTheme);
+const origSwitchTheme = window.switchTheme;
+window.switchTheme = function(theme) {
+  origSwitchTheme(theme);
+  setTimeout(handleStarfieldTheme, 10); // Nach Attribut-Update
+};
+</script>
+<!-- ...existing code... -->
+<script>
+(function() {
+  const FOG_COUNT = 20;
+  let fogs = [];
+  let running = false;
+  const fogContainer = document.querySelector('.forest-fog');
+
+  function randomFogProps() {
+    const vh = window.innerHeight;
+    const vw = window.innerWidth;
+    return {
+      top: Math.random() * (vh * 0.7) + vh * 0.2, // 55-95vh
+      left: vw + Math.random() * vw * 0.3, // Start rechts außerhalb
+      width: Math.random() * 18 + 18, // 18vw - 36vw
+      height: Math.random() * 8 + 8,  // 8vh - 16vh
+      opacity: Math.random() * 0.18 + 0.42, // 0.12 - 0.3
+      blur: Math.random() * 18 + 12, // 12px - 30px
+      speed: Math.random() * 0.12 + 0.04 // 0.04 - 0.16 vw/ms
+    };
+  }
+
+  function createFog() {
+    const props = randomFogProps();
+    const fog = document.createElement('div');
+    fog.className = 'fog';
+    fog.style.top = props.top + 'px';
+    fog.style.left = props.left + 'px';
+    fog.style.width = props.width + 'vw';
+    fog.style.height = props.height + 'vh';
+    fog.style.opacity = props.opacity;
+    fog.style.filter = `blur(${props.blur}px)`;
+    fog.dataset.speed = props.speed;
+    fog.dataset.left = props.left;
+    fogContainer.appendChild(fog);
+    return fog;
+  }
+
+  function animateFogs(ts) {
+    if (!running) return;
+    const vw = window.innerWidth;
+    fogs.forEach(fog => {
+      let left = parseFloat(fog.dataset.left);
+      left -= fog.dataset.speed * vw * 0.016; // 60fps: ca. 16ms/frame
+      fog.dataset.left = left;
+      fog.style.left = left + 'px';
+      // Optional: leichtes Wabern
+      fog.style.top = (parseFloat(fog.style.top) + Math.sin(left/80) * 0.2) + 'px';
+      // Entfernen, wenn links raus
+      if (left + fog.offsetWidth < -20) {
+        fog.remove();
+      }
+    });
+    // Entfernte fogs ersetzen
+    fogs = fogs.filter(fog => fog.isConnected);
+    while (fogs.length < FOG_COUNT) {
+      fogs.push(createFog());
+    }
+    requestAnimationFrame(animateFogs);
+  }
+
+  function startFog() {
+    if (running) return;
+    running = true;
+    // Nur im Forest-Theme!
+    if (document.body.getAttribute('data-theme') !== 'forest') return;
+    // Initial auffüllen
+    while (fogs.length < FOG_COUNT) {
+      fogs.push(createFog());
+    }
+    requestAnimationFrame(animateFogs);
+  }
+  function stopFog() {
+    running = false;
+    fogs.forEach(fog => fog.remove());
+    fogs = [];
+  }
+
+  // Theme-Wechsel beobachten
+  function handleFogTheme() {
+    if (document.body.getAttribute('data-theme') === 'forest') {
+      startFog();
+    } else {
+      stopFog();
+    }
+  }
+  document.addEventListener('DOMContentLoaded', handleFogTheme);
+  const origSwitchTheme = window.switchTheme;
+  window.switchTheme = function(theme) {
+    origSwitchTheme(theme);
+    setTimeout(handleFogTheme, 10);
+  };
+})();
+</script>
+<!-- ...existing code... -->
 </body>
 </html>
 
