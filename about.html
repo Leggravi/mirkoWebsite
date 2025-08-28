@@ -1,59 +1,38 @@
 ---
 layout: default
-title: Über diese Website & Offline-Nutzung
-description: Informationen zur Offline-Nutzung dieser Website und wie du sie als App installieren kannst.
+title: Über diese Website
+description: Infos zu diesem Blog und wie du mich begleiten kannst.
 permalink: /about/
 ---
 
 <h1>Über diese Website</h1>
-<p>Diese Website kann als App installiert und offline verwendet werden.<br>
-Damit das funktioniert, musst du die Seite einmal mit Internet besuchen.<br>
-Danach werden die wichtigsten Seiten und Bilder automatisch gespeichert.</p>
+<p>Willkommen auf meinem Blog! 🙌  
+Hier berichte ich von meinem Auslandsjahr in Brasilien. Ab Oktober werde ich auf einer Missionsstation im Bundesstaat Mato Grosso mitarbeiten und meine Eindrücke, Erlebnisse und Gebetsanliegen hier teilen.</p>
 
-<h2>Offline-Fehlermeldung</h2>
-<p>Wenn du eine Seite besuchst, die noch nicht gespeichert wurde, zeigt dein Browser eine Standard-Offline-Meldung.<br>
-Das ist bei GitHub Pages leider nicht anders möglich.</p>
+<h2>Über mich</h2>
+<p>Ich heiße Mirko, bin 18 Jahre alt und mache nach dem Abitur ein freiwilliges Jahr in Brasilien.  
+Meine Motivation: meinen Glauben praktisch leben, neue Erfahrungen sammeln und Gott dienen – dort, wo er mich hinschickt.</p>
 
-<h2>Cache leeren</h2>
-<p>Du kannst den Cache jederzeit über den Button <b>Cache leeren</b> im Footer löschen.<br>
-Danach werden die Seiten beim nächsten Besuch neu gespeichert.</p>
 
-<div id="installPrompt" style="display:none; text-align:center; margin:2em 0; border:2px solid #1fa2ff; border-radius:1em; padding:1em; background:#e0f7fa; color:#222;">
+<h2>Warum diese Website?</h2>
+<p>Ich möchte dich an meinem Abenteuer teilhaben lassen – egal, ob du einfach neugierig bist, meine Arbeit unterstützen willst oder für mich beten möchtest.  
+Statt alles nur über E-Mails zu verschicken, findest du hier alle Beiträge gesammelt und übersichtlich.</p>
 
-<h2>App installieren</h2>
-  <p>Du kannst diese Website als App installieren!<br>
-  Tippe unten auf „Installieren“.</p>
-  <button id="installBtn" style="font-size:1.2em; padding:0.5em 2em;">Installieren</button>
-</div>
+<h2>Wie kannst du dabei sein?</h2>
+<ul>
+  <li> <a href="{{ '/blog/' | relative_url }}">Blog lesen</a>: Regelmäßig reinschauen, um Updates und Fotos zu sehen.</li>
+  <li> <a href="https://forms.gle/kDLjBrFRAX2mfBYA9" target="_blank">Rundbriefe</a>: Für ausführlichere Infos kannst du dich für meinen Rundbrief eintragen.</li>
+  <li> <a href="mailto:leggravi@gmail.com">Feedback & Kontakt</a>: Anregungen zur Website oder Themen? Schreib mir eine Mail!</li>
+  <li><b>Gebet:</b> Über meine Gebetsanliegen freue ich mich ganz besonders.</li>
+  <li><b>Teilen:</b> Wenn du jemanden kennst, der sich für mein Abenteuer interessiert, leite die Seite gerne weiter.</li>
+</ul>
+
+
+<div id="installPrompt" style="display:none; text-align:center; margin:2em 0; border:2px solid #1fa2ff; border-radius:1em; padding:1em; background:#e0f7fa; color:#222;"> <h2>App installieren</h2> <p>Du kannst diese Website als App installieren!<br> Tippe unten auf „Installieren“.</p> <button id="installBtn" style="font-size:1.2em; padding:0.5em 2em;">Installieren</button> </div>
 
 <footer>
-  <p>© 2364 qwertzuiopü</p>
-  <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and GitHub Pages</p>
-  <button onclick="clearCache()">Cache leeren</button>
+  <p>© 2025 Mirko Hahn</p>
+  <p>Powered by <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> & GitHub Pages</p>
 </footer>
 
-<script>
-function clearCache() {
-  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-    navigator.serviceWorker.controller.postMessage('clear-cache');
-    alert('Cache wurde geleert! Seite wird neu geladen.');
-    window.location.reload();
-  }
-}
-
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  document.getElementById('installPrompt').style.display = 'block';
-});
-document.getElementById('installBtn').onclick = function() {
-  if (deferredPrompt) {
-    deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(() => {
-      document.getElementById('installPrompt').style.display = 'none';
-      deferredPrompt = null;
-    });
-  }
-};
-</script>
+<script> let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; document.getElementById('installPrompt').style.display = 'block'; }); document.getElementById('installBtn').onclick = function() { if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(() => { document.getElementById('installPrompt').style.display = 'none'; deferredPrompt = null; }); } }; </script>
