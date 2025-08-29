@@ -580,67 +580,19 @@ body[data-theme="game"]::after {
   20% { transform: translateX(0px) scaleY(1.03); }
 }
 
+// ...existing code...
+
 // --- LICHTSTRAHLEN FÜR FOREST THEME ---
 body[data-theme="forest"] .forest-rays {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.06;
-  background: 
-    repeating-linear-gradient(120deg, #fff8, #fff0 60px, #fff2 120px, #fff0 200px),
-    repeating-linear-gradient(100deg, #fff4 0 40px, #fff0 80px, #fff2 120px, #fff0 200px);
-  mix-blend-mode: lighten;
-  animation: rays-move 8s linear infinite alternate, rays-cycle 60s infinite;
-}
-@keyframes rays-move {
-  0% { background-position: 0 0, 0 0; }
-  100% { background-position: 80px 40px, -60px 60px; }
-}
-body:not([data-theme="forest"]) .forest-rays { display: none !important; }
-
-@keyframes rays-cycle {
-  0%, 65%   { opacity: 0.06; } /* sichtbar wenn pollen unsichtbar */
-  70%, 95%  { opacity: 0; }    /* unsichtbar wenn pollen sichtbar */
-  100%      { opacity: 0.06; } /* wieder sichtbar */
-}
-.forest-pollen {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  display: block;
-  opacity: 0.7;
-}
-body:not([data-theme="forest"]) .forest-pollen {
-  display: none !important;
-}
-
-// --- LICHTSTRAHLEN FÜR FOREST THEME ---
-body[data-theme="forest"] .forest-rays2 {
   pointer-events: none;
   position: fixed;
   inset: 0;
   z-index: 11;
+  opacity: 0.35; // weniger sichtbar
   mix-blend-mode: lighten;
-
-  // Basiszustand unsichtbar
-  opacity: 0;
-
-  // Sichtbarkeit steuern
-  animation: pollen-cycle 60s infinite; 
 }
 
-@keyframes pollen-cycle {
-  0%, 65% { opacity: 0; }    // 0-39s unsichtbar
-  70%, 95% { opacity: 0.35; } // 40s–59s sichtbar
-  100% { opacity: 0; }       // wieder ausblenden
-}
-
-
-body[data-theme="forest"] .forest-rays2 .ray {
+body[data-theme="forest"] .forest-rays .ray {
   position: absolute;
   top: 0;
   right: 0;
@@ -658,7 +610,7 @@ body[data-theme="forest"] .forest-rays2 .ray {
   animation: ray-swing 8s ease-in-out infinite alternate;
 }
 
-body[data-theme="forest"] .forest-rays2 .ray.ray2 {
+body[data-theme="forest"] .forest-rays .ray.ray2 {
   width: 45vw;
   height: 90vh;
   animation-delay: 2s;
@@ -670,7 +622,7 @@ body[data-theme="forest"] .forest-rays2 .ray.ray2 {
     rgba(255,255,180,0.00) 100%
   );
 }
-body[data-theme="forest"] .forest-rays2 .ray.ray3 {
+body[data-theme="forest"] .forest-rays .ray.ray3 {
   width: 70vw;
   height: 80vh;
   animation-delay: 4s;
@@ -682,7 +634,7 @@ body[data-theme="forest"] .forest-rays2 .ray.ray3 {
     rgba(255,255,180,0.00) 100%
   );
 }
-body[data-theme="forest"] .forest-rays2 .ray.ray4 {
+body[data-theme="forest"] .forest-rays .ray.ray4 {
   width: 35vw;
   height: 100vh;
   animation-delay: 1s;
@@ -700,3 +652,28 @@ body[data-theme="forest"] .forest-rays2 .ray.ray4 {
   50%  { transform: rotate(-8deg); }
   100% { transform: rotate(10deg); }
 }
+
+// --- NEBEL/RAUCH FÜR FOREST THEME ---
+body[data-theme="forest"] .forest-fog {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 12;
+  opacity: 0.6;
+  mix-blend-mode: lighten;
+}
+body[data-theme="forest"] .forest-fog .fog {
+  position: absolute;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.07) 70%, transparent 100%);
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+  transition: opacity 0.8s;
+}
+
+
+@keyframes fog-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-130vw); }
+}
+
+// ...existing code...

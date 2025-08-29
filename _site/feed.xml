@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-28T23:20:50+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<h3 id="überblick">Überblick</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-29T12:40:31+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<h3 id="überblick">Überblick</h3>
 <p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
 
 <hr />
@@ -39,7 +39,10 @@
 
 <p>Um einen besseren Eindruck von der Station zu bekommen, könnt ihr euch dieses Video ansehen.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rGSmI5A3ASI" title="YouTube video player" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe src="https://www.youtube.com/embed/rGSmI5A3ASI" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+  </iframe>
+</div>
 
 <hr />
 

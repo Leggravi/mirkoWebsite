@@ -25,6 +25,7 @@
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     if (window.handleStarfieldTheme) handleStarfieldTheme();
+    if (window.handlePollenTheme) handlePollenTheme();
   }
 
   window.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +36,7 @@
       document.body.setAttribute('data-theme', 'light');
     }
     if (window.handleStarfieldTheme) handleStarfieldTheme();
+    if (window.handlePollenTheme) handlePollenTheme();
   });
 </script>
 
@@ -77,14 +79,14 @@
 <body>
   <!-- STERNENHIMMEL CANVAS (nur für Game Theme sichtbar) -->
 <canvas class="starfield-bg"></canvas>
-<!-- SONNENSTRAHLEN (nur für Forest Theme sichtbar) -->
-<div class="forest-rays">
+<canvas class="forest-pollen"></canvas>
+<div class="forest-rays"></div>
+<div class="forest-rays2">
   <div class="ray ray1"></div>
   <div class="ray ray2"></div>
   <div class="ray ray3"></div>
   <div class="ray ray4"></div>
 </div>
-<div class="forest-fog"></div>
 
   <div class="topbar">
     <div class="topbar-nav">
@@ -208,7 +210,7 @@
   window.addEventListener('blur', () => {
     timeout = setTimeout(() => {
       document.title = "👋 Vermisst du mich?";
-    }, 5000);
+    }, 600000);
   });
 
   window.addEventListener('focus', () => {
@@ -427,101 +429,109 @@ window.switchTheme = function(theme) {
   setTimeout(handleStarfieldTheme, 10); // Nach Attribut-Update
 };
 </script>
-<!-- ...existing code... -->
 <script>
-(function() {
-  const FOG_COUNT = 20;
-  let fogs = [];
-  let running = false;
-  const fogContainer = document.querySelector('.forest-fog');
+// --- POLLENPARTIKEL FÜR FOREST THEME ---
+let pollenAnimId = null;
+let pollenActive = false;
 
-  function randomFogProps() {
-    const vh = window.innerHeight;
-    const vw = window.innerWidth;
+function startPollen() {
+  const canvas = document.querySelector('.forest-pollen');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = window.innerWidth, h = window.innerHeight;
+  canvas.width = w; canvas.height = h;
+
+  const PARALLAX = .5;
+  const COUNT = 40;
+  function newPollen() {
     return {
-      top: Math.random() * (vh * 0.7) + vh * 0.2, // 55-95vh
-      left: vw + Math.random() * vw * 0.3, // Start rechts außerhalb
-      width: Math.random() * 18 + 18, // 18vw - 36vw
-      height: Math.random() * 8 + 8,  // 8vh - 16vh
-      opacity: Math.random() * 0.18 + 0.42, // 0.12 - 0.3
-      blur: Math.random() * 18 + 12, // 12px - 30px
-      speed: Math.random() * 0.12 + 0.04 // 0.04 - 0.16 vw/ms
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*3.5+0.5,
+      dx: (Math.random()-0.5)*0.43,
+      dy: Math.random()*0.38-0.13,
+      alpha: Math.random()*0.3+0.2,
+      life: Math.random()*2+3,
+      age: 0
+      
     };
   }
+  let pollen = Array.from({length: COUNT}, newPollen);
 
-  function createFog() {
-    const props = randomFogProps();
-    const fog = document.createElement('div');
-    fog.className = 'fog';
-    fog.style.top = props.top + 'px';
-    fog.style.left = props.left + 'px';
-    fog.style.width = props.width + 'vw';
-    fog.style.height = props.height + 'vh';
-    fog.style.opacity = props.opacity;
-    fog.style.filter = `blur(${props.blur}px)`;
-    fog.dataset.speed = props.speed;
-    fog.dataset.left = props.left;
-    fogContainer.appendChild(fog);
-    return fog;
-  }
+  let lastTime = performance.now();
 
-  function animateFogs(ts) {
-    if (!running) return;
-    const vw = window.innerWidth;
-    fogs.forEach(fog => {
-      let left = parseFloat(fog.dataset.left);
-      left -= fog.dataset.speed * vw * 0.016; // 60fps: ca. 16ms/frame
-      fog.dataset.left = left;
-      fog.style.left = left + 'px';
-      // Optional: leichtes Wabern
-      fog.style.top = (parseFloat(fog.style.top) + Math.sin(left/80) * 0.2) + 'px';
-      // Entfernen, wenn links raus
-      if (left + fog.offsetWidth < -20) {
-        fog.remove();
+  function draw(now) {
+    if (!pollenActive) return;
+    const dt = (now - lastTime) / 1000;
+    lastTime = now;
+
+    ctx.clearRect(0,0,w,h);
+
+    // Parallax-Offset
+    const scrollY = window.scrollY;
+    const parallaxOffset = scrollY * PARALLAX;
+
+    for (let i = 0; i < pollen.length; ++i) {
+      let p = pollen[i];
+      p.age += dt;
+      if (p.age > p.life) {
+        pollen[i] = newPollen();
+        pollen[i].y += parallaxOffset;
+        continue;
       }
-    });
-    // Entfernte fogs ersetzen
-    fogs = fogs.filter(fog => fog.isConnected);
-    while (fogs.length < FOG_COUNT) {
-      fogs.push(createFog());
+      // Fade-in/out
+      let fade = 1;
+      if (p.age < 1) fade = p.age ;
+      if (p.life - p.age < 1) fade = (p.life - p.age) ;
+      const alpha = p.alpha * Math.max(0, fade);
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y - parallaxOffset, p.r, 0, 2*Math.PI);
+      ctx.fillStyle = `rgba(255,255,200,${alpha})`;
+      ctx.shadowColor = "#fff";
+      ctx.shadowBlur = 4;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      p.x += p.dx; p.y += p.dy;
+      //if (p.x<0) p.x=w; if (p.x>w) p.x=0;
+      //if (p.y>h) { p.y=0; p.x=Math.random()*w; }
     }
-    requestAnimationFrame(animateFogs);
+    pollenAnimId = requestAnimationFrame(draw);
   }
 
-  function startFog() {
-    if (running) return;
-    running = true;
-    // Nur im Forest-Theme!
-    if (document.body.getAttribute('data-theme') !== 'forest') return;
-    // Initial auffüllen
-    while (fogs.length < FOG_COUNT) {
-      fogs.push(createFog());
-    }
-    requestAnimationFrame(animateFogs);
-  }
-  function stopFog() {
-    running = false;
-    fogs.forEach(fog => fog.remove());
-    fogs = [];
-  }
+  pollenActive = true;
+  lastTime = performance.now();
+  draw(lastTime);
 
-  // Theme-Wechsel beobachten
-  function handleFogTheme() {
-    if (document.body.getAttribute('data-theme') === 'forest') {
-      startFog();
-    } else {
-      stopFog();
-    }
+  function resize() {
+    w = window.innerWidth; h = window.innerHeight;
+    canvas.width = w; canvas.height = h;
+    pollen = Array.from({length: COUNT}, newPollen);
   }
-  document.addEventListener('DOMContentLoaded', handleFogTheme);
-  const origSwitchTheme = window.switchTheme;
-  window.switchTheme = function(theme) {
-    origSwitchTheme(theme);
-    setTimeout(handleFogTheme, 10);
-  };
-})();
+  window.addEventListener('resize', resize);
+}
+
+function stopPollen() {
+  pollenActive = false;
+  if (pollenAnimId) cancelAnimationFrame(pollenAnimId);
+  pollenAnimId = null;
+  const canvas = document.querySelector('.forest-pollen');
+  if (canvas) canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);
+}
+
+function handlePollenTheme() {
+  const body = document.body, canvas = document.querySelector('.forest-pollen');
+  if (body.getAttribute('data-theme') === 'forest') {
+    canvas && (canvas.style.display = '');
+    stopPollen(); startPollen();
+  } else {
+    stopPollen(); canvas && (canvas.style.display = 'none');
+  }
+}
+
+// Theme-Wechsel erkennen (wie bei Sternenhimmel)
 </script>
-<!-- ...existing code... -->
+
 </body>
 </html>
 
