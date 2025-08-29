@@ -1,24 +1,38 @@
 title: Mirko in Brasilien
 theme: minima
+
 plugins:
   - jekyll-feed
-   - jekyll-seo-tag
-   - jekyll-sitemap
-    - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+#  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-archives
 
-paginate: 1      # Anzahl Posts pro Seite
-paginate_path: "/blog/page:num/"
-
+paginate:
+  enabled: true
+  per_page: 3
+  permalink: '/blog/page/:num/'
+  title: 'Seite :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  
 jekyll-archives:
   enabled:
     - categories
     - tags
     - yearly
     - monthly
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+    yearly: '/:year/'
+    monthly: '/:year/:month/'
 sass:
   style: compressed
+
 service_worker_enabled: false
 
 defaults:

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-29T23:10:22+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station-copy.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station%20copy</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station-copy.html"><![CDATA[<h3 id="überblick">Überblick</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-29T23:47:07+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<h3 id="überblick">Überblick</h3>
 <p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
 
 <hr />
@@ -50,56 +50,77 @@
 
 <p>Liebe Grüße,</p>
 
-<p>Mirko</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Überblick In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation Alves de Barros. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.]]></summary></entry><entry><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<h3 id="überblick">Überblick</h3>
-<p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
+<p>Mirko</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Überblick In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation Alves de Barros. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.]]></summary></entry><entry><title type="html">Meine ersten Tage in Brasilien</title><link href="http://localhost:4000/2025/07/02/titel.html" rel="alternate" type="text/html" title="Meine ersten Tage in Brasilien" /><published>2025-07-02T00:00:00+02:00</published><updated>2025-07-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/07/02/titel</id><content type="html" xml:base="http://localhost:4000/2025/07/02/titel.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
 
-<hr />
+<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
+<ul>
+  <li><strong>Fett</strong></li>
+  <li><em>Kursiv</em></li>
+  <li><a href="https://example.com">Links</a></li>
+  <li>Bilder:<br />
+<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Hier kommt dann dein Text.]]></summary></entry><entry><title type="html">pommes</title><link href="http://localhost:4000/2025/04/02/hallo-copy.html" rel="alternate" type="text/html" title="pommes" /><published>2025-04-02T00:00:00+02:00</published><updated>2025-04-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/04/02/hallo%20copy</id><content type="html" xml:base="http://localhost:4000/2025/04/02/hallo-copy.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
 
-<h2 id="der-einsatzort-alves-de-barros">Der Einsatzort: Alves de Barros</h2>
+<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
+<ul>
+  <li><strong>Fett</strong></li>
+  <li><em>Kursiv</em></li>
+  <li><a href="https://example.com">Links</a></li>
+  <li>Bilder:<br />
+<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Hier kommt dann dein Text.]]></summary></entry><entry><title type="html">Meine ersten Tage in Brasilien</title><link href="http://localhost:4000/2025/04/02/hallo.html" rel="alternate" type="text/html" title="Meine ersten Tage in Brasilien" /><published>2025-04-02T00:00:00+02:00</published><updated>2025-04-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/04/02/hallo</id><content type="html" xml:base="http://localhost:4000/2025/04/02/hallo.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
 
-<p>Mein Weg führt mich nach Brasilien, wo ich für einige Zeit in der Missionsstation Alves de Barros mitarbeiten werde. Die Station liegt in einer kleinen Ortschaft <strong>nahe der Grenze zu Paraguay und Bolivien</strong>. <em>Es soll dort einen weiten Ausblick (s. Video unten) geben darauf freue ich mich schon!</em></p>
+<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
+<ul>
+  <li><strong>Fett</strong></li>
+  <li><em>Kursiv</em></li>
+  <li><a href="https://example.com">Links</a></li>
+  <li>Bilder:<br />
+<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Hier kommt dann dein Text.]]></summary></entry><entry><title type="html">Test</title><link href="http://localhost:4000/1025/07/02/halloew.html" rel="alternate" type="text/html" title="Test" /><published>1025-07-02T00:00:56+00:53</published><updated>1025-07-02T00:00:56+00:53</updated><id>http://localhost:4000/1025/07/02/halloew</id><content type="html" xml:base="http://localhost:4000/1025/07/02/halloew.html"><![CDATA[<h2 id="test">Test</h2>
+<h1 id="test-1">Test</h1>
 
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18384384.982312076!2d-66.0815286472667!3d-19.413903287037098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947953ddd4b16f7d%3A0x5ba757a130f99a40!2sSchule%20Alves%20de%20Barros!5e1!3m2!1sde!2sde!4v1756401393001!5m2!1sde!2sde" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none; border-radius: 8px;" allowfullscreen="" loading="lazy">
-          </iframe>
-</div>
+<h2 id="gegenderte-sprache-trägt-nicht-zu-mehr-gleichberechtigung-bei">gegenderte Sprache trägt nicht zu mehr Gleichberechtigung bei!</h2>
 
-<hr />
+<p>Die Frage, ob gendergerechte Sprache zu mehr Geschlechtergerechtigkeit führt oder ob sie eher die Unterschiede zwischen den Geschlechtern betont, ist ein zentrales Thema in der Debatte um das Gendern. Dazu gibt es unterschiedliche Positionen und Studien, die teils widersprüchliche Ergebnisse liefern.</p>
 
-<h2 id="meine-rolle-praktische-mitarbeit-zur-unterstützung">Meine Rolle: Praktische Mitarbeit zur Unterstützung</h2>
+<h3 id="mögliche-positive-effekte-des-genderns">Mögliche positive Effekte des Genderns</h3>
 
-<p>Mein Einsatz ist als Kurzzeiteinsatz konzipiert, bei dem ich die dort ansässigen Missionare praktisch entlasten werde. Der Fokus liegt auf Tätigkeiten, die den Missionaren mehr Zeit für ihre Kernaufgaben verschaffen. Dabei geht es um Routinearbeiten, die für den Unterhalt der Station unverzichtbar sind. Ich werde unter anderem bei der <strong>Renovierung von Häusern und der landwirtschaftlichen Arbeit</strong> wie dem Melken von Kühen helfen - <em>Mal schauen wie das klappt. xD</em>.</p>
+<ol>
+  <li>
+    <p><strong>Sichtbarmachung und Inklusion:</strong><br />
+Gendergerechte Sprache hat das Ziel, alle Geschlechter sichtbar zu machen, insbesondere Frauen und nicht-binäre Personen, die in vielen traditionellen Sprachformen oft unsichtbar bleiben. Studien zeigen, dass die Verwendung von geschlechtergerechter Sprache dazu beitragen kann, stereotype Vorstellungen zu reduzieren und das Bewusstsein für die Gleichstellung der Geschlechter zu schärfen. Wenn z. B. Frauen sprachlich sichtbarer werden, kann dies auch ihre Präsenz in sozialen, politischen und beruflichen Kontexten fördern.</p>
+  </li>
+  <li>
+    <p><strong>Förderung von Geschlechtergerechtigkeit:</strong><br />
+Es gibt Hinweise darauf, dass gendergerechte Sprache das Bewusstsein für Ungleichheiten stärkt und dadurch einen Beitrag zu ihrer Reduktion leisten kann. Wenn z. B. Berufsbezeichnungen sowohl in der männlichen als auch in der weiblichen Form verwendet werden (z. B. „Ärztinnen und Ärzte“), kann dies dazu führen, dass Menschen weniger geneigt sind, bestimmte Berufe als „männlich“ oder „weiblich“ zu klassifizieren. Dadurch können auch die Vorstellungen davon, was für wen „geeignet“ ist, aufgebrochen werden.</p>
+  </li>
+</ol>
 
-<p>Das beiliegende Bild zeigt Indigene, die handwerkliche Fähigkeiten erlernen. Dies ist ein wichtiger Teil der praktischen Ausbildung, die im Zentrum angeboten wird.</p>
+<h2 id="kritik-am-gendern">Kritik am Gendern</h2>
 
-<div class="gallery">
-    <img src="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" alt="Indigene lernen Handwerk" style="max-width: 70%; height: auto; display: block; margin: 0 auto; border-radius: 8px;" />
-    <figcaption style="text-align: center; font-style: italic; color: #555;">Praktische Ausbildung der Indigenen auf der Station.</figcaption>
-</div>
+<ol>
+  <li>
+    <p><strong>Verstärkung der Unterschiede:</strong><br />
+Kritiker des Genderns argumentieren, dass die explizite Nennung verschiedener Geschlechter in der Sprache die Unterschiede zwischen den Geschlechtern stärker betont, anstatt sie zu überwinden. Dadurch könnten alte Stereotype und geschlechtsspezifische Rollenbilder eher verstärkt als abgeschwächt werden. Ein häufiger Kritikpunkt ist, dass die ständige Hervorhebung des Geschlechts den Fokus auf das unterscheidende Merkmal „Geschlecht“ legt, anstatt es zu relativieren.</p>
+  </li>
+  <li>
+    <p><strong>Pragmatische und ästhetische Bedenken:</strong><br />
+Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer lesbar. Diese ästhetische Kritik kann dazu führen, dass das Gendern als aufdringlich oder übertrieben wahrgenommen wird, was wiederum Widerstände hervorruft und die Akzeptanz in der breiten Bevölkerung mindern kann. Dies könnte dazu führen, dass die eigentliche Intention – nämlich die Förderung von Gleichstellung – in den Hintergrund tritt.</p>
+  </li>
+</ol>
 
-<hr />
+<h3 id="wissenschaftliche-befunde">Wissenschaftliche Befunde</h3>
 
-<h2 id="die-vision-ein-ausbildungszentrum-für-indigene">Die Vision: Ein Ausbildungszentrum für Indigene</h2>
+<ul>
+  <li>
+    <p><strong>Untersuchungen zur Wirkung von Gendern:</strong> Einige Studien haben gezeigt, dass gendergerechte Sprache die Wahrnehmung von Geschlechtergleichheit positiv beeinflusst und dazu beitragen kann, Stereotype abzubauen. Andere Studien legen jedoch nahe, dass die Wirkung des Genderns auf tief verwurzelte Denkmuster und gesellschaftliche Strukturen begrenzt ist und allein durch sprachliche Veränderungen keine umfassende Geschlechtergerechtigkeit erreicht werden kann.</p>
+  </li>
+  <li>
+    <p><strong>Empirische Belege und Meinungen:</strong> Studien von Sozialwissenschaftlern wie Sabine Sczesny und anderen zeigen, dass gendergerechte Sprache dazu beiträgt, das Bewusstsein für Geschlechtergerechtigkeit zu erhöhen. Allerdings gibt es auch Untersuchungen, die nahelegen, ==dass die positiven Effekte gering sind, wenn sie nicht durch andere Maßnahmen zur Förderung der Gleichstellung begleitet werden.==</p>
+  </li>
+</ul>
 
-<p>Das Missionszentrum Alves de Barros (MCTA) ist als Weiterbildungszentrum konzipiert. Das langfristige Ziel ist es, Indigene zu befähigen, selbst als Missionare in ihren eigenen Gemeinschaften zu wirken. Sie sollen lernen, das Evangelium vorzuleben und andere Menschen in ihrem Glauben zu begleiten. Ein zentraler Ansatz ist dabei die <strong>praktische Ausbildung in Bereichen wie Bauwesen, Viehzucht oder Pflanzenanbau</strong>, die den Teilnehmern ermöglicht, Verantwortung für ihr Leben zu übernehmen.</p>
+<h3 id="fazit">Fazit</h3>
 
-<p>Das MCTA ist ein Ort des interkulturellen Austauschs. Indem ich Teil dieses Projekts werde, trage ich zur Entlastung bei und kann gleichzeitig miterleben, wie nachhaltige Missionsarbeit aufgebaut wird.</p>
-
-<hr />
-
-<h2 id="ein-visueller-einblick">Ein visueller Einblick</h2>
-
-<p>Um einen besseren Eindruck von der Station zu bekommen, könnt ihr euch dieses Video ansehen.</p>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe src="https://www.youtube.com/embed/rGSmI5A3ASI" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-  </iframe>
-</div>
-
-<hr />
-
-<p>Ich freue mich schon auf Brasilien und euch davon zu berichten. In den nächsten Beiträgen werde ich aber erstmal noch über meine Vorbereitungen schreiben.</p>
-
-<p>Liebe Grüße,</p>
-
-<p>Mirko</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Überblick In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation Alves de Barros. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.]]></summary></entry></feed>
+<p>Gendergerechte Sprache kann durchaus zu einer neuen Sicht auf Geschlechterrollen beitragen und das Bewusstsein für Geschlechtergerechtigkeit schärfen. Sie macht Unterschiede sichtbar, was sowohl als Stärke (sichtbare Inklusion) als auch als Schwäche (Verstärkung der Unterschiede) interpretiert werden kann. Ob diese sprachlichen Veränderungen tatsächlich zu mehr Gerechtigkeit führen oder ob sie eher den Blick auf Unterschiede lenken und damit das Problem der Geschlechterungleichheit verschärfen, bleibt eine offene und kontroverse Frage. Es scheint, dass Sprache allein nicht ausreicht, um tiefgreifende gesellschaftliche Veränderungen herbeizuführen; sie muss von weiteren strukturellen und kulturellen Maßnahmen begleitet werden.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Test Test]]></summary></entry></feed>
