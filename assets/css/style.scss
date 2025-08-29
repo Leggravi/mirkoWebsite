@@ -242,26 +242,40 @@ h1, h2, h3, h4 {
 }
 
 .sidebar {
-  width: 240px;
-  padding: 2em 1.5em;
+  max-width: 240px;
+  padding: 1.5em;
+  padding-bottom: 10em;
   flex-shrink: 0;
   background: #222222;
   position: fixed;
+  z-index: 3 ;
   left: 0;
   top: 0;
   bottom: 0;
   height: 100vh;
-  overflow-y: auto;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* keine Scrollbar */
 }
 
 .profile-img {
   width: 100%;
-  max-width: 200px;
   border-radius: 10px;
   display: block;
   margin-bottom: 1em;
+  flex-shrink: 1;       /* darf schrumpfen */
+  object-fit: cover;    /* Bild wird beschnitten */
+  max-height: 2000px;    /* max. Höhe wenn Platz */ //oder  max-height: calc(100vh - 320px); /* 320px reserviert für Navigation+Buttons */
+  min-height: 0px;     /* min. Höhe, bevor es „verschwindet“ */
 }
+
+.sidebar h2,
+.sidebar h3,
+.sidebar ul,
+.theme-switcher {
+  flex-shrink: 0; /* diese Teile bleiben */
+}
+
 
 .content {
   flex: 1 1 0;
@@ -700,3 +714,10 @@ body[data-theme="forest"] .forest-rays2 .ray.ray4 {
   50%  { transform: rotate(-8deg); }
   100% { transform: rotate(10deg); }
 }
+
+/* Alle Links, die auf feed.xml zeigen, ausblenden 
+a[href$="feed.xml"], 
+a[href$="feed.xml"] * {
+  display: none !important;
+}
+*/

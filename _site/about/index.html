@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNR3TD2Z94"></script>
 <script>
@@ -101,7 +102,7 @@
       <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
     </div>
   </div>
-  <div class="wrapper">
+  <g class="wrapper">
     <aside class="sidebar">
       <img src="/assets/img/mirko.jpg" alt="Mirko" class="profile-img">
       <h2>Navigation</h2>
@@ -118,6 +119,8 @@
         <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
         <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
       </div>
+      <div style="height:80px;"></div> <!-- Abstandshalter -->
+
     </aside>
 
     <main class="content">
@@ -157,7 +160,7 @@ Statt alles nur über E-Mails zu verschicken, findest du hier alle Beiträge ges
       <h3>Inhalt</h3>
       <ul id="toc-list"></ul>
     </div>
-  </div>
+  </g>
 
   
   <script>
@@ -300,7 +303,7 @@ newNotes.forEach(n => {
   const style = typeStyles[n.type] || typeStyles.info;
   const div = document.createElement("div");
   div.className = "notification-banner";
-  div.innerHTML = `<span>${n.message}</span> <a href="${n.url}">Ansehen</a> <button onclick="this.parentElement.remove()">×</button>`;
+  div.innerHTML = `<span>${n.message}</span> <a href="/${n.url}">Ansehen</a> <button onclick="this.parentElement.remove()">×</button>`;
   div.style = `
     position:fixed;left:50%;transform:translateX(-50%);
     background:${style.color};color:#111;font-weight:bold;
@@ -550,6 +553,12 @@ function handlePollenTheme() {
 }
 
 // Theme-Wechsel erkennen (wie bei Sternenhimmel)
+document.querySelectorAll('a[href$="feed.xml"]').forEach(el => {
+  el.href = "https://forms.gle/kDLjBrFRAX2mfBYA9"; // neuer Link
+  el.textContent = "via E-mail";          // neuer Text
+  el.target = "_blank";                             // optional: in neuem Tab öffnen
+});
+
 </script>
 
 </body>

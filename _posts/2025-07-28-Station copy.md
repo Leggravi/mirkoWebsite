@@ -1,0 +1,64 @@
+---
+layout: post
+title: Über die Station und meine Arbeit dort
+date: 2025-08-28
+---
+
+### Überblick
+In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation **Alves de Barros**. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.
+
+---
+
+## Der Einsatzort: Alves de Barros
+
+Mein Weg führt mich nach Brasilien, wo ich für einige Zeit in der Missionsstation Alves de Barros mitarbeiten werde. Die Station liegt in einer kleinen Ortschaft **nahe der Grenze zu Paraguay und Bolivien**. *Es soll dort einen weiten Ausblick (s. Video unten) geben darauf freue ich mich schon!*
+
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18384384.982312076!2d-66.0815286472667!3d-19.413903287037098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x947953ddd4b16f7d%3A0x5ba757a130f99a40!2sSchule%20Alves%20de%20Barros!5e1!3m2!1sde!2sde!4v1756401393001!5m2!1sde!2sde" style="position:absolute; top:0; left:0; width:100%; height:100%; border:none; border-radius: 8px;"
+          allowfullscreen="" loading="lazy">
+          </iframe>
+</div>
+
+---
+
+## Meine Rolle: Praktische Mitarbeit zur Unterstützung
+
+Mein Einsatz ist als Kurzzeiteinsatz konzipiert, bei dem ich die dort ansässigen Missionare praktisch entlasten werde. Der Fokus liegt auf Tätigkeiten, die den Missionaren mehr Zeit für ihre Kernaufgaben verschaffen. Dabei geht es um Routinearbeiten, die für den Unterhalt der Station unverzichtbar sind. Ich werde unter anderem bei der **Renovierung von Häusern und der landwirtschaftlichen Arbeit** wie dem Melken von Kühen helfen - *Mal schauen wie das klappt. xD*.
+
+Das beiliegende Bild zeigt Indigene, die handwerkliche Fähigkeiten erlernen. Dies ist ein wichtiger Teil der praktischen Ausbildung, die im Zentrum angeboten wird.
+
+<div class="gallery">
+    <img src="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" alt="Indigene lernen Handwerk" style="max-width: 70%; height: auto; display: block; margin: 0 auto; border-radius: 8px;">
+    <figcaption style="text-align: center; font-style: italic; color: #555;">Praktische Ausbildung der Indigenen auf der Station.</figcaption>
+</div>
+
+---
+
+## Die Vision: Ein Ausbildungszentrum für Indigene
+
+Das Missionszentrum Alves de Barros (MCTA) ist als Weiterbildungszentrum konzipiert. Das langfristige Ziel ist es, Indigene zu befähigen, selbst als Missionare in ihren eigenen Gemeinschaften zu wirken. Sie sollen lernen, das Evangelium vorzuleben und andere Menschen in ihrem Glauben zu begleiten. Ein zentraler Ansatz ist dabei die **praktische Ausbildung in Bereichen wie Bauwesen, Viehzucht oder Pflanzenanbau**, die den Teilnehmern ermöglicht, Verantwortung für ihr Leben zu übernehmen.
+
+Das MCTA ist ein Ort des interkulturellen Austauschs. Indem ich Teil dieses Projekts werde, trage ich zur Entlastung bei und kann gleichzeitig miterleben, wie nachhaltige Missionsarbeit aufgebaut wird.
+
+---
+
+## Ein visueller Einblick
+
+Um einen besseren Eindruck von der Station zu bekommen, könnt ihr euch dieses Video ansehen.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe src="https://www.youtube.com/embed/rGSmI5A3ASI"
+          style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"
+          frameborder="0" allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+  </iframe>
+</div>
+
+
+---
+
+Ich freue mich schon auf Brasilien und euch davon zu berichten. In den nächsten Beiträgen werde ich aber erstmal noch über meine Vorbereitungen schreiben.
+
+Liebe Grüße,
+
+Mirko

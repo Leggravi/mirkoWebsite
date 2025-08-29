@@ -6,6 +6,7 @@ permalink: /notes/
 
 <h1>Alle Benachrichtigungen</h1>
 <div id="all-notes"></div>
+
 <script src="{{ '/assets/js/notifications.js' | relative_url }}"></script>
 <script>
 const typeIcons = {
@@ -37,7 +38,7 @@ container.innerHTML = `<ul style="list-style:none;padding:0;">` +
   ">
     <span style="font-size:1.5em;margin-right:1em;">${typeIcons[n.type] || "🔔"}</span>
     <div>
-      <div>${n.message} <a href="${n.url}">Link</a></div>
+      <div>${n.message} <a href="{{ site.baseurl }}/${n.url}">Link</a></div>
       <div style="font-size:0.8em;color:#333;margin-top:0.5em;">ID: ${n.id}</div>
     </div>
   </li>`).join('') +

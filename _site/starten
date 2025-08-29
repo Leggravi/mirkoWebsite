@@ -9,6 +9,7 @@ todo: offline möcglich machen
 - nachrichten und push nachrichten
 - als app installieren -> links relativ machen
 - animations/effekte
+- rss / feeds 
 
 
 "src": "{{ site.baseurl }}/assets/icon-192.png"
