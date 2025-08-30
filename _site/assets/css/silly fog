@@ -5,17 +5,20 @@
 <title>Mirko in Brasilien | Brasilien-Blog. mein Leben und was mir so einfällt</title>
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Mirko in Brasilien" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Brasilien-Blog. mein Leben und was mir so einfällt" />
-<meta property="og:description" content="Brasilien-Blog. mein Leben und was mir so einfällt" />
+<meta name="author" content="Leggravi" />
+<meta property="og:locale" content="de_DE" />
+<meta name="description" content="Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien." />
+<meta property="og:description" content="Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien." />
 <link rel="canonical" href="http://localhost:4000/assets/css/silly%20fog" />
 <meta property="og:url" content="http://localhost:4000/assets/css/silly%20fog" />
 <meta property="og:site_name" content="Mirko in Brasilien" />
+<meta property="og:image" content="http://localhost:4000/assets/img/seo.jpg" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/seo.jpg" />
 <meta property="twitter:title" content="Mirko in Brasilien" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Brasilien-Blog. mein Leben und was mir so einfällt","headline":"Mirko in Brasilien","url":"http://localhost:4000/assets/css/silly%20fog"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Leggravi"},"description":"Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.","headline":"Mirko in Brasilien","image":"http://localhost:4000/assets/img/seo.jpg","url":"http://localhost:4000/assets/css/silly%20fog"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,6 +109,7 @@
   <div class="ray ray4"></div>
 </div>
 
+
   <div class="topbar">
     <div class="topbar-nav">
       <a href="/">🏠</a>
@@ -137,6 +141,7 @@
         <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
       </div>
       <div style="height:80px;"></div> <!-- Abstandshalter -->
+      <p></p>
 
     </aside>
 

@@ -2,22 +2,15 @@ title: Mirko in Brasilien
 theme: minima
 
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap
-#  - jekyll-include-cache
-  - jekyll-paginate
+  - jekyll-sitemap #  - jekyll-include-cache
   - jekyll-archives
 
-paginate:
-  enabled: true
-  per_page: 3
-  permalink: '/blog/page/:num/'
-  title: 'Seite :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
-  
+paginate: 4        # Anzahl Posts pro Seite
+paginate_path: "/blog/page:num"   # Seiten-URL (page2, page3 …)
+
 jekyll-archives:
   enabled:
     - categories
@@ -42,3 +35,7 @@ defaults:
     values:
       layout: "default"
       css: "assets/css/style.scss"
+      image: "/assets/img/seo.jpg"   # Default Bild
+      lang: "de_DE"
+      author: "Leggravi"
+      description: "Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien."

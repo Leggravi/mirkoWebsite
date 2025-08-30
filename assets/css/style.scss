@@ -67,7 +67,7 @@ $light-theme: (
 );
 
 $blue-theme: (
-   bg: linear-gradient(135deg, #a0f7e0 0%, #3ed7c5 100%),
+  bg: linear-gradient(135deg, #a0f7e0 0%, #3ed7c5 100%),
   text: #003c3c,
   link: #008b8b,
   sidebar: #6cd3bc,
@@ -719,5 +719,81 @@ body[data-theme="forest"] .forest-rays2 .ray.ray4 {
 a[href$="feed.xml"], 
 a[href$="feed.xml"] * {
   display: none !important;
+} */
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
-*/
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  @each $theme, $colors in $themes {
+    body[data-theme="#{$theme}"] & {
+      background-color: map-get($colors, sidebar) ;
+      color: map-get($colors, text) ;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    display: block;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin: 0.5rem 1rem;
+    font-size: 1.25rem;
+
+    @each $theme, $colors in $themes {
+      body[data-theme="#{$theme}"] & {
+        color: map-get($colors, link) ;
+      }
+    }
+  }
+
+  small {
+    display: block;
+    margin: 0 1rem;
+    font-size: 0.85rem;
+
+    @each $theme, $colors in $themes {
+      body[data-theme="#{$theme}"] & {
+        color: map-get($colors, text) ;
+      }
+    }
+  }
+
+  p {
+    margin: 0.5rem 1rem 1rem;
+    
+    @each $theme, $colors in $themes {
+      body[data-theme="#{$theme}"] & {
+        color: map-get($colors, text);
+      }
+    }
+  }
+}
+
+.card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   // Maximal 4 Zeilen
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
