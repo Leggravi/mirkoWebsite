@@ -1,5 +1,5 @@
 ---
 permalink: /warten/
-layout: none
+layout: default
 ---
 {% include_relative warten.html %}

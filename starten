@@ -2,6 +2,8 @@ bundle exec jekyll serve
 
 zum starten 
 
+links: 
+https://docs.google.com/forms/d/1sc8u47ACk9E9WW2r1KVbzKx7sPOJflAfwFRz8PIcZ6g/edit
 
 
 todo: offline möcglich machen
@@ -13,6 +15,7 @@ todo: offline möcglich machen
 
 
 "src": "{{ site.baseurl }}/assets/icon-192.png"
+"{{ '/' | relative_url }}"
 !!!
 
 blogs: 
@@ -23,3 +26,7 @@ kannst du es einrichten, dass:
 die website gecached wird, so dass man sie offline verwenden kann (va, wenn man das ganze als app installiert)
 (und der cache muss sich leeren, wenn ich es will (also mal was ändere an der website))
 und wenn die seite dann noch nciht gecached wurde, soll eine lustige fehlermeldung kommen und man die möglichkeit haebn wieder zurück zu kommen
+
+index.html: 
+<!-- {% if post.image and post.image != "assets/img/seo.jpg" %} -->
+ 

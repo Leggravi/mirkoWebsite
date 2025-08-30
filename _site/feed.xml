@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-30T15:49:58+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry xml:lang="de_DE"><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-08-30T21:47:55+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mirko in Brasilien</title><subtitle>Brasilien-Blog. mein Leben und was mir so einfällt</subtitle><entry xml:lang="de_DE"><title type="html">Bald geht es los!!</title><link href="http://localhost:4000/2025/08/30/1.Blog.html" rel="alternate" type="text/html" title="Bald geht es los!!" /><published>2025-08-30T00:00:00+02:00</published><updated>2025-08-30T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/30/1.Blog</id><content type="html" xml:base="http://localhost:4000/2025/08/30/1.Blog.html"><![CDATA[<p>Es sind nur noch gut 30 Tage bis zu meinem großen Abenteuer: Ein Jahr in Brasilien mit der DIPM!<br />
+In diesem Blog erzähle ich euch:</p>
+<ul>
+  <li>wie die letzten Vorbereitungen laufen (Impfungen, Einkäufe, Geschenke …)</li>
+  <li>wie ich eigentlich auf Brasilien und die DIPM gekommen bin (Spoiler: das war ursprünglich gar nicht mein Plan)</li>
+  <li>was beim Vorbereitungsseminar passiert ist</li>
+  <li>und wie ich die Zeit nach dem Abi bisher genutzt habe.</li>
+</ul>
+
+<p><strong>Es geht bald los! ✈️</strong></p>
+
+<h3 class="countdown" id="countdown">Noch XX Tage, XX Stunden...</h3>
+
+<script>
+function updateCountdown() {
+  const departure = new Date("2025-10-02T19:00:00+02:00");
+  const now = new Date();
+  const diff = departure - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").textContent = "Ich bin bereits unterwegs!";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+  document.getElementById("countdown").textContent =
+    `Noch ${days} Tage, ${hours} Stunden und ${minutes} Minuten`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000); // jede Minute aktualisieren
+</script>
+
+<h2 id="letzte-vorbereitungen">Letzte Vorbereitungen</h2>
+<p>Noch 33 Tage bis zum Abflug – und es gibt einiges zu erledigen.</p>
+
+<ul>
+  <li>✅ Flugticket ist gebucht</li>
+  <li>✅ Führungszeugnis erledigt</li>
+  <li>✅ Gelbfieber-Impfung schon hinter mir</li>
+  <li>⏳ Reisepass ist beantragt und muss noch ankommen</li>
+  <li>⏳ Hepatitis A &amp; B Impfung steht noch an (doppelte Dosis, weil ich zu spät dran bin)</li>
+</ul>
+
+<p>Meine Hausärztin meinte zwar, es könnte Nebenwirkungen geben (Gelbfieber ist ein Lebendimpfstoff), aber überraschenderweise habe ich diesmal gar nichts gespürt. Bei meinen letzten Impfungen lag ich sonst 2–3 Tage flach. Hoffentlich bleibt es auch bei Hepatitis so – da bekomme ich gleich die doppelte Dosis, weil ich nicht früh genug angefangen habe.</p>
+
+<p>Neben den medizinischen Dingen gibt’s auch viele persönliche Vorbereitungen:</p>
+<ul>
+  <li>Weihnachts- und Geburtstagsgeschenke besorgen (bevor ich weg bin)</li>
+  <li>Bestellungen für Brasilien: Trockenbox, leichte und langärmlige Kleidung gegen Insekten</li>
+  <li>Noch zwei Events genießen: <strong>Ki6</strong> (WDL am Starnberger See) und das <strong>Jugendwochenende</strong> (Haus Friede in Franken)</li>
+</ul>
+
+<p>Langsam wird es real – in gut einem Monat sitze ich schon im Flieger!</p>
+
+<h2 id="wie-bin-ich-auf-brasilien-und-die-dipm-gekommen">Wie bin ich auf Brasilien und die DIPM gekommen?</h2>
+<div class="gallery">
+    <img src="/assets/img/AbiEinzug.jpg" alt="AbiEinzug" style="max-width: 70%; max-height: 500px; display: block; margin: 0 auto; border-radius: 8px;" />
+    <figcaption style="text-align: center; font-style: italic; color: #555;">Ich beim Abieinzug</figcaption>
+</div>
+
+<p>Nach meinem Abi war klar: Erstmal <strong>kein Studium</strong>. Schon in der 11. Klasse hatte ich entschieden: Ich will ein <strong>FSJ</strong> machen, am liebsten in <strong>Afrika</strong> – und es sollte <strong>praktisch</strong> sein.</p>
+
+<p>Also habe ich mich durch unzählige Organisationen geklickt, u. a.:</p>
+<ul>
+  <li><a href="https://www.christlichedienste.de/">Christliche Dienste</a>, <a href="https://coworkers.de/freiwillige/">Coworkers</a>, <a href="https://ethnos360.org/go/">Ethnos360</a>, <a href="https://www.wiedenest.de/beyond">Wiedenest Beyond</a>, <a href="https://www.liebenzell.org/mitmachen/mitarbeiten/kurzeinsatz-impact/">Liebenzell Impact</a>, <a href="https://www.wec-international.de/">WEC International</a></li>
+  <li>OM und einige weitere</li>
+</ul>
+
+<p>Bei der <strong>DMG</strong> war ich sogar beim Bewerbertag in Sinsheim. Dort gab es spannende Angebote wie:</p>
+<ul>
+  <li>Medienprojekt in Kenia (mit Kamera durch Afrika – mein Favorit!)</li>
+  <li>Praktisch &amp; Jugendarbeit in Tansania</li>
+  <li>Sport &amp; Bildung in Ghana</li>
+</ul>
+
+<p>Leider hat es nicht geklappt: kurz vor meinem Abi wurde abgesagt, die Stellen konnten nicht besetzt werden.</p>
+
+<p>Und dann kam die Rettung: <strong>meine Schwester</strong>. Sie selbst war bereits über die DIPM in Brasilien (allerdings an einer anderen Station) und konnte es mir deshalb empfehlen. Durch ihre Erfahrungen wusste ich sofort: Das passt!</p>
+
+<p>Nach einem erstaunlich unkomplizierten Bewerbungsgespräch und ein bisschen Papierkram hatte ich meinen Platz – zunächst in <strong>Costa Rica</strong>.</p>
+
+<p>Doch kurz nach dem Vorbereitungsseminar kam die Mail: <strong>Es geht für mich nach Brasilien</strong> statt Costa Rica.<br />
+Erst war das überraschend, aber inzwischen sehe ich es so: Hauptsache, ich darf Gott dienen. Ob Meer oder kein Meer, Costa Rica oder Brasilien – die Hauptsache ist, dass Gott mich dort gebrauchen kann.</p>
+
+<h2 id="vorbereitungsseminar">Vorbereitungsseminar</h2>
+<p>Das Vorbereitungsseminar ging fünf Tage (inklusive Fahrten) und war eine gute Mischung aus Infos, Gemeinschaft und Spaß. Inhalte waren u. a.:</p>
+
+<ul>
+  <li>Einführung in die DIPM und ihre Arbeit</li>
+  <li>kulturelle Unterschiede und Herausforderungen</li>
+  <li>Blogschreiben</li>
+  <li>Packliste und Tipps zur Vorbereitung</li>
+  <li>Austausch mit ehemaligen Kurzzeitlern</li>
+  <li>Spiele, Gemeinschaft und leckeres Essen</li>
+</ul>
+
+<p>Besonders schön fand ich, dass <strong>jeder Morgen mit einer längeren Andacht begann</strong> – das hat mir richtig gutgetan und das will ich mir in Brasilien unbedingt beibehalten.</p>
+
+<p>Natürlich hätte man manche Inhalte auch kürzer machen oder freiwillig gestalten können, aber insgesamt war es ein wirklich sinnvolles Seminar. Ich habe viel mitgenommen und fühle mich jetzt viel besser vorbereitet.</p>
+
+<div class="gallery">
+    <img src="/assets/img/Vorbereitungsseminar.jpeg" alt="bei der DIPM" style="max-width: 70%; max-height: 500px; display: block; margin: 0 auto; border-radius: 8px;" />
+    <figcaption style="text-align: center; font-style: italic; color: #555;">Ich, die anderen Kurzzeitler und Luc und Heidi</figcaption>
+</div>
+
+<h2 id="zeit-nach-dem-abi">Zeit nach dem Abi</h2>
+<p>Momentan genieße ich die Zeit nach der Schule:</p>
+
+<ul>
+  <li>Freunde und Verwandte besuchen</li>
+  <li>viel entspannen</li>
+  <li>Vorbereitungen für Brasilien treffen</li>
+</ul>
+
+<p>Manches an der Schule werde ich sogar vermissen – die Regelmäßigkeit, das frühe Aufstehen, die Freunde, die man täglich gesehen hat, oder auch das „sinnlose Zeug“, das man manchmal lernen musste.<br />
+Aber insgesamt bin ich froh über diesen neuen Lebensabschnitt und gespannt, was kommt.</p>
+
+<hr />
+
+<p>Das war’s mit meinem ersten Rundbrief!<br />
+Für weitere Informationen rund um die DIPM und meinen Einsatz kannst du gerne die Website durchsuchen.</p>
+
+<p>Viele Grüße<br />
+<strong>Mirko</strong></p>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[- wie die letzten Vorbereitungen laufen (Impfungen, Einkäufe, Geschenke …) - wie ich eigentlich auf Brasilien und die DIPM gekommen bin (Spoiler: das war ursprünglich gar nicht mein Plan) - was beim Vorbereitungsseminar passiert ist - und wie ich die Zeit nach dem Abi bisher genutzt habe.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/Vorbereitungsseminar.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/Vorbereitungsseminar.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="de_DE"><title type="html">Über die Station und meine Arbeit dort</title><link href="http://localhost:4000/2025/08/28/Station.html" rel="alternate" type="text/html" title="Über die Station und meine Arbeit dort" /><published>2025-08-28T00:00:00+02:00</published><updated>2025-08-28T00:00:00+02:00</updated><id>http://localhost:4000/2025/08/28/Station</id><content type="html" xml:base="http://localhost:4000/2025/08/28/Station.html"><![CDATA[<p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
 
 <hr />
 
@@ -49,77 +176,4 @@
 
 <p>Liebe Grüße,</p>
 
-<p>Mirko</p>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" /><media:content medium="image" url="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="de_DE"><title type="html">Meine ersten Tage in Brasilien</title><link href="http://localhost:4000/2025/07/02/titel.html" rel="alternate" type="text/html" title="Meine ersten Tage in Brasilien" /><published>2025-07-02T00:00:00+02:00</published><updated>2025-07-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/07/02/titel</id><content type="html" xml:base="http://localhost:4000/2025/07/02/titel.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
-
-<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
-<ul>
-  <li><strong>Fett</strong></li>
-  <li><em>Kursiv</em></li>
-  <li><a href="https://example.com">Links</a></li>
-  <li>Bilder:<br />
-<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
-</ul>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/seo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/seo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="de_DE"><title type="html">pommes</title><link href="http://localhost:4000/2025/04/02/hallo-copy.html" rel="alternate" type="text/html" title="pommes" /><published>2025-04-02T00:00:00+02:00</published><updated>2025-04-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/04/02/hallo%20copy</id><content type="html" xml:base="http://localhost:4000/2025/04/02/hallo-copy.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
-
-<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
-<ul>
-  <li><strong>Fett</strong></li>
-  <li><em>Kursiv</em></li>
-  <li><a href="https://example.com">Links</a></li>
-  <li>Bilder:<br />
-<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
-</ul>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/seo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/seo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="de_DE"><title type="html">Meine ersten Tage in Brasilien</title><link href="http://localhost:4000/2025/04/02/hallo.html" rel="alternate" type="text/html" title="Meine ersten Tage in Brasilien" /><published>2025-04-02T00:00:00+02:00</published><updated>2025-04-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/04/02/hallo</id><content type="html" xml:base="http://localhost:4000/2025/04/02/hallo.html"><![CDATA[<p>Hier kommt dann dein Text.</p>
-
-<p>Du kannst <strong>Markdown</strong> nutzen, z. B.:</p>
-<ul>
-  <li><strong>Fett</strong></li>
-  <li><em>Kursiv</em></li>
-  <li><a href="https://example.com">Links</a></li>
-  <li>Bilder:<br />
-<code class="language-plaintext highlighter-rouge">![Bildbeschreibung](pfad/zum/bild.jpg)</code></li>
-</ul>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/seo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/seo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="de_DE"><title type="html">Test</title><link href="http://localhost:4000/1025/07/02/halloew.html" rel="alternate" type="text/html" title="Test" /><published>1025-07-02T00:00:56+00:53</published><updated>1025-07-02T00:00:56+00:53</updated><id>http://localhost:4000/1025/07/02/halloew</id><content type="html" xml:base="http://localhost:4000/1025/07/02/halloew.html"><![CDATA[<h2 id="test">Test</h2>
-<h1 id="test-1">Test</h1>
-
-<h2 id="gegenderte-sprache-trägt-nicht-zu-mehr-gleichberechtigung-bei">gegenderte Sprache trägt nicht zu mehr Gleichberechtigung bei!</h2>
-
-<p>Die Frage, ob gendergerechte Sprache zu mehr Geschlechtergerechtigkeit führt oder ob sie eher die Unterschiede zwischen den Geschlechtern betont, ist ein zentrales Thema in der Debatte um das Gendern. Dazu gibt es unterschiedliche Positionen und Studien, die teils widersprüchliche Ergebnisse liefern.</p>
-
-<h3 id="mögliche-positive-effekte-des-genderns">Mögliche positive Effekte des Genderns</h3>
-
-<ol>
-  <li>
-    <p><strong>Sichtbarmachung und Inklusion:</strong><br />
-Gendergerechte Sprache hat das Ziel, alle Geschlechter sichtbar zu machen, insbesondere Frauen und nicht-binäre Personen, die in vielen traditionellen Sprachformen oft unsichtbar bleiben. Studien zeigen, dass die Verwendung von geschlechtergerechter Sprache dazu beitragen kann, stereotype Vorstellungen zu reduzieren und das Bewusstsein für die Gleichstellung der Geschlechter zu schärfen. Wenn z. B. Frauen sprachlich sichtbarer werden, kann dies auch ihre Präsenz in sozialen, politischen und beruflichen Kontexten fördern.</p>
-  </li>
-  <li>
-    <p><strong>Förderung von Geschlechtergerechtigkeit:</strong><br />
-Es gibt Hinweise darauf, dass gendergerechte Sprache das Bewusstsein für Ungleichheiten stärkt und dadurch einen Beitrag zu ihrer Reduktion leisten kann. Wenn z. B. Berufsbezeichnungen sowohl in der männlichen als auch in der weiblichen Form verwendet werden (z. B. „Ärztinnen und Ärzte“), kann dies dazu führen, dass Menschen weniger geneigt sind, bestimmte Berufe als „männlich“ oder „weiblich“ zu klassifizieren. Dadurch können auch die Vorstellungen davon, was für wen „geeignet“ ist, aufgebrochen werden.</p>
-  </li>
-</ol>
-
-<h2 id="kritik-am-gendern">Kritik am Gendern</h2>
-
-<ol>
-  <li>
-    <p><strong>Verstärkung der Unterschiede:</strong><br />
-Kritiker des Genderns argumentieren, dass die explizite Nennung verschiedener Geschlechter in der Sprache die Unterschiede zwischen den Geschlechtern stärker betont, anstatt sie zu überwinden. Dadurch könnten alte Stereotype und geschlechtsspezifische Rollenbilder eher verstärkt als abgeschwächt werden. Ein häufiger Kritikpunkt ist, dass die ständige Hervorhebung des Geschlechts den Fokus auf das unterscheidende Merkmal „Geschlecht“ legt, anstatt es zu relativieren.</p>
-  </li>
-  <li>
-    <p><strong>Pragmatische und ästhetische Bedenken:</strong><br />
-Einige Menschen empfinden gendergerechte Sprache als umständlich oder schwer lesbar. Diese ästhetische Kritik kann dazu führen, dass das Gendern als aufdringlich oder übertrieben wahrgenommen wird, was wiederum Widerstände hervorruft und die Akzeptanz in der breiten Bevölkerung mindern kann. Dies könnte dazu führen, dass die eigentliche Intention – nämlich die Förderung von Gleichstellung – in den Hintergrund tritt.</p>
-  </li>
-</ol>
-
-<h3 id="wissenschaftliche-befunde">Wissenschaftliche Befunde</h3>
-
-<ul>
-  <li>
-    <p><strong>Untersuchungen zur Wirkung von Gendern:</strong> Einige Studien haben gezeigt, dass gendergerechte Sprache die Wahrnehmung von Geschlechtergleichheit positiv beeinflusst und dazu beitragen kann, Stereotype abzubauen. Andere Studien legen jedoch nahe, dass die Wirkung des Genderns auf tief verwurzelte Denkmuster und gesellschaftliche Strukturen begrenzt ist und allein durch sprachliche Veränderungen keine umfassende Geschlechtergerechtigkeit erreicht werden kann.</p>
-  </li>
-  <li>
-    <p><strong>Empirische Belege und Meinungen:</strong> Studien von Sozialwissenschaftlern wie Sabine Sczesny und anderen zeigen, dass gendergerechte Sprache dazu beiträgt, das Bewusstsein für Geschlechtergerechtigkeit zu erhöhen. Allerdings gibt es auch Untersuchungen, die nahelegen, ==dass die positiven Effekte gering sind, wenn sie nicht durch andere Maßnahmen zur Förderung der Gleichstellung begleitet werden.==</p>
-  </li>
-</ul>
-
-<h3 id="fazit">Fazit</h3>
-
-<p>Gendergerechte Sprache kann durchaus zu einer neuen Sicht auf Geschlechterrollen beitragen und das Bewusstsein für Geschlechtergerechtigkeit schärfen. Sie macht Unterschiede sichtbar, was sowohl als Stärke (sichtbare Inklusion) als auch als Schwäche (Verstärkung der Unterschiede) interpretiert werden kann. Ob diese sprachlichen Veränderungen tatsächlich zu mehr Gerechtigkeit führen oder ob sie eher den Blick auf Unterschiede lenken und damit das Problem der Geschlechterungleichheit verschärfen, bleibt eine offene und kontroverse Frage. Es scheint, dass Sprache allein nicht ausreicht, um tiefgreifende gesellschaftliche Veränderungen herbeizuführen; sie muss von weiteren strukturellen und kulturellen Maßnahmen begleitet werden.</p>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/seo.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/seo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Mirko</p>]]></content><author><name>Leggravi</name></author><summary type="html"><![CDATA[Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" /><media:content medium="image" url="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

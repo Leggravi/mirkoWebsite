@@ -4,6 +4,12 @@ window.NOTIFICATIONS = [
     message: "Willkommen auf meiner Website!",
     url: "",
     type: "success"
+  },
+  {
+    id: "2025-08-15-1.Blog",
+    message: "Mein erster Blogeintrag ist online! Schau ihn dir an.",
+    url: "2025/08/30/1.Blog.html",
+    type: "info"
   }
   // Weitere Benachrichtigungen einfach ergänzen
   //types : info, success, warning, error
