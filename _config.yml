@@ -31,7 +31,7 @@ defaults:
     values:
       layout: "default"
       css: "assets/css/style.scss"
-      image: "{{ 'assets/img/seo.jpg' | relative_url }}"  # Default Bild
+      image: "assets/img/seo.jpg"   # Default Bild
       lang: "de_DE"
       author: "Leggravi"
       description: "Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien."
