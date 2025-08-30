@@ -149,9 +149,53 @@
     <main class="content">
       <h1>Blog</h1>
 
-<div class="card-grid">
+<div id="blog-list" class="card-grid">
   
-    <div class="card">
+    <div class="card blog-item" style="display:none;">
+      
+        <img src="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" alt="Über die Station und meine Arbeit dort">
+      
+      <h2><a href="/2025/08/28/Station.html">Über die Station und meine Arbeit dort</a></h2>
+      <small>28.08.2025</small>
+      <p><p>In diesem ersten Beitrag möchte ich euch einen kurzen Einblick in mein bevorstehendes Abenteuer geben. Ich befinde mich derzeit in der Vorbereitung für einen Kurzzeiteinsatz in Brasilien, genauer gesagt in der Missionsstation <strong>Alves de Barros</strong>. Hier erfahrt ihr, wo die Station liegt, welche Aufgaben mich dort erwarten und wie die Missionare die frohe Botschaft von Jesus weitergeben.</p>
+
+</p>
+    </div>
+  
+    <div class="card blog-item" style="display:none;">
+      
+        <img src="/assets/img/seo.jpg" alt="Meine ersten Tage in Brasilien">
+      
+      <h2><a href="/2025/07/02/titel.html">Meine ersten Tage in Brasilien</a></h2>
+      <small>02.07.2025</small>
+      <p><p>Hier kommt dann dein Text.</p>
+
+</p>
+    </div>
+  
+    <div class="card blog-item" style="display:none;">
+      
+        <img src="/assets/img/seo.jpg" alt="Meine ersten Tage in Brasilien">
+      
+      <h2><a href="/2025/04/02/hallo.html">Meine ersten Tage in Brasilien</a></h2>
+      <small>02.04.2025</small>
+      <p><p>Hier kommt dann dein Text.</p>
+
+</p>
+    </div>
+  
+    <div class="card blog-item" style="display:none;">
+      
+        <img src="/assets/img/seo.jpg" alt="pommes">
+      
+      <h2><a href="/2025/04/02/hallo-copy.html">pommes</a></h2>
+      <small>02.04.2025</small>
+      <p><p>Hier kommt dann dein Text.</p>
+
+</p>
+    </div>
+  
+    <div class="card blog-item" style="display:none;">
       
         <img src="/assets/img/seo.jpg" alt="Test">
       
@@ -166,14 +210,58 @@
 </div>
 
 <div class="pagination">
-  
-    <a href="/blog/">&laquo; Neuere Beiträge</a>
-  
-
-  <span>Seite 2 von 2</span>
-
-  
+  <button id="prevBtn" disabled>&laquo; Zurück</button>
+  <span id="pageInfo"></span>
+  <button id="nextBtn">Weiter &raquo;</button>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const posts = document.querySelectorAll(".blog-item");
+    const perPage = 4; // Anzahl Posts pro Seite
+    let currentPage = 1;
+    const totalPages = Math.ceil(posts.length / perPage);
+
+    function showPage(page) {
+      // Alle verstecken
+      posts.forEach(p => p.style.display = "none");
+
+      // Start- und Endindex berechnen
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+
+      // Sichtbar machen
+      for (let i = start; i < end && i < posts.length; i++) {
+        posts[i].style.display = "block";
+      }
+
+      // Page Info aktualisieren
+      document.getElementById("pageInfo").innerText = "Seite " + page + " von " + totalPages;
+
+      // Buttons aktivieren/deaktivieren
+      document.getElementById("prevBtn").disabled = (page === 1);
+      document.getElementById("nextBtn").disabled = (page === totalPages);
+    }
+
+    // Buttons Events
+    document.getElementById("prevBtn").addEventListener("click", function() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // Erste Seite laden
+    showPage(currentPage);
+  });
+</script>
 
     </main>
     <div class="toc">

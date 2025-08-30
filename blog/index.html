@@ -2,11 +2,12 @@
 layout: default
 title: Blog
 ---
+
 <h1>Blog</h1>
 
-<div class="card-grid">
-  {% for post in paginator.posts %}
-    <div class="card">
+<div id="blog-list" class="card-grid">
+  {% for post in site.posts %}
+    <div class="card blog-item" style="display:none;">
       {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}">
       {% endif %}
@@ -18,13 +19,55 @@ title: Blog
 </div>
 
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">&laquo; Neuere Beiträge</a>
-  {% endif %}
-
-  <span>Seite {{ paginator.page }} von {{ paginator.total_pages }}</span>
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Ältere Beiträge &raquo;</a>
-  {% endif %}
+  <button id="prevBtn" disabled>&laquo; Zurück</button>
+  <span id="pageInfo"></span>
+  <button id="nextBtn">Weiter &raquo;</button>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const posts = document.querySelectorAll(".blog-item");
+    const perPage = 4; // Anzahl Posts pro Seite
+    let currentPage = 1;
+    const totalPages = Math.ceil(posts.length / perPage);
+
+    function showPage(page) {
+      // Alle verstecken
+      posts.forEach(p => p.style.display = "none");
+
+      // Start- und Endindex berechnen
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+
+      // Sichtbar machen
+      for (let i = start; i < end && i < posts.length; i++) {
+        posts[i].style.display = "block";
+      }
+
+      // Page Info aktualisieren
+      document.getElementById("pageInfo").innerText = "Seite " + page + " von " + totalPages;
+
+      // Buttons aktivieren/deaktivieren
+      document.getElementById("prevBtn").disabled = (page === 1);
+      document.getElementById("nextBtn").disabled = (page === totalPages);
+    }
+
+    // Buttons Events
+    document.getElementById("prevBtn").addEventListener("click", function() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // Erste Seite laden
+    showPage(currentPage);
+  });
+</script>

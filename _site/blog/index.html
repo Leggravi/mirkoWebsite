@@ -149,9 +149,9 @@
     <main class="content">
       <h1>Blog</h1>
 
-<div class="card-grid">
+<div id="blog-list" class="card-grid">
   
-    <div class="card">
+    <div class="card blog-item" style="display:none;">
       
         <img src="https://dipm.de/wp-content/uploads/2025/01/Alves-4-2048x1536.jpg" alt="Über die Station und meine Arbeit dort">
       
@@ -162,7 +162,7 @@
 </p>
     </div>
   
-    <div class="card">
+    <div class="card blog-item" style="display:none;">
       
         <img src="/assets/img/seo.jpg" alt="Meine ersten Tage in Brasilien">
       
@@ -173,7 +173,7 @@
 </p>
     </div>
   
-    <div class="card">
+    <div class="card blog-item" style="display:none;">
       
         <img src="/assets/img/seo.jpg" alt="Meine ersten Tage in Brasilien">
       
@@ -184,7 +184,7 @@
 </p>
     </div>
   
-    <div class="card">
+    <div class="card blog-item" style="display:none;">
       
         <img src="/assets/img/seo.jpg" alt="pommes">
       
@@ -195,17 +195,73 @@
 </p>
     </div>
   
+    <div class="card blog-item" style="display:none;">
+      
+        <img src="/assets/img/seo.jpg" alt="Test">
+      
+      <h2><a href="/1025/07/02/halloew.html">Test</a></h2>
+      <small>02.07.1025</small>
+      <p><h2 id="test">Test</h2>
+<h1 id="test-1">Test</h1>
+
+</p>
+    </div>
+  
 </div>
 
 <div class="pagination">
-  
-
-  <span>Seite 1 von 2</span>
-
-  
-    <a href="/blog/page2">Ältere Beiträge &raquo;</a>
-  
+  <button id="prevBtn" disabled>&laquo; Zurück</button>
+  <span id="pageInfo"></span>
+  <button id="nextBtn">Weiter &raquo;</button>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const posts = document.querySelectorAll(".blog-item");
+    const perPage = 4; // Anzahl Posts pro Seite
+    let currentPage = 1;
+    const totalPages = Math.ceil(posts.length / perPage);
+
+    function showPage(page) {
+      // Alle verstecken
+      posts.forEach(p => p.style.display = "none");
+
+      // Start- und Endindex berechnen
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+
+      // Sichtbar machen
+      for (let i = start; i < end && i < posts.length; i++) {
+        posts[i].style.display = "block";
+      }
+
+      // Page Info aktualisieren
+      document.getElementById("pageInfo").innerText = "Seite " + page + " von " + totalPages;
+
+      // Buttons aktivieren/deaktivieren
+      document.getElementById("prevBtn").disabled = (page === 1);
+      document.getElementById("nextBtn").disabled = (page === totalPages);
+    }
+
+    // Buttons Events
+    document.getElementById("prevBtn").addEventListener("click", function() {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", function() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // Erste Seite laden
+    showPage(currentPage);
+  });
+</script>
 
     </main>
     <div class="toc">
