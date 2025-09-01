@@ -186,6 +186,8 @@
   },
   "active": "ebaf4a898d1f4a8e",
   "lastOpenFiles": [
+    "_layouts/email.html",
+    "_layouts/email",
     "_site/raw/index.html",
     "raw/index.html",
     "_site/assets/img/Vorbereitungsseminar.jpeg",
@@ -210,8 +212,6 @@
     "_site/assets/css/silly fog",
     "_layouts/silly fog",
     "_layouts/default (copy).html",
-    "assets/css/silly fog",
-    "assets/css/style (copy).scss",
     "_posts/2025-08-02-hallo.md",
     "_posts/2025-07-28 Statio.md",
     "_posts/2025-04-02-hallo copy.md",
