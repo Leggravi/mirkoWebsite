@@ -35,7 +35,7 @@ Vielen Dank an alle, die mich dabei finanziell und im Gebet begleiten! ❤️
     
     <!-- Logo -->
     <div style="flex:0 0 auto;">
-      <img src="{{ '/assets/img/dipm-logo.png' | relative_url }}" alt="DIPM Logo" style="height:60px;">
+      <img src="{{ '/assets/img/dipm-logo.png' | relative_url }}" alt="DIPM Logo" style="height:60px; width:60px;">
     </div>
     
     <!-- Kontaktinfos -->
@@ -48,11 +48,11 @@ Vielen Dank an alle, die mich dabei finanziell und im Gebet begleiten! ❤️
 
     <!-- Bankdaten -->
     <div style="flex:1 1 200px; min-width:220px;">
-      <b>Spendenkonto</b><br>
+      <b>Spendenkonto der DIPM</b><br>
       Volksbank Ermstal-Alb eG<br>
       BIC: GENODES1MTZ<br>
       IBAN: <span id="iban">DE22 6409 1200 0049 5850 02</span><br>
-      Vermerk: <b>Mirko Hahn</b><br>
+      Verwendungszweck: <b>Mirko Hahn</b> (+ Adresse des Spenders für Spendenbescheid)<br>
     </div>
   </div>
 

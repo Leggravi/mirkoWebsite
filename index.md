@@ -19,3 +19,5 @@ Auf meinem Blog teile ich meine Erlebnisse, Eindrücke und Gebetsanliegen. Schau
 - 👉 [Für Updates anmelden](about/#anmelden)
   
 - 👉 [Spenden](spenden/)
+
+
