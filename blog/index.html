@@ -72,11 +72,71 @@ title: Blog
   });
 </script>
 
+
 <hr>
-<h2>Tagesvers</h2>
-<script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
-<script src="https://www.biblegateway.com/votd/get/?format=json&version=HOF&callback=BG.votdWriteCallback"></script>
-<!-- alternative for no javascript -->
-<noscript>
-<iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=HOF">View Verse of the Day</iframe>
-</noscript>
+<div id="tagesvers-wrapper">
+  <h2 id="tagesvers-title" style="display:none;">Tagesvers</h2>
+  <div id="tagesvers-content" aria-live="polite"></div>
+</div>
+
+<script>
+  // Callback für JSONP
+  function showVerse(data) {
+    const title = document.getElementById('tagesvers-title');
+    const container = document.getElementById('tagesvers-content');
+
+    // Debug: einmalig aktivieren, um zu sehen, wie die API wirklich antwortet:
+    // console.log('VOTD data:', data);
+
+    if (!data) {
+      title.style.display = 'none';
+      container.innerHTML = '';
+      return;
+    }
+
+    // Mögliche Orte für Text und Referenz (fällt auf mehrere Varianten zurück)
+    let text = '';
+    let ref  = '';
+
+    if (data.votd) {
+      text = data.votd.text || data.votd.html || data.votd.content || data.votd.quote || '';
+      ref  = data.votd.scripture || data.votd.reference || data.votd.verse || data.votd.citation || '';
+    }
+
+    text = text || data.text || data.html || data.content || '';
+    ref  = ref  || data.reference || data.verse || '';
+
+    // Falls text als Objekt kommt (selten), extrahiere html/value
+    if (typeof text === 'object' && text !== null) {
+      text = text.html || text.value || JSON.stringify(text);
+    }
+
+    // Clean / show
+    if (text && String(text).trim()) {
+      // Wenn es schon HTML ist, übernehmen; sonst Zeilenumbrüche konvertieren
+      const isHtml = /<[^>]+>/.test(text);
+      container.innerHTML = isHtml ? text : '<p>' + String(text).replace(/\n/g, '<br>') + '</p>';
+
+      // Referenz anfügen, falls vorhanden und nicht bereits im Text
+      if (ref && !container.textContent.includes(ref)) {
+        const refEl = document.createElement('div');
+        refEl.className = 'votd-ref';
+        refEl.textContent = ref;
+        refEl.style.fontStyle = 'italic';
+        refEl.style.marginTop = '0.25rem';
+        container.appendChild(refEl);
+      }
+
+      title.style.display = 'block';
+    } else {
+      // Kein Inhalt — nichts anzeigen
+      title.style.display = 'none';
+      container.innerHTML = '';
+    }
+  }
+
+  // JSONP-Script nachladen (setzt callback=showVerse)
+  const s = document.createElement('script');
+  s.src = 'https://www.biblegateway.com/votd/get/?format=json&version=HOF&callback=showVerse';
+  document.body.appendChild(s);
+</script>
