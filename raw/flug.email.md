@@ -1,6 +1,6 @@
 ---
 title: Endlich angekommen! Und ich fliag wie an Fliaga
-layout: post
+layout: email
 date: 2025-10-04
 image: https://leggravi.github.io/mirkoWebsite/assets/img/flugfenster.jpg
 categories:

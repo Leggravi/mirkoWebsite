@@ -197,11 +197,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "0a3ea29d458d1af3",
+  "active": "b9bd0236163c9d61",
   "lastOpenFiles": [
+    "𝙈𝙚𝙞𝙣 2. 𝙍𝙪𝙣𝙙𝙗𝙧𝙞𝙚𝙛!.html",
+    "_site/raw/flug.email.html",
+    "raw/flug.email.md",
+    "mail/flug.email.md",
+    "mail/2025-10-04-Der Flug.md",
+    "mail",
     "raw/2025-10-04-Der Flug.md",
-    "_posts/2025-08-30-1.Blog.md",
+    "_posts/2025-07-28-Station.md",
     "_posts/2025-10-04-Der Flug.md",
+    "_posts/2025-08-30-1.Blog.md",
     "_site/assets/img/flugfenster.jpg",
     "assets/img/flugfenster.jpg",
     "_site/assets/img/ANMP1682.jpg",
@@ -219,15 +226,12 @@
     "_site/assets/img/spitze.jpg",
     "_site/assets/img/flagge.png",
     "_site/raw/2025-10-04-Der Flug.html",
-    "_site/image1.html",
-    "_posts/2025-07-28-Station.md",
     "assets/img/zähneputzen.png",
     "assets/img/spitze.jpg",
     "assets/img/flagge.png",
     "raw/2025-10-04-Die Reise.md",
     "Untitled.md",
     "image1.md",
-    "_layouts/email.html",
     "2025-08-30.md",
     "_site/2025-08-30.md",
     "_site/Untitled.md",
@@ -240,9 +244,6 @@
     "Spenden.md",
     "index.md",
     "warten.md",
-    "_site/Spenden.md",
-    "blog.md",
-    "about.md",
-    "about 2.md"
+    "_site/Spenden.md"
   ]
 }
