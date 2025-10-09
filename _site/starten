@@ -1,8 +1,8 @@
 bundle exec jekyll serve
 
-zum starten 
+zum starten
 
-links: 
+links:
 https://docs.google.com/spreadsheets/d/12LXgHigCvg4TbeGBe5qLixuhX6Ot3mll17jzj9-l_YM/edit?resourcekey&usp=forms_web_b&urp=linked#gid=1473679320
 https://docs.google.com/forms/d/1sc8u47ACk9E9WW2r1KVbzKx7sPOJflAfwFRz8PIcZ6g/edit
 https://analytics.google.com/analytics/web/#/a366603086p502873114/reports/reportinghub?params=_u..nav%3Dmaui%26_u.dateOption%3DthisWeekSunToToday%26_u.comparisonOption%3Ddisabled
@@ -11,29 +11,27 @@ https://dipm-staff.mytntware.com/default.aspx
 
 todo: offline möcglich machen
 -> service worker usw richtig einrichten
+
 - nachrichten und push nachrichten
 - als app installieren -> links relativ machen
 - animations/effekte
-- rss / feeds 
-
+- rss / feeds
 
 "src": "{{ site.baseurl }}/assets/icon-192.png"
 "{{ '/' | relative_url }}"
 !!!
 
-blogs: 
+blogs:
 excerpt: "Das ist mein Vorschau-Text, unabhängig vom Inhalt." (oben rein)
-
 
 kannst du es einrichten, dass:
 die website gecached wird, so dass man sie offline verwenden kann (va, wenn man das ganze als app installiert)
 (und der cache muss sich leeren, wenn ich es will (also mal was ändere an der website))
 und wenn die seite dann noch nciht gecached wurde, soll eine lustige fehlermeldung kommen und man die möglichkeit haebn wieder zurück zu kommen
 
-index.html: 
+index.html:
+
 <!-- {% if post.image and post.image != "assets/img/seo.jpg" %} -->
 
 gem install premailer
-premailer ./_site/2025/08/30/1.Blog.html --mode html > ../email-ready.html
-
- 
+premailer ./\_site/2025/08/30/1.Blog.html --mode html > ../email-ready.html

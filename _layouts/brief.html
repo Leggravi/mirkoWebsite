@@ -1,0 +1,158 @@
+<!-- _layouts/letter.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} – Brief</title>
+
+  <style>
+    /* Druck-Setup */
+    @page { size: A4; margin: 15mm; }
+    html,body { height:100%; margin:0; background:#f0f0f0; font-family: Georgia, "Times New Roman", serif; -webkit-print-color-adjust: exact; }
+
+    /* Blatt / Container (A4 minus Ränder) */
+    .letter-sheet {
+      width: calc(210mm - 30mm);       /* A4 width minus page margins */
+      max-width: 800px;                /* Bildschirm-Fallback */
+      margin: 20px auto;
+      background: #fff;                /* unbedingt weiß für Druck/Word */
+      padding: 18mm;
+      box-sizing: border-box;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      color: #222;
+    }
+
+    /* Adressen / Kopf */
+    .sender { float:left; width:55%; font-size:12pt; line-height:1.25; }
+    .date { float:right; text-align:right; font-size:12pt; line-height:1.25; }
+    .recipient { clear:both; margin-top:18mm; margin-bottom:10mm; font-size:12pt; }
+
+    h1 { margin: 0 0 6pt 0; font-size:18pt; color:#1fa2ff; font-weight:600; }
+    .kopie-note { font-size:10pt; color:#666; margin-top:6pt; margin-bottom:10pt; }
+
+    .subject { font-weight:700; margin:10pt 0; font-size:12pt; }
+    .body { font-size:12pt; line-height:1.35; margin-bottom:14pt; color:#222; }
+    .closing { margin-top:18pt; font-size:12pt; }
+    .signature { margin-top:36pt; }
+
+    .footer { border-top:1px solid #e9e9e9; margin-top:18pt; padding-top:10px; font-size:10pt; color:#666; line-height:1.35; }
+
+    img { max-width:100%; height:auto; display:block; margin: 8px 0; }
+
+    /* kompakte Variante: mehr auf eine Seite quetschen */
+    .compact .letter-sheet { padding:12mm; }
+    .compact .sender, .compact .date, .compact .recipient, .compact .body { font-size:11pt; line-height:1.18; }
+
+    /* Bildschirm-Hilfebuttons (nicht drucken) */
+    .controls { text-align:center; margin:12px 0; }
+    .controls button { margin:0 6px; padding:6px 10px; font-size:13px; }
+    @media print {
+      html,body { background: #fff; }
+      .controls { display:none; }
+      .letter-sheet { box-shadow:none; margin:0; width:100%; max-width:none; padding:15mm; }
+    }
+
+    /* Vermeide Seitenumbruch mitten in wichtigen Elementen */
+    .letter-sheet, .recipient, .body, .closing { page-break-inside: avoid; }
+  </style>
+</head>
+<body>
+
+  <!-- Bildschirm-Buttons -->
+  <div class="controls">
+    <button id="toggleCompact">Kompakte Ansicht (mehr auf 1 Seite)</button>
+    <button onclick="window.print()">Als PDF drucken</button>
+    <button id="toggleEdit">Bearbeiten</button>
+  </div>
+
+  <main id="letterRoot">
+    <article class="letter-sheet" contenteditable="false">
+
+      <!-- Sender / Datum -->
+      <div class="sender">
+        {{ site.author | default: "Dein Name" }}<br>
+        {% if site.address %}{{ site.address | newline_to_br }}{% else %}Straße 1<br>12345 Ort{% endif %}
+      </div>
+
+      <div class="date">
+        {{ page.date | date: "%d. %B %Y" }}
+      </div>
+
+      <!-- Empfänger -->
+      <div class="recipient">
+        <strong>Empfänger:</strong><br>
+        {% if page.recipient %}
+          {{ page.recipient }}
+        {% else %}
+          Name Empfänger<br>Straße und Hausnummer<br>PLZ Ort
+        {% endif %}
+      </div>
+
+      <!-- Titel & Hinweis -->
+      <h1>{{ page.title }}</h1>
+
+      <p class="kopie-note" style="margin-bottom:8px;">
+        Dies ist eine Kopie des Inhalts von 
+        <a href="{{ 'https://leggravi.github.io/mirkoWebsite' | append: page.url }}" target="_blank" rel="noopener">
+          leggravi.github.io{{ page.url }}
+        </a>.
+        Für das volle Erlebnis besuchen Sie gerne die Website.
+      </p>
+
+      <!-- Betreff (optional) -->
+      {% if page.subject %}
+        <p class="subject">Betreff: {{ page.subject }}</p>
+      {% endif %}
+
+      <!-- Inhalt des Briefes (aus dem Post / Seite) -->
+      <div class="body">
+        {{ content }}
+      </div>
+
+      <!-- Gruß & Unterschrift -->
+      <div class="closing">
+        Mit freundlichen Grüßen,<br>
+        <div class="signature">
+          {{ site.author | default: "Dein Name" }}<br>
+        </div>
+      </div>
+
+      <!-- Footer mit Links -->
+      <div class="footer">
+        Dies ist eine Kopie des Inhalts von 
+        <a href="{{ 'https://leggravi.github.io/mirkoWebsite' | append: page.url }}" target="_blank" rel="noopener">
+          leggravi.github.io{{ page.url }}
+        </a>. Besuchen Sie die Website, um das volle Erlebnis zu haben, mehr über die Missionsstation zu erfahren 
+        (<a href="https://leggravi.github.io/mirkoWebsite/2025/08/28/Station.html">Station</a>), 
+        Informationen zur Verwendung von Spenden zu sehen (<a href="https://leggravi.github.io/mirkoWebsite/spenden/">Spenden</a>) 
+        und Zugriff auf alle Blogbeiträge zu bekommen (<a href="https://leggravi.github.io/mirkoWebsite/blog/">Blog</a>).
+      </div>
+
+    </article>
+  </main>
+
+  <script>
+    (function(){
+      const root = document.getElementById('letterRoot');
+      const btnCompact = document.getElementById('toggleCompact');
+      const btnEdit = document.getElementById('toggleEdit');
+      let compact = false;
+      btnCompact.addEventListener('click', () => {
+        compact = !compact;
+        document.body.classList.toggle('compact', compact);
+        btnCompact.textContent = compact ? 'Normale Ansicht' : 'Kompakte Ansicht (mehr auf 1 Seite)';
+      });
+
+      let editing = false;
+      btnEdit.addEventListener('click', () => {
+        editing = !editing;
+        const sheet = document.querySelector('.letter-sheet');
+        sheet.contentEditable = editing;
+        btnEdit.textContent = editing ? 'Bearbeitung beenden' : 'Bearbeiten';
+        if (editing) sheet.focus();
+      });
+    })();
+  </script>
+</body>
+</html>
