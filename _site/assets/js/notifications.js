@@ -6,9 +6,9 @@ window.NOTIFICATIONS = [
     type: "success"
   },
   {
-    id: "2025-08-15-1.Blog",
-    message: "Mein erster Blogeintrag ist online! Schau ihn dir an.",
-    url: "2025/08/30/1.Blog.html",
+    id: "2025endeOktober",
+    message: "Endlich ein Update ; )",
+    url: "2025/10/26/Paradies.html",
     type: "info"
   }
   // Weitere Benachrichtigungen einfach ergänzen
