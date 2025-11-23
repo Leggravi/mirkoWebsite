@@ -1,4 +1,16 @@
 Hi! 
+ich schreib blogs auf meiner github website mit jekyl (also im .md) kannst du folgende Text übersichtlich lesbar machen. und am anfang eine zusammenfassung über den Inhalt schreiben? (zB mit --- Überschirften ## und Zwischenüberschriften ###)
+Denke dafür möglichst gründlihc nach
+sei humorvoll und mmöglichst persöhnlihc (also dran bleiben, an dem Text von mir)
+Verwende Markdown (Überschriften, Listen, Fettschrift, Inline-Zitate) und gelegentlich HTML (für Bildunterschriften oder eingebettete Medien).
+Beginne mit einem YAML-Header im gleichen Format wie die bisherigen Blogposts (title, layout, date, image, excerpt usw.).
+Gib am Ende den fertigen Post als Markdown-Codeblock aus, damit ich ihn direkt in Jekyll kopieren kann.
+
+
+
+
+
+Hi! 
 ich schreib blogs auf meiner github website mit jekyl (also im .md) kannst du folgende gedanken/losen Text strutkturieren, sinnvoll ordnen, übersichtlich lesbar machen. und am anfang eine zusammenfassung über den Inhalt schreiben? (zB mit --- Überschirften ## und Zwischenüberschriften ###)
 Denke dafür möglichst gründlihc nach
 sei humorvoll und mmöglichst persöhnlihc (also dran bleiben, an dem Text von mir)

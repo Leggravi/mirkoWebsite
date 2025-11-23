@@ -35,3 +35,8 @@ defaults:
       lang: "de_DE"
       author: "Leggravi"
       description: "Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien."
+
+collections:
+  status:
+    output: true
+    permalink: /status/:path/

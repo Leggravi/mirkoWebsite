@@ -12,7 +12,7 @@ permalink: /spenden/
 Damit ich meinen Freiwilligendienst in Brasilien antreten kann, bin ich auf finanzielle Unterstützung angewiesen.  
 Die **monatlichen Kosten liegen bei etwa 500 €**:
 
-- ca. **200 €** Taschengeld & Verpflegung (ich versorge mich selbst oder esse bei der Station)
+- ca. **200 €** Taschengeld & Verpflegung (Essen bei der Station)
     
 - ca. **300 €** für Versicherung, Transport & weitere Fixkosten
     
