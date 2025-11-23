@@ -6,10 +6,10 @@ window.NOTIFICATIONS = [
     type: "success"
   },
   {
-    id: "2025endeOktober",
-    message: "Endlich ein Update ; )",
-    url: "2025/10/26/Paradies.html",
-    type: "info"
+    id: "status",
+    message: "Status Page was added!",
+    url: "status",
+    type: "success"
   }
   // Weitere Benachrichtigungen einfach ergänzen
   //types : info, success, warning, error
