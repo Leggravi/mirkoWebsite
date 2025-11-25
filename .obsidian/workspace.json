@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "raw/To-Do.md",
+                "file": "_posts/2025-11-08-1.Monat.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,7 +161,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for To-Do"
+              "title": "Backlinks for 2025-11-08-1.Monat"
             }
           },
           {
@@ -212,7 +212,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,8 +226,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "56d23007bafb8abb",
+  "active": "6fa10e1ac67d9047",
   "lastOpenFiles": [
+    "raw/To-Do.md",
     "_site/status/index.html",
     "_site/status",
     "status/index.html",
@@ -238,7 +240,6 @@
     "_site/assets/img/monat1/autofahren.mp4",
     "assets/img/monat1/autofahren.mp4",
     "_site/assets/img/monat1/Fest_compressed.mp4",
-    "assets/img/monat1/Fest_compressed.mp4",
     "_site/assets/img/monat1/pizza.jpg",
     "_site/assets/img/monat1/neue Hütte.jpeg",
     "_site/assets/img/monat1/ich.jpg",
@@ -250,7 +251,6 @@
     "assets/img/monat1/Kurzzeitler.jpg",
     "assets/img/monat1/pizza.jpg",
     "_posts/2025-11-08-1.Monat.md",
-    "raw/To-Do.md",
     "Spenden.md",
     "_site/my-status-corner/README.md",
     "_site/README.md",
