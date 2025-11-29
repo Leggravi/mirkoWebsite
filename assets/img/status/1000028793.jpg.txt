@@ -1,0 +1,3 @@
+Titel: Baum
+Beschreibung: Ein Baum
+Datum: 
