@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/To-Do.md",
+                "file": "raw/Dezwmber.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "To-Do"
+              "title": "Dezwmber"
             }
           },
           {
@@ -228,6 +228,11 @@
   },
   "active": "6fa10e1ac67d9047",
   "lastOpenFiles": [
+    "raw/Dezwmber.md",
+    "raw/Bonito und so weiter.md",
+    "_site/2025/11/20/1.Monat.html",
+    "_site/2025/11/20",
+    "_posts/2025-11-08-1.Monat.md",
     "raw/To-Do.md",
     "_site/status/index.html",
     "_site/status",
@@ -238,8 +243,6 @@
     "_site/assets/img/monat1/Fest.mp4",
     "assets/img/monat1/Fest.mp4",
     "_site/assets/img/monat1/autofahren.mp4",
-    "assets/img/monat1/autofahren.mp4",
-    "_site/assets/img/monat1/Fest_compressed.mp4",
     "_site/assets/img/monat1/pizza.jpg",
     "_site/assets/img/monat1/neue Hütte.jpeg",
     "_site/assets/img/monat1/ich.jpg",
@@ -250,7 +253,6 @@
     "_site/assets/img/monat1/Kurzzeitler.jpg",
     "assets/img/monat1/Kurzzeitler.jpg",
     "assets/img/monat1/pizza.jpg",
-    "_posts/2025-11-08-1.Monat.md",
     "Spenden.md",
     "_site/my-status-corner/README.md",
     "_site/README.md",
@@ -271,7 +273,6 @@
     "mirko-website/node_modules/@jest/core/README.md",
     "mirko-website/node_modules/esquery/README.md",
     "mirko-website/node_modules/table/README.md",
-    "mirko-website/node_modules/enquirer/README.md",
-    "mirko-website/node_modules/v8-to-istanbul/node_modules/source-map/README.md"
+    "mirko-website/node_modules/enquirer/README.md"
   ]
 }
