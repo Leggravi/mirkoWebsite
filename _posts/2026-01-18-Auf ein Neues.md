@@ -44,6 +44,12 @@ Ganz normal ist deswegen:
 ## Kühe, Kälber & kein Angsthase mehr
 
 Ich war zwei Wochen lang im **Melkteam** – eine Erfahrung wie aus einem Bauernleben vor 100 Jahren.  
+<video controls>
+    <source src="{{site.baseurl}}/assets/img/neuesJahr/melken.mp4" type="video/mp4">
+    Dein Browser unterstützt das Video-Format nicht.
+</video>
+<figcaption style="text-align: center; font-style: italic; color: #555;">erste Unbeholfene Versuche</figcaption>
+
 Dann kam eine **Pilzkrankheit** bei den Kühen. Anfangs völlige Ratlosigkeit, inzwischen ein klarer Plan:
 
 **Aktion „Rettet die Kühe“**
@@ -91,6 +97,11 @@ Wir bauen gerade gemeinsam einen **Wandschrank** – und ich war überrascht, wi
 - Lösungen finden ohne perfekte Materialien (z. B. dübeln ohne Dübel)
 
 In Deutschland bestellt man vieles fertig. Hier lerne ich den **Ursprung des Handwerks** kennen. Nächste Woche wird der Schrank zusammengesetzt – darauf freue ich mich sehr.
+
+<div class="gallery">
+    <img src="{{site.baseurl}}/assets/img/neuesJahr/schreinern.jpg" style="max-width: 70%; max-height: 500px; display: block; margin: 0 auto; border-radius: 8px;">
+    <figcaption style="text-align: center; font-style: italic; color: #555;">einmal Arbeiten mit Profis</figcaption>
+</div>
 
 ---
 
@@ -158,7 +169,10 @@ Es gab:
 - Pommes & Cola
 - Action
 - Wichteln (meine Bananenkrippe kam gut an)
-
+<div class="gallery">
+    <img src="{{site.baseurl}}/assets/img/neuesJahr/bananenkrippe.jpg" style="max-width: 70%; max-height: 500px; display: block; margin: 0 auto; border-radius: 8px;">
+    <figcaption style="text-align: center; font-style: italic; color: #555;">besagte Krippe</figcaption>
+</div>
 Ich hatte insgesamt **nur drei Geschenke** – und das war wunderschön.  
 Zuhause habe ich zu viel. Hier habe ich gemerkt, wie wenig man braucht, um sich wirklich zu freuen.
 
@@ -167,12 +181,23 @@ Wir jagen Befriedigung, Besitz, Macht – und bleiben doch unfrei.
 Frei macht nicht mehr, sondern **weniger**.  
 Wirkliche Freiheit finde ich nur bei Jesus – das wünsche ich mir für mich und für diese Welt.
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+  <iframe src="https://www.youtube.com/embed/IAxpGSNDgH0"
+          style="position: absolute; top:0; left: 0; width: 100%; height: 100%;"
+          frameborder="0" allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+  </iframe>
+</div>
+
 Silvester war ruhig:
 - selbstgemachter Döner
 - Dschungelbuch
 - MakeItMeme
 - Mitternacht ohne großes Spektakel
-
+<div class="gallery">
+    <img src="{{site.baseurl}}/assets/img/neuesJahr/döner.jpg" style="max-width: 70%; max-height: 500px; display: block; margin: 0 auto; border-radius: 8px;">
+    <figcaption style="text-align: center; font-style: italic; color: #555;">einmal Arbeiten mit Profis</figcaption>
+</div>
 ---
 
 ## Jahresrückblick & Resümee
