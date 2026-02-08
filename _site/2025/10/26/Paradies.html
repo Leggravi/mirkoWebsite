@@ -1,105 +1,165 @@
-<!-- _layouts/letter.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Willkommen im paradiesischen Brasilien – erste Eindrücke! – Brief</title>
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Willkommen im paradiesischen Brasilien – erste Eindrücke! | Mirko in Brasilien</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Willkommen im paradiesischen Brasilien – erste Eindrücke!" />
+<meta name="author" content="Leggravi" />
+<meta property="og:locale" content="de_DE" />
+<meta name="description" content="Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien." />
+<meta property="og:description" content="Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien." />
+<link rel="canonical" href="http://localhost:4000/2025/10/26/Paradies.html" />
+<meta property="og:url" content="http://localhost:4000/2025/10/26/Paradies.html" />
+<meta property="og:site_name" content="Mirko in Brasilien" />
+<meta property="og:image" content="https://leggravi.github.io/mirkoWebsite/assets/img/Banana.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-26T00:00:00+02:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://leggravi.github.io/mirkoWebsite/assets/img/Banana.jpg" />
+<meta property="twitter:title" content="Willkommen im paradiesischen Brasilien – erste Eindrücke!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Leggravi"},"dateModified":"2025-10-26T00:00:00+02:00","datePublished":"2025-10-26T00:00:00+02:00","description":"Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien.","headline":"Willkommen im paradiesischen Brasilien – erste Eindrücke!","image":"https://leggravi.github.io/mirkoWebsite/assets/img/Banana.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/10/26/Paradies.html"},"url":"http://localhost:4000/2025/10/26/Paradies.html"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <style>
-    /* Druck-Setup */
-    @page { size: A4; margin: 15mm; }
-    html,body { height:100%; margin:0; background:#f0f0f0; font-family: Georgia, "Times New Roman", serif; -webkit-print-color-adjust: exact; }
 
-    /* Blatt / Container (A4 minus Ränder) */
-    .letter-sheet {
-      width: calc(210mm - 30mm);       /* A4 width minus page margins */
-      max-width: 800px;                /* Bildschirm-Fallback */
-      margin: 20px auto;
-      background: #fff;                /* unbedingt weiß für Druck/Word */
-      padding: 18mm;
-      box-sizing: border-box;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      color: #222;
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNR3TD2Z94"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNR3TD2Z94');
+</script>
+  
+  <meta charset="UTF-8">
+  <title>
+  Willkommen im paradiesischen Brasilien – erste Eindrücke! | Mirko in Brasilien
+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+
+  <meta name="theme-color" content="#1fa2ff">
+ <script>
+  function switchTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (window.handleStarfieldTheme) handleStarfieldTheme();
+    if (window.handlePollenTheme) handlePollenTheme();
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      document.body.setAttribute('data-theme', saved);
+    } else {
+      document.body.setAttribute('data-theme', 'light');
     }
+    if (window.handleStarfieldTheme) handleStarfieldTheme();
+    if (window.handlePollenTheme) handlePollenTheme();
+  });
+</script>
 
-    /* Adressen / Kopf */
-    .sender { float:left; width:55%; font-size:12pt; line-height:1.25; }
-    .date { float:right; text-align:right; font-size:12pt; line-height:1.25; }
-    .recipient { clear:both; margin-top:18mm; margin-bottom:10mm; font-size:12pt; }
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-    h1 { margin: 0 0 6pt 0; font-size:18pt; color:#1fa2ff; font-weight:600; }
-    .kopie-note { font-size:10pt; color:#666; margin-top:6pt; margin-bottom:10pt; }
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<!-- Fallback für alte Browser -->
+<link rel="alternate icon" href="/assets/favicon.ico" type="image/x-icon">
 
-    .subject { font-weight:700; margin:10pt 0; font-size:12pt; }
-    .body { font-size:12pt; line-height:1.35; margin-bottom:14pt; color:#222; }
-    .closing { margin-top:18pt; font-size:12pt; }
-    .signature { margin-top:36pt; }
+<link rel="manifest" href="/manifest.json">
 
-    .footer { border-top:1px solid #e9e9e9; margin-top:18pt; padding-top:10px; font-size:10pt; color:#666; line-height:1.35; }
+<!--<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "dbff754e-f042-45ca-a0a1-ccfb8ed9cf4d",
+      safari_web_id: "web.onesignal.auto.514888af-c9d7-482b-90d4-9de98d872128",
+      notifyButton: {
+        enable: true,
+      },
+      allowLocalhostAsSecureOrigin: true,
+    });
+  });
+</script> -->
 
-    img { max-width:100%; height:auto; display:none; margin: 8px 0; }
 
-    .gallery {display: none;}  /* !!!!*/
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log("SW registered:", reg.scope))
+      .catch(err => console.error("SW registration failed:", err));
+  }
+</script>
 
-    /* kompakte Variante: mehr auf eine Seite quetschen */
-    .compact .letter-sheet { padding:12mm; }
-    .compact .sender, .compact .date, .compact .recipient, .compact .body { font-size:10pt; line-height:1.18; }
 
-    /* Bildschirm-Hilfebuttons (nicht drucken) */
-    .controls { text-align:center; margin:12px 0; }
-    .controls button { margin:0 6px; padding:6px 10px; font-size:13px; }
-    @media print {
-      html,body { background: #fff; }
-      .controls { display:none; }
-      .letter-sheet { box-shadow:none; margin:0; width:100%; max-width:none; padding:15mm; }
-    }
 
-    /* Vermeide Seitenumbruch mitten in wichtigen Elementen */
-    .letter-sheet, .recipient, .body, .closing { page-break-inside: avoid; }
-  </style>
+  
 </head>
 <body>
+  <!-- STERNENHIMMEL CANVAS (nur für Game Theme sichtbar) -->
+<canvas class="starfield-bg"></canvas>
+<canvas class="forest-pollen"></canvas>
+<div class="forest-rays"></div>
+<div class="forest-rays2">
+  <div class="ray ray1"></div>
+  <div class="ray ray2"></div>
+  <div class="ray ray3"></div>
+  <div class="ray ray4"></div>
+</div>
 
-  <!-- Bildschirm-Buttons -->
-  <div class="controls">
-    <button id="toggleCompact">Kompakte Ansicht (mehr auf 1 Seite)</button>
-    <button onclick="window.print()">Als PDF drucken</button>
-    <button id="toggleEdit">Bearbeiten</button>
+
+  <div class="topbar">
+    <div class="topbar-nav">
+      <a href="/">🏠</a>
+      <a href="/blog/">✍️</a>
+      <a href="/status/">📷</a>
+    </div>
+    <div class="topbar-themes theme-switcher" role="group" aria-label="Theme Switcher">
+      <button title="Light" onclick="switchTheme('light')" aria-label="Light"><span>☀️</span></button>
+      <button title="Dark" onclick="switchTheme('dark')" aria-label="Dark"><span>🌑</span></button>
+      <button title="Blue" onclick="switchTheme('blue')" aria-label="Blue"><span>🔵</span></button>
+      <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
+      <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
+    </div>
   </div>
+  <g class="wrapper">
+    <aside class="sidebar">
+      <img src="/assets/img/mirko.jpg" alt="Mirko" class="profile-img">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="/">🏠 Start</a></li>
+        <li><a href="/blog/">✍️ Blog</a></li>
+        <li><a href="/status/">📷 Status</a></li>
+      </ul>
 
-  <main id="letterRoot">
-    <article class="letter-sheet" contenteditable="false">
-
-      <!-- Sender / Datum -->
-      <div class="sender">
-        Mirko Hahn<br>
-        Burgstraße 31<br>85604 Zorneding
+      <h3 style="margin-top:2em;">Thema wechseln</h3>
+      <div class="theme-switcher" role="group" aria-label="Theme Switcher">
+        <button title="Light" onclick="switchTheme('light')" aria-label="Light"><span>☀️</span></button>
+        <button title="Dark" onclick="switchTheme('dark')" aria-label="Dark"><span>🌑</span></button>
+        <button title="Blue" onclick="switchTheme('blue')" aria-label="Blue"><span>🔵</span></button>
+        <button title="Forest" onclick="switchTheme('forest')" aria-label="Forest"><span>🌲</span></button>
+        <button title="Game" onclick="switchTheme('game')" aria-label="Game"><span>🕹️</span></button>
       </div>
+      <div style="height:80px;"></div> <!-- Abstandshalter -->
+      <p></p>
 
-      <div class="date">
-        26. October 2025
-      </div>
+    </aside>
 
-      <!-- Empfänger -->
-      <div class="recipient">
-        <strong>Empfänger:</strong><br>
-        
-          Name Empfänger<br>Straße und Hausnummer<br>PLZ Ort
-        
-      </div>
+    <main class="content">
+      <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-      <!-- Titel & Hinweis -->
-      <h1>Willkommen im paradiesischen Brasilien – erste Eindrücke!</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Willkommen im paradiesischen Brasilien – erste Eindrücke!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-10-26T00:00:00+02:00" itemprop="datePublished">Oct 26, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Leggravi</span></span></p>
+  </header>
 
-      
-
-      <!-- Betreff (optional) -->
-      
-
-      <!-- Inhalt des Briefes (aus dem Post / Seite) -->
-      <div class="body">
-        <p>In diesem Blog erzähle ich euch von meinen <strong>ersten Tagen in Brasilien</strong>:</p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>In diesem Blog erzähle ich euch von meinen <strong>ersten Tagen in Brasilien</strong>:</p>
 <ul>
   <li>Ankunft auf der Station und erste Eindrücke</li>
   <li>Erste Arbeitserfahrungen und Bernhards spannende Konzepte</li>
@@ -240,51 +300,414 @@ Doch in der ersten Woche waren wir dann übers Wochenende in <strong>Bonito</str
     <figcaption style="text-align: center; font-style: italic; color: #555;">BANAANAAA</figcaption>
 </div>
 
-      </div>
+  </div><a class="u-url" href="/2025/10/26/Paradies.html" hidden></a>
+</article>
 
-      <!-- Gruß & Unterschrift 
-      <div class="closing">
-        Mit freundlichen Grüßen,<br>
-        <div class="signature">
-          Dein Mirko<br>
-        </div>
-      </div>-->
+    </main>
+    <div class="toc">
+      <h3>Inhalt</h3>
+      <ul id="toc-list"></ul>
+    </div>
+  </g>
 
-      <!-- Footer mit Links 
-      <div class="footer">
-        Dies ist eine Kopie des Inhalts von 
-        <a href="https://leggravi.github.io/mirkoWebsite/2025/10/26/Paradies.html" target="_blank" rel="noopener">
-          leggravi.github.io/2025/10/26/Paradies.html
-        </a>. Besuchen Sie die Website, um das volle Erlebnis zu haben, mehr über die Missionsstation zu erfahren 
-        (<a href="https://leggravi.github.io/mirkoWebsite/2025/08/28/Station.html">Station</a>), 
-        Informationen zur Verwendung von Spenden zu sehen (<a href="https://leggravi.github.io/mirkoWebsite/spenden/">Spenden</a>) 
-        und Zugriff auf alle Blogbeiträge zu bekommen (<a href="https://leggravi.github.io/mirkoWebsite/blog/">Blog</a>).
-      </div> -->
+  
+  <script>
+  // NUR Überschriften aus dem Content-Bereich für den TOC verwenden!
+  const toc = document.getElementById("toc-list");
+  const content = document.querySelector(".content");
+  const headers = Array.from(content.querySelectorAll("h2, h3"));
+  let h2Map = {};
 
-    </article>
-  </main>
+  headers.forEach(el => {
+    const id = el.id || el.textContent.trim().toLowerCase().replace(/\s+/g, "-");
+    el.id = id;
+    if (el.tagName === "H2") {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="#${id}">${el.textContent}</a>`;
+      toc.appendChild(li);
+      h2Map[id] = li;
+    } else if (el.tagName === "H3") {
+      // Finde das vorherige H2
+      const prevH2 = headers.slice(0, headers.indexOf(el)).reverse().find(h => h.tagName === "H2");
+      if (prevH2) {
+        const h2Id = prevH2.id;
+        const h2Li = h2Map[h2Id];
+        let sublist = h2Li.querySelector('.toc-sublist');
+        if (!sublist) {
+          sublist = document.createElement('ul');
+          sublist.className = 'toc-sublist';
+          h2Li.appendChild(sublist);
+          // Toggle-Button nur einmal pro H2
+          const toggle = document.createElement('span');
+          toggle.className = 'toc-toggle';
+          toggle.textContent = '▸';
+          toggle.onclick = () => {
+            h2Li.classList.toggle('open');
+            toggle.textContent = h2Li.classList.contains('open') ? '▾' : '▸';
+          };
+          h2Li.insertBefore(toggle, h2Li.firstChild);
+        }
+        const subli = document.createElement("li");
+        subli.innerHTML = `<a href="#${id}">↳ ${el.textContent}</a>`;
+        sublist.appendChild(subli);
+      }
+    }
+  });
+
+  function markActiveTOC() {
+    let activeId = null;
+    headers.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < 120) activeId = el.id;
+    });
+    document.querySelectorAll('#toc-list a').forEach(a => {
+      a.parentElement.classList.toggle('active', a.getAttribute('href').slice(1) === activeId);
+    });
+    // Öffne die aktuelle H2-Gruppe
+    document.querySelectorAll('#toc-list li').forEach(li => {
+      if (li.querySelector('.active')) li.classList.add('open');
+      else li.classList.remove('open');
+      const toggle = li.querySelector('.toc-toggle');
+      if (toggle) toggle.textContent = li.classList.contains('open') ? '▾' : '▸';
+    });
+  }
+  window.addEventListener('scroll', markActiveTOC);
+  markActiveTOC();
+  </script>
+  <script>
+  const originalTitle = document.title;
+  let timeout;
+
+  window.addEventListener('blur', () => {
+    timeout = setTimeout(() => {
+      document.title = "👋 Vermisst du mich?";
+    }, 600000);
+  });
+
+  window.addEventListener('focus', () => {
+    clearTimeout(timeout);
+    document.title = originalTitle;
+  });
+</script>
+
+
+
+<!--<button onclick="updateCache()">Cache erneuern</button>
+<script>
+  function updateCache() {
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (let reg of regs) {
+          reg.unregister().then(() => {
+            window.location.reload();
+          });
+        }
+      });
+    }
+  }
+</script>-->
+
 
   <script>
-    (function(){
-      const root = document.getElementById('letterRoot');
-      const btnCompact = document.getElementById('toggleCompact');
-      const btnEdit = document.getElementById('toggleEdit');
-      let compact = false;
-      btnCompact.addEventListener('click', () => {
-        compact = !compact;
-        document.body.classList.toggle('compact', compact);
-        btnCompact.textContent = compact ? 'Normale Ansicht' : 'Kompakte Ansicht (mehr auf 1 Seite)';
-      });
+function clearCache() {
+  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage('clear-cache');
+    alert('Cache wurde geleert! Seite wird neu geladen.');
+    window.location.reload();
+  }
+}
+</script>
+  <div style="text-align:center; margin:2em 0;">
+    <a href="/about/">ℹ️ Mehr Infos</a> |
+    <a href="/spenden/">💸 Spenden</a> 
+  </div>
 
-      let editing = false;
-      btnEdit.addEventListener('click', () => {
-        editing = !editing;
-        const sheet = document.querySelector('.letter-sheet');
-        sheet.contentEditable = editing;
-        btnEdit.textContent = editing ? 'Bearbeitung beenden' : 'Bearbeiten';
-        if (editing) sheet.focus();
-      });
-    })();
-  </script>
+<script src="/assets/js/notifications.js"></script>
+<script>
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  return match ? decodeURIComponent(match[2]) : "";
+}
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days*864e5).toUTCString();
+  document.cookie = name + "=" + encodeURIComponent(value) + ";path=/;expires=" + expires;
+}
+
+// Typen mit Farbe und Dauer
+const typeStyles = {
+  info:    { color: "#1fa2ff", duration: 0 },
+  success: { color: "#4caf50", duration: 4000 },
+  warning: { color: "#ff9800", duration: 6000 },
+  error:   { color: "#e53935", duration: 8000 }
+};
+
+const seen = getCookie("seenNotifications") ? getCookie("seenNotifications").split(",") : [];
+const allNotes = window.NOTIFICATIONS || [];
+const newNotes = allNotes.filter(n => !seen.includes(n.id));
+
+// Zeige alle neuen Nachrichten als Banner untereinander
+newNotes.forEach(n => {
+  const style = typeStyles[n.type] || typeStyles.info;
+  const div = document.createElement("div");
+  div.className = "notification-banner";
+  div.innerHTML = `<span>${n.message}</span> <a href="/${n.url}">Ansehen</a> <button onclick="this.parentElement.remove()">×</button>`;
+  div.style = `
+    position:fixed;left:50%;transform:translateX(-50%);
+    background:${style.color};color:#111;font-weight:bold;
+    padding:1em 2em;border-radius:1em;z-index:9999;
+    box-shadow:0 2px 8px #0002;
+    font-family:sans-serif;
+    bottom:${2 + 4 * Array.from(document.querySelectorAll('.notification-banner')).length}em;
+    margin-bottom:1em;
+  `;
+  document.body.appendChild(div);
+  if (style.duration > 0) {
+    setTimeout(() => div.remove(), style.duration);
+  }
+});
+
+// Nach Anzeige als gesehen speichern
+if (newNotes.length) {
+  setCookie("seenNotifications", seen.concat(newNotes.map(n=>n.id)).join(","), 365);
+}
+</script>
+<script>
+// --- STERNENHIMMEL ANIMATION MIT PARALLAX UND BLINKEN ---
+
+let starfieldAnimationId = null;
+let starfieldActive = false;
+let lastScrollY = window.scrollY;
+
+function startStarfield() {
+  const canvas = document.querySelector('.starfield-bg');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = window.innerWidth, h = window.innerHeight;
+  canvas.width = w;
+  canvas.height = h;
+
+  // Parallax-Faktor (0.3 = 30% der Scrollgeschwindigkeit)
+  const PARALLAX = 0.3;
+
+  // Sterne erzeugen
+  const STAR_COUNT = 120;
+  function newStar() {
+    return {
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 1.2 + 0.3,
+      blink: Math.random() * Math.PI * .1,
+      speed: Math.random() * 0.2 + 0.15,
+      life: Math.random() * 1.5 + 0.5, // Sekunden sichtbar
+      age: 0
+    };
+  }
+  let stars = Array.from({length: STAR_COUNT}, newStar);
+
+  let lastTime = performance.now();
+
+  function draw(now) {
+    if (!starfieldActive) return;
+    const dt = (now - lastTime) / 1000;
+    lastTime = now;
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Parallax-Offset berechnen
+    const scrollY = window.scrollY;
+    const parallaxOffset = scrollY * PARALLAX;
+
+    for (let i = 0; i < stars.length; ++i) {
+      let s = stars[i];
+      s.age += dt;
+      s.blink += s.speed * 0.25 + Math.random() * .3;
+      // Wenn Lebensdauer vorbei: neuen Stern erzeugen
+      if (s.age > s.life) {
+        stars[i] = newStar();
+        stars[i].y += parallaxOffset; // damit neue Sterne nicht "springen"
+        continue;
+      }
+      // Alpha: schnelles Blinken
+      const blinkAlpha = 0.3 + 0.7 * Math.abs(Math.sin(s.blink * 2));
+      // Fade-in/out am Lebensanfang/-ende
+      let fade = 1;
+      if (s.age < 0.2) fade = s.age / 0.2;
+      if (s.life - s.age < 0.2) fade = (s.life - s.age) / 0.2;
+      const alpha = blinkAlpha * Math.max(0, fade);
+
+      ctx.beginPath();
+      ctx.arc(s.x, s.y - parallaxOffset, s.r, 0, 2 * Math.PI);
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      ctx.shadowColor = "#0ff";
+      ctx.shadowBlur = 8 * alpha;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+    starfieldAnimationId = requestAnimationFrame(draw);
+  }
+
+  starfieldActive = true;
+  lastTime = performance.now();
+  draw(lastTime);
+
+  function resize() {
+    w = window.innerWidth;
+    h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
+    // Sterne neu verteilen
+    stars = Array.from({length: STAR_COUNT}, newStar);
+  }
+  window.addEventListener('resize', resize);
+
+  window.addEventListener('scroll', () => {
+    // Kein Neuzeichnen nötig, da draw() sowieso läuft und scrollY abfragt
+  });
+}
+
+function stopStarfield() {
+  starfieldActive = false;
+  if (starfieldAnimationId) {
+    cancelAnimationFrame(starfieldAnimationId);
+    starfieldAnimationId = null;
+  }
+  const canvas = document.querySelector('.starfield-bg');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    ctx && ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+}
+
+function handleStarfieldTheme() {
+  const body = document.body;
+  const canvas = document.querySelector('.starfield-bg');
+  if (body.getAttribute('data-theme') === 'game') {
+    canvas && (canvas.style.display = '');
+    stopStarfield(); // Falls noch eine alte Animation läuft
+    startStarfield();
+  } else {
+    stopStarfield();
+    canvas && (canvas.style.display = 'none');
+  }
+}
+
+// Theme-Wechsel erkennen (auch bei Button-Klicks)
+document.addEventListener('DOMContentLoaded', handleStarfieldTheme);
+const origSwitchTheme = window.switchTheme;
+window.switchTheme = function(theme) {
+  origSwitchTheme(theme);
+  setTimeout(handleStarfieldTheme, 10); // Nach Attribut-Update
+};
+</script>
+<script>
+// --- POLLENPARTIKEL FÜR FOREST THEME ---
+let pollenAnimId = null;
+let pollenActive = false;
+
+function startPollen() {
+  const canvas = document.querySelector('.forest-pollen');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w = window.innerWidth, h = window.innerHeight;
+  canvas.width = w; canvas.height = h;
+
+  const PARALLAX = .5;
+  const COUNT = 40;
+  function newPollen() {
+    return {
+      x: Math.random()*w,
+      y: Math.random()*h,
+      r: Math.random()*3.5+0.5,
+      dx: (Math.random()-0.5)*0.43,
+      dy: Math.random()*0.38-0.13,
+      alpha: Math.random()*0.3+0.2,
+      life: Math.random()*2+3,
+      age: 0
+      
+    };
+  }
+  let pollen = Array.from({length: COUNT}, newPollen);
+
+  let lastTime = performance.now();
+
+  function draw(now) {
+    if (!pollenActive) return;
+    const dt = (now - lastTime) / 1000;
+    lastTime = now;
+
+    ctx.clearRect(0,0,w,h);
+
+    // Parallax-Offset
+    const scrollY = window.scrollY;
+    const parallaxOffset = scrollY * PARALLAX;
+
+    for (let i = 0; i < pollen.length; ++i) {
+      let p = pollen[i];
+      p.age += dt;
+      if (p.age > p.life) {
+        pollen[i] = newPollen();
+        pollen[i].y += parallaxOffset;
+        continue;
+      }
+      // Fade-in/out
+      let fade = 1;
+      if (p.age < 1) fade = p.age ;
+      if (p.life - p.age < 1) fade = (p.life - p.age) ;
+      const alpha = p.alpha * Math.max(0, fade);
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y - parallaxOffset, p.r, 0, 2*Math.PI);
+      ctx.fillStyle = `rgba(255,255,200,${alpha})`;
+      ctx.shadowColor = "#fff";
+      ctx.shadowBlur = 4;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      p.x += p.dx; p.y += p.dy;
+      //if (p.x<0) p.x=w; if (p.x>w) p.x=0;
+      //if (p.y>h) { p.y=0; p.x=Math.random()*w; }
+    }
+    pollenAnimId = requestAnimationFrame(draw);
+  }
+
+  pollenActive = true;
+  lastTime = performance.now();
+  draw(lastTime);
+
+  function resize() {
+    w = window.innerWidth; h = window.innerHeight;
+    canvas.width = w; canvas.height = h;
+    pollen = Array.from({length: COUNT}, newPollen);
+  }
+  window.addEventListener('resize', resize);
+}
+
+function stopPollen() {
+  pollenActive = false;
+  if (pollenAnimId) cancelAnimationFrame(pollenAnimId);
+  pollenAnimId = null;
+  const canvas = document.querySelector('.forest-pollen');
+  if (canvas) canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);
+}
+
+function handlePollenTheme() {
+  const body = document.body, canvas = document.querySelector('.forest-pollen');
+  if (body.getAttribute('data-theme') === 'forest') {
+    canvas && (canvas.style.display = '');
+    stopPollen(); startPollen();
+  } else {
+    stopPollen(); canvas && (canvas.style.display = 'none');
+  }
+}
+
+// Theme-Wechsel erkennen (wie bei Sternenhimmel)
+document.querySelectorAll('a[href$="feed.xml"]').forEach(el => {
+  el.href = "https://forms.gle/kDLjBrFRAX2mfBYA9"; // neuer Link
+  el.textContent = "via E-mail";          // neuer Text
+  el.target = "_blank";                             // optional: in neuem Tab öffnen
+});
+
+</script>
+
 </body>
 </html>
+
