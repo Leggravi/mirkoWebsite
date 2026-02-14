@@ -1,7 +1,0 @@
-Titel: Chorprobe
-Beschreibung: In der KIrche proben wir, aber ich muss noch etwas üben
-Datum: 2025-12-28T18:53
-Datumquelle: Fallback lastModified
-
-RAW METADATA (falls vorhanden):
-keine Metadaten

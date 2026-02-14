@@ -1,0 +1,54 @@
+# Jekyll build output
+_site/
+
+# Project-specific (user's mobile uploads)
+assets/img/Link to Handy/
+
+# Ruby / Bundler / Jekyll cache
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/bundle/
+
+# Node / package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build / output / caches
+dist/
+public/
+coverage/
+tmp/
+.cache/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*~
+.history
+
+# Local environment / secrets
+.env
+.env.*
+
+# Personal / optional / generated folders
+.obsidian/
+# Beispiel: Build-Ordner einer eingebetteten App
+my-status-corner/public/
+
+# Misc
+*.log
+
+# Wenn du _site/ versioniert hast: git rm -r --cached _site/
+# (ich kann das für dich erledigen, wenn du möchtest)

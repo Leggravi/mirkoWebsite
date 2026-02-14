@@ -1,7 +1,0 @@
-Titel: Regenzeit
-Beschreibung: die Regen werden immer stärker und immer häufiger
-Datum: 2025-12-28T18:52
-Datumquelle: Fallback lastModified
-
-RAW METADATA (falls vorhanden):
-keine Metadaten
