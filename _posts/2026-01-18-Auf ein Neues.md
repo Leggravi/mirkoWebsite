@@ -2,7 +2,7 @@
 title: "Neues Jahr, neues Glück?"
 layout: post
 date: 2026-01-18
-image: /assets/images/jahreswechsel.jpg
+image: /assets/img/neuesJahr/cover.jpg
 excerpt: "Shampoo statt Schnee: Weihnachten in Brasilien zwischen Container, Chaos und geistlichem Reset."
 ---
 
@@ -228,23 +228,28 @@ Meine Empfehlung:
 
 ---
 
-## Bibel & geistlicher Input ??überarbeiten
+## Bibel & geistlicher Input
 
-Ich nutze aktuell intensiv **„MyBible“**: ?tutorial
+Da ich hier nur begrenzt Wlan habe und eine dicke Studienbibel unpraktisch wäre folgender Tipp von mir (s. Video)
+<video controls>
+    <source src="{{site.baseurl}}/assets/img/neuesJahr/screen.mp4" type="video/mp4">
+    Dein Browser unterstützt das Video-Format nicht.
+</video>
+Ich nutze aktuell intensiv [**„MyBible“**](https://play.google.com/store/apps/details?id=ua.mybible) (s. Videotutorial):
 - mehrere Übersetzungen
 - Lexika
 - Strong’s
 - Parallelstellen
 - komplett offline  
 
-Gerade mache ich einen **6-Wochen-Kurs zum Römerbrief**:
+Gerade mache ich einen **6-Wochen-Kurs zum Römerbrief** von Natha:
 - alter vs. neuer Mensch
 - Fleisch & Geist
 - Sünde und Veränderung
 - echte Freiheit  
 
-Das „Restart“-Programm von **Nathanael Bubenzeller** kann ich sehr empfehlen  
-(YouTube, Crosstalk, Bücher – z. B. *„Überrascht von Furcht“*). ??
+**Nathanael Bubenzeller** kann ich sehr empfehlen  
+([YoutUbe](https://www.youtube.com/@nathanaelbubenzer), Crosstalk, Bücher – z. B. *„Überrascht von Furcht“*).
 
 ---
 
@@ -290,5 +295,8 @@ Hängematten im Wald, Wasserfälle, Geburtstag, Backen, Putzen, Alligator im See
 
 Wenn du mehr wissen willst:
 - Statusbilder
-- Berichte von Bernhard ??verlinken!
+- Berichte von Bernhard <a href="{{site.baseurl}}/assets/img/neuesJahr/Rundbrief_Moeck_59.pdf" target="_blank">
+    Rundbrief Möck Nr. 59 herunterladen
+</a>
+
 - oder schreib mir direkt
