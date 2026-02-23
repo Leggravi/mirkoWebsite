@@ -31,7 +31,8 @@ Thumbs.db
 .history
 
 # 6) Projekt-spezifisch (lokale Uploads)
-assets/img/Link to Handy/
+assets/img/Link*
+#lokaler link!!
 
 # 7) Logs / Caches / temporäre Ordner
 .cache/

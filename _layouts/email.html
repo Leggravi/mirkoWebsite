@@ -35,7 +35,7 @@
 </head>
 <header>
     <p style="font-size:0.9em; color:#666; margin-bottom:1.5em;">
-  Dies ist eine Kopie des Inhalts von <a href="{{ page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite/' }}">leggravi.github.io/mirkoWebsite{{ page.url }}</a>. 
+  Dies ist eine Kopie des Inhalts von <a href="{{ page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' }}">leggravi.github.io/mirkoWebsite{{ page.url }}</a>. 
   Für das volle Erlebnis, weitere Infos über die Missionsstation und alle Blogbeiträge besuchen Sie gerne die Website.
 </p>
 
@@ -49,8 +49,48 @@
     {{ content }}
   {% endcapture %}
 
+  {%- comment -%} make relative links absolute for emails {%- endcomment -%}
   {% assign updated_content = updated_content | replace: 'href="/', 'href="https://leggravi.github.io/mirkoWebsite/' %}
   {% assign updated_content = updated_content | replace: 'src="/', 'src="https://leggravi.github.io/mirkoWebsite/' %}
+
+  {%- comment -%} prepare absolute URL for this post (used in video placeholders) {%- endcomment -%}
+  {% assign absolute_post_url = page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' %}
+
+  {%- comment -%} Replace responsive YouTube iframe wrappers with a simple link for email clients - handles the common responsive embed pattern used in posts {%- endcomment -%}
+  {% assign parts = updated_content | split: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">' %}
+  {% assign rebuilt = parts[0] %}
+  {% for part in parts offset:1 %}
+    {% assign inner_and_rest = part | split: '</div>' %}
+    {% assign inner = inner_and_rest[0] %}
+    {% assign rest = part | remove_first: inner | remove_first: '</div>' %}
+    {% if inner contains 'iframe' and inner contains 'src="' %}
+      {% assign src_part = inner | split: 'src="' | last %}
+      {% assign iframe_url = src_part | split: '"' | first %}
+      {% if iframe_url contains '/embed/' %}
+        {% assign video_id = iframe_url | split: '/embed/' | last %}
+        {% assign youtube_url = 'https://www.youtube.com/watch?v=' | append: video_id %}
+      {% else %}
+        {% assign youtube_url = iframe_url %}
+      {% endif %}
+      {% assign rebuilt = rebuilt | append: '<p style="background:#f3f7fb;padding:12px;border-radius:6px;margin:0 0 1em 0;"><a href="' | append: youtube_url | append: '" target="_blank" rel="noopener">Video auf YouTube ansehen</a></p>' | append: rest %}
+    {% else %}
+      {% assign rebuilt = rebuilt | append: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">' | append: inner | append: '</div>' | append: rest %}
+    {% endif %}
+  {% endfor %}
+  {% assign updated_content = rebuilt %}
+
+  {%- comment -%} Replace any <video>...</video> blocks with a short, professional note + link to the post {%- endcomment -%}
+  {% assign vparts = updated_content | split: '<video' %}
+  {% if vparts.size > 1 %}
+    {% assign rebuilt = vparts[0] %}
+    {% for part in vparts offset:1 %}
+      {% assign after_video = part | split: '</video>' %}
+      {% assign inner_vid = after_video[0] %}
+      {% assign rest = part | remove_first: inner_vid | remove_first: '</video>' %}
+      {% assign rebuilt = rebuilt | append: '<p style="background:#f9f9f9;border-left:4px solid #1fa2ff;padding:12px;border-radius:4px;margin:0 0 1em 0;"><strong>Hinweis:</strong> Videos werden in E‑Mails nicht eingebettet. Bitte besuche den Beitrag auf der Website, um das Video anzusehen: <a href="' | append: absolute_post_url | append: '">Beitrag online ansehen</a></p>' | append: rest %}
+    {% endfor %}
+    {% assign updated_content = rebuilt %}
+  {% endif %}
 
   {{ updated_content }}
 </div>
@@ -91,7 +131,7 @@
 </section>
 <hr style="border:none; border-top:1px solid #ddd; margin:2em 0;">
 <p style="font-size:0.85em; color:#666; line-height:1.4;">
-  Dies ist eine Kopie des Inhalts von <a href="{{ page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite/' }}">leggravi.github.io/mirkoWebsite{{ page.url }}</a>. 
+  Dies ist eine Kopie des Inhalts von <a href="{{ page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' }}">leggravi.github.io/mirkoWebsite{{ page.url }}</a>. 
   Besuchen Sie gerne die Website, um das volle Erlebnis zu haben, mehr über die Missionsstation zu erfahren 
   (<a href="https://leggravi.github.io/mirkoWebsite/2025/08/28/Station.html">Station</a>), 
   Informationen zur Verwendung von Spenden zu sehen 

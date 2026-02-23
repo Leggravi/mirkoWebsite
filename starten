@@ -1,6 +1,7 @@
 bundle exec jekyll serve
 
-premailer ./\_site/2025/08/30/1.Blog.html --mode html > ../email-ready.html
+1. layout auf email setzen
+2. premailer ./\_site/2025/08/30/1.Blog.html --mode html > ../email-ready.html
 
 bilder: /home/mirko/Documents/ubuntu/home/mirko/Pictures/Handy
 

@@ -1,7 +1,7 @@
 ---
 title: Neues Jahr neues Glück?
 layout: post
-date: 2026-01-18
+date: 2026-02-14
 image: /assets/images/
 excerpt: Schampoo
 ---
