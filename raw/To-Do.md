@@ -1,12 +1,3 @@
-- [ ] Heimweh? Weihnachten anders!
-- [ ] Bonito + Paraguay
-
-- [ ] Gottesdienste (Gottesdienste generell: viele Tänze/unterschiedlich, viele filmen mit, viel simpler (keine Powerpoint oder Liederbücher und auf Plastestühlen sitzen), sehr laute Musik)
-- [ ] Wetter
-	- [ ] schlafen
-	- [ ] etc
-- [ ] alles was ich über mich, Gott und die Welt gelernt habe
-
 
 ## Andachten 
 -> meine Bibelfragen damals!
@@ -74,3 +65,13 @@ zum anderen habe finde ich es voll interessant wie sich doch die Andachten von z
 
 Meine Vorsätze/Pläne/Ideen: Sport (Joggen, Training, Parcour), Portugiesisch lernen, Jagen gehen/ schwimmen/ etc Aktionen mit Einheimischen oder allein, Bibel lesen/ Bibel Studium, viele neue Arbeit Kennenlernen, mich selbst und Gott kennenlernen 
 Anders Packen: Zahnbürste, Wechselsocken im Handgepack
+
+
+- [ ] Heimweh? Weihnachten anders!
+- [ ] Bonito + Paraguay
+
+- [ ] Gottesdienste (Gottesdienste generell: viele Tänze/unterschiedlich, viele filmen mit, viel simpler (keine Powerpoint oder Liederbücher und auf Plastestühlen sitzen), sehr laute Musik)
+- [ ] Wetter
+	- [ ] schlafen
+	- [ ] etc
+- [ ] alles was ich über mich, Gott und die Welt gelernt habe

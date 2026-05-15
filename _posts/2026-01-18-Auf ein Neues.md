@@ -249,7 +249,7 @@ Gerade mache ich einen **6-Wochen-Kurs zum Römerbrief** von Natha:
 - echte Freiheit  
 
 **Nathanael Bubenzeller** kann ich sehr empfehlen  
-([YoutUbe](https://www.youtube.com/@nathanaelbubenzer), Crosstalk, Bücher – z. B. *„Überrascht von Furcht“*).
+([YouTube](https://www.youtube.com/@nathanaelbubenzer), Crosstalk, Bücher – z. B. *„Überrascht von Furcht“*).
 
 ---
 
