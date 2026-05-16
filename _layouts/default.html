@@ -15,7 +15,7 @@
   
   <meta charset="UTF-8">
   <title>
-  {% if page.title %}{{ page.title }} | {% endif %}Mirko in Brasilien
+  {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -95,6 +95,7 @@
     <div class="topbar-nav">
       <a href="{{ '/' | relative_url }}">🏠</a>
       <a href="{{ '/blog/' | relative_url }}">✍️</a>
+      <a href="{{ '/about/' | relative_url }}">ℹ️</a>
       <!-- <a href="{{ '/status/' | relative_url }}">📷</a> -->
     </div>
     <div class="topbar-themes theme-switcher" role="group" aria-label="Theme Switcher">
@@ -112,6 +113,7 @@
       <ul>
         <li><a href="{{ '/' | relative_url }}">🏠 Start</a></li>
         <li><a href="{{ '/blog/' | relative_url }}">✍️ Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">ℹ️ Über mich</a></li>
         <!-- <li><a href="{{ '/status/' | relative_url }}">📷 Status</a></li> -->
       </ul>
 
@@ -245,10 +247,10 @@ function clearCache() {
 }
 </script>
   <div style="text-align:center; margin:2em 0;">
-    <a href="{{ '/about/' | relative_url }}">ℹ️ Mehr Infos</a> |
-    <a href="{{ '/spenden/' | relative_url }}">💸 Spenden</a> 
+    <a href="{{ '/about/' | relative_url }}">ℹ️ Mehr Infos</a>
   </div>
 
+<script src="{{ '/assets/js/age-calculator.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/notifications.js' | relative_url }}"></script>
 <script>
 function getCookie(name) {

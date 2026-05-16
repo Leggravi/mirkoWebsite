@@ -1,4 +1,4 @@
-# Mirko in Brasilien — Website (Jekyll)
+# Holz, Herz & Himmel (Mirko) — Website (Jekyll)
 
 Kurz: persönliche Blog-/Rundbrief-Website (Jekyll) mit Beiträgen, "raw" Entwürfen und einigen Hilfsseiten. Dieses README dokumentiert die aktuelle Struktur, erklärt wichtige Dateien/Skripte, nennt generierte Inhalte und gibt konkrete Vorschläge zum Aufräumen.
 

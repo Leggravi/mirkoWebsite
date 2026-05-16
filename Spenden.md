@@ -7,28 +7,14 @@ permalink: /spenden/
 
 # Spenden
 
-### Ich freue mich über Unterstützung! 🌍✈️
+### Vielen Dank — Spendenziel erreicht 🙏
 
-Damit ich meinen Freiwilligendienst in Brasilien antreten kann, bin ich auf finanzielle Unterstützung angewiesen.  
-Die **monatlichen Kosten liegen bei etwa 500 €**:
+Vielen, vielen Dank an alle, die mich unterstützt haben: die nötigen Mittel sind zusammengekommen und ich bin sehr dankbar für eure Großzügigkeit und Begleitung.
 
-- ca. **200 €** Taschengeld & Verpflegung (Essen bei der Station)
-    
-- ca. **300 €** für Versicherung, Transport & weitere Fixkosten
-    
+Wenn du trotzdem etwas tun möchtest, wäre eine direkte Unterstützung der <a href="https://www.dipm.de" target="_blank">Deutschen Indianer Pionier Mission (DIPM)</a> eine wunderbare Möglichkeit — dort kommt die Hilfe direkt Projekten vor Ort zugute.
 
-Hinzu kommen einmalige Ausgaben wie:
+Ursprünglich sammelte ich für meinen Freiwilligendienst (Reise, Versicherung, Lebensunterhalt vor Ort). Falls du Fragen zur Mittelverwendung hast, schreibe mir gerne.
 
-- Flugticket (**1.300 €**)
-    
-- Insektenschutz, Reisepass und passende Kleidung
-    
-
-🙏 Jeder Beitrag – ob einmalig oder regelmäßig – hilft mir, diesen Dienst möglich zu machen.
-
-Vielen Dank an alle, die mich dabei finanziell und im Gebet begleiten! ❤️
-
-*Ich werde den jeweils aktuellen Spenden Stand in den Rundbriefen dokumentieren*
 
 <footer style="margin-top:2em; padding:1em; border-top:2px solid #ddd; font-size:0.9em; line-height:1.6;">
   <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2em;">

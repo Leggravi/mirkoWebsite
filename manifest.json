@@ -5,13 +5,13 @@ layout: null
 
 
 {
-  "name": "Mirko in Brasilien",
+  "name": "{{ site.title }}",
   "short_name": "Mirko",
   "start_url": "{{ '/' | relative_url }}",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1fa2ff",
-  "description": "Mirko in Brasilien – Blog und Infos",
+  "description": "{{ site.description }}",
   "icons": [
     {
       "src": "{{ '/assets/icon-192.png' | relative_url }}",

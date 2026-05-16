@@ -1,5 +1,5 @@
 {
-  "name": "Mirko in Brasilien",
+  "name": "{{ site.title }}",
   "short_name": "Mirko",
   "start_url": "/",
   "display": "standalone",

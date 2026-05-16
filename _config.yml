@@ -1,4 +1,4 @@
-title: Mirko in Brasilien
+title: "Holz, Herz & Himmel (Mirko)"
 theme: minima
 
 plugins:
@@ -33,8 +33,8 @@ defaults:
       css: "assets/css/style.scss"
       image: "assets/img/seo.jpg"   # Default Bild
       lang: "de_DE"
-      author: "Leggravi"
-      description: "Mirko in Brasilien - Ein Blog über meine Erfahrungen und Erlebnisse während meines Kurzzeiteinsatzes in der Missionsstation Alves de Barros in Brasilien."
+      author: "Mirko"
+      description: "Perfekt unperfekt! Holz, Herz & Himmel ist der persönliche Blog von Miroko."
 
 collections:
   status:
