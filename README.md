@@ -1,171 +1,69 @@
-# Holz, Herz & Himmel (Mirko) — Website (Jekyll)
+# Holz, Herz & Himmel
 
-Kurz: persönliche Blog-/Rundbrief-Website (Jekyll) mit Beiträgen, "raw" Entwürfen und einigen Hilfsseiten. Dieses README dokumentiert die aktuelle Struktur, erklärt wichtige Dateien/Skripte, nennt generierte Inhalte und gibt konkrete Vorschläge zum Aufräumen.
+Die persönliche Website von Mirko. Sie basiert auf Jekyll und enthält Blogbeiträge, statische Seiten und die dafür verwendeten Layouts und Dateien.
 
-Inhalt
-- Projektübersicht
-- Schnellstart (lokal)
-- Wichtige Dateien & Funktionen (mit Links)
-- Ordner-Übersicht & Bedeutung
-- Hinweise zu generierten Dateien (_site)
-- Vorschläge / To‑do für Aufräumen und Neuorganisation
-- Deployment & Kontakt
+## Lokal starten
 
----
+### Voraussetzungen
 
-Projektübersicht
----------------
+- Ruby 3.x
+- Bundler
 
-Diese Website ist ein Jekyll-basiertes Blog/Portfolio mit Blogposts in `_posts/`, statischen Seiten, Entwürfen in `raw/` und vielen Hilfsdateien unter `assets/`. Einige Dateien im Repo sind Kopien oder generierte Artefakte unter `_site/`. Ziel: klar strukturieren, überflüssige Dateien identifizieren, README ergänzen und langfristig gut wartbar machen.
+Prüfe im Terminal, ob beides verfügbar ist:
 
-Schnellstart (lokal)
---------------------
-Voraussetzung: Ruby + Bundler (für Jekyll) oder Docker. Die Seite wurde mit Jekyll erzeugt (siehe generierte `_site/`).
+```sh
+ruby --version
+bundle --version
+```
 
--Lokales Testen mit Jekyll (klassisch):
-  ```sh
-  bundle install
-  bundle exec jekyll serve --livereload
-  ```
-  (Konfiguration in [_config.yml](_config.yml).)
+Falls ein Befehl nicht gefunden wird, installiere Ruby und Bundler für dein Betriebssystem und öffne danach ein neues Terminal.
 
-- Ohne Ruby: Die bereits erzeugten Seiten liegen in `_site/` — können direkt in einem Static-Server geöffnet werden.
+Unter Ubuntu oder Debian geht das zum Beispiel so:
 
-Wichtige Dateien & zentrale Funktionen
--------------------------------------
+```sh
+sudo apt update
+sudo apt install ruby-full ruby-bundler build-essential
+```
 
-- Layouts:
-  - [`_layouts/default.html`][ _layouts/default.html ] — Hauptlayout: Navigation, Theme-Switcher, TOC-Generator, Sternenhimmel/Partikel-Animationen und Notification-Banner-Logik. Enthält zentrale JS-Funktionen wie:
-    - [`switchTheme`]( _layouts/default.html ) — wechselt Themes und speichert Auswahl.
-    - [`startStarfield`]( _layouts/default.html ) / [`stopStarfield`]( _layouts/default.html ) / [`handleStarfieldTheme`]( _layouts/default.html ) — Sternenhimmel-Canvas-Animation (Theme "game").
-    - [`startPollen`]( _layouts/default.html ) / [`stopPollen`]( _layouts/default.html ) / [`handlePollenTheme`]( _layouts/default.html ) — Pollenpartikel (Theme "forest").
-    - TOC-Generator / Scroll-Marker — erzeugt Inhaltsverzeichnis aus H2/H3 innerhalb `.content`.
-  - [`_layouts/email.html`][ _layouts/email.html ] — E-Mail-kompatibles Layout (Kopie-Note, Footer).
-  - [`generate-email.sh`](generate-email.sh) — Automatisches E-Mail-Export-Skript für jeden Markdown-Post. Aufruf im Projektroot z. B. `./generate-email.sh _posts/2026-05-16-Back-to-Business.md`, oder ohne Parameter zur Dateiauswahl. Speichert die fertige E-Mail als `../<slug>_email.html`.
-  - [`_layouts/brief.html`][ _layouts/brief.html ] — "Brief" (druckfreundlich / PDF) Layout.
+### Erster Start
 
-- Posts & Inhalte:
-  - [`_posts/`]( _posts/ ) — veröffentlichte Blogeinträge (Datum-getriggerte Markdown-Dateien).
-  - [`raw/`]( raw/ ) — Rohtexte / Entwürfe (Markdown / HTML). Diese Dateien sind nützlich, gehören jedoch ggf. nach `_posts` / `pages` verschoben oder archiviert.
+Führe die Befehle im Projektordner aus:
 
-- Assets:
-  - [`assets/js/notifications.js`]( assets/js/notifications.js ) — zentrale Notifications-Definition (window.NOTIFICATIONS).
-  - [`assets/css/style.css`]( assets/css/style.css ) — Hauptstylesheet (verlinkt im Layout).
-  - `/assets/img/` — Bilder (Profil, SEO, etc.).
+```sh
+bundle install
+./starten
+```
 
-- PWA / Service Worker:
-  - [`manifest.json`]( manifest.json )
-  - [`service-worker.js`]( service-worker.js )
+`./starten` startet Jekyll mit Live-Neuladen. Falls die Gems noch fehlen, versucht das Skript zuerst `bundle install` auszuführen. Alternativ kannst du Jekyll direkt starten:
 
-- Sonstiges:
-  - [`Spenden.md`]( Spenden.md ) — Spenden-Info-Seite.
-  - [`about.md`], [`about.html`] — "Über mich" Seiten (Achte auf doppelte Inhalte).
-  - [`warten.md`], [`warten.html`] — Countdown-Vorbereitungsseite (eine Datei inkludiert die andere).
+```sh
+bundle exec jekyll serve --livereload
+```
 
-Generierte Dateien / `_site`
----------------------------
-- [`_site/`]( _site/ ) — erzeugte (build) Dateien von Jekyll. Enthält HTML-Kopien aller Seiten. Diese sind nicht quellcode-relevant und sollten nicht committen werden, außer es ist bewusst für GitHub Pages nötig. Beispiele:
-  - `_site/index.html` — erzeugte Startseite
-  - `_site/about/index.html` — erzeugte About-Seite
-  - `_site/raw/` — gerenderte Kopien von `raw/`-Inhalten
-- Empfehlung: Entferne `_site/` aus Commits (füge `.gitignore`-Eintrag hinzu), solange du nicht absichtlich statische Dateien versionierst.
+Öffne anschließend <http://127.0.0.1:4000/> im Browser. Änderungen an Seiten und Beiträgen werden automatisch neu gebaut. Zum Beenden im Terminal `Ctrl+C` drücken.
 
-Ordner-Übersicht & Bedeutung
-----------------------------
-- Root:
-  - `_config.yml` — Jekyll-Konfiguration (Base URL, Plugins, etc.).
-  - `Gemfile` — Ruby Gems für Jekyll.
-  - `manifest.json`, `service-worker.js` — PWA-Einstellungen.
-- Content:
-  - `_posts/` — veröffentlichte Blogposts (Datum-basiert).
-  - `raw/` — Rohentwürfe, Notizen, E-Mail-Versionen (z. T. Doppelungen zu `_posts/`).
-  - `blog/`, `notes.html`, `about.html` — statische Seiten; prüfen auf Duplikate (z. B. `about.md` vs `about.html`).
-- UI / assets:
-  - `assets/js/notifications.js` — Notifications-Liste.
-  - `assets/css/` — Styles (zentrale Stelle für Theme-Styles).
-- Sonstige Ordner:
-  - `Lego/`, `games/`, `my-status-corner/`, `löschen/` — vermutlich Projekte/Altdaten. Archivieren oder löschen, wenn unnötig.
-  - `.github/`, `.obsidian/` — Repo- / Private-Notes; `.obsidian/` ggf. lokal halten und ignorieren.
+**Wenn `bundle` oder `ruby` nicht gefunden wird:** Das ist ein fehlendes Ruby/Bundler-Setup, kein Fehler der Website. Installiere zuerst Ruby und Bundler; `bundle install` kann ohne diese Programme nicht laufen.
 
-Konkrete Red Flags (Dinge, die durcheinander wirken)
-----------------------------------------------------
-- Viele generierte Dateien in `_site/` sind im Repo; das führt zu Doppelarbeit. Prüfe `.gitignore`.
-- Doppelte Inhalte: z. B. `about.md` und `about.html` + `_site/about/index.html`. Wähle ein Source-Format (MD oder HTML).
-- Rohordner `raw/` enthält Inhalte, die sowohl als `_posts/` als auch als E‑Mail-Vorlage gerendert werden — konsolidieren.
-- Dateien mit Sonderzeichen (z. B. `𝙈𝙚𝙞𝙣 2. 𝙍𝙪𝙣𝙙𝙗𝙧𝙞𝙚𝙛!.html`) erschweren Automatisierung und URL-Stabilität — umbenennen.
-- `assets/js/notifications.js` wird sowohl in Quell-Layouts als auch in `_site/` kopiert — halte nur eine Quelle in `assets/`.
+## Website bauen
 
-Empfohlene Aufräum‑ & Umstrukturierungsschritte (kurz)
------------------------------------------------------
-1. Git: Erstelle Branch "cleanup/readme" für Änderungen.
-2. .gitignore: Stelle sicher, dass `_site/` und `.obsidian/` ignoriert werden.
-3. Inhalte konsolidieren:
-   - Move fertige Posts nach `_posts/`.
-   - Raw-Entwürfe in `raw/drafts/` verschieben; nur bei Veröffentlichung nach `_posts`.
-   - Entferne oder archiviere veraltete Ordner (`löschen/`, alte Projekte).
-4. Einheitliche Dateinamen: keine Sonderzeichen in Dateinamen; Use slugified US-ASCII names.
-5. Assets: Trenne JS per Verantwortung:
-   - `assets/js/main.js` — TOC, theme-switch, cookie helpers (von `_layouts/default.html` auslagern).
-   - `assets/js/starfield.js`, `assets/js/pollen.js` — Animationen auslagern.
-   - `assets/js/notifications.js` bleibt zentrale Quelle.
-   - Verlinke die Dateien im Layout statt alles inline.
-6. Layouts:
-   - `_layouts/default.html` entkernen: JS in `assets/js/` auslagern, HTML-Komponenten in `_includes/`.
-   - Erstelle `_includes/topbar.html`, `_includes/sidebar.html`, `_includes/notifications.html`.
-7. Readability: Ersetze inline styles im HTML (viele `style="..."`) durch Klassen im CSS.
-8. Tests / Lint: Optional: kleine Scripts in `scripts/` für Strukturprüfung (z. B. find unslugged filenames).
+```sh
+bundle exec jekyll build
+```
 
-Praktische Hinweise / Beispiele
--------------------------------
-- Notifications:
-  - Quelle: [`assets/js/notifications.js`]( assets/js/notifications.js )
-  - Anzeige-Logik: in [`_layouts/default.html`][ _layouts/default.html ] (Variable `window.NOTIFICATIONS` wird ausgewertet).
-- Theme / Animation:
-  - Theme-Wechsel-Funktion: [`switchTheme`]( _layouts/default.html )
-  - Animation-Funktionen (`startStarfield`, `startPollen`) sind im Layout eingebettet — empfehlenswert: auslagern nach `assets/js/`.
+Jekyll schreibt die fertige Website nach `_site/`. Dieser Ordner wird automatisch erzeugt und ist nicht der Ort, an dem du Inhalte bearbeiten solltest.
 
-Cleanup-Checklist (konkrete Commits)
-------------------------------------
-- [ ] .gitignore: add `_site/`, `.DS_Store`, `.env`, `.obsidian/`
-- [ ] Move/rename: `𝙈𝙚𝙞𝙣 2. 𝙍𝙪𝙣𝙙𝙗𝙧𝙞𝙚𝙛!.html` → `raw/rundbrief-2.html`
-- [ ] Consolidate `about.md` / `about.html` → keep one source (prefer `_pages/about.md`)
-- [ ] Extract JS from `_layouts/default.html` → `assets/js/{main,starfield,pollen}.js`
-- [ ] Create `_includes/` for topbar/sidebar/footer/notifications
-- [ ] Move published pages to `_posts/` or `pages/` consistently
-- [ ] Remove `_site/` from repository or move to `gh-pages` branch if required
+## Wo finde ich was?
 
-Deployment
-----------
-- GitHub Pages mit Jekyll: Wenn du GitHub Pages verwendest, kannst du entweder die Source-Branch (Jekyll-Build on GitHub) oder eine `gh-pages`-Branch mit fertigem `_site/` deployen. Empfehlung: committe nur Quellcode; aktiviere GitHub Pages auf der Repo-Einstellung und lasse GitHub bauen.
-- Falls du aktuell `_site/` committest, überlege Umzug zu Quell-Only und GitHub-Building (sauberer Repo).
+- `_posts/` – veröffentlichte Blogbeiträge
+- `index.md`, `about.html`, `warten.html` und weitere Dateien im Projektordner – Seiten der Website
+- `_layouts/` – Vorlagen für Seiten, E-Mails und Druckansichten
+- `assets/` – Bilder, Schriften, CSS und JavaScript
+- `_config.yml` – Jekyll-Einstellungen
+- `Gemfile` und `Gemfile.lock` – benötigte Ruby-Pakete und deren Versionen
+- `generate-email.sh` – Hilfsskript zum Erstellen einer E-Mail aus einem Beitrag
 
-Nützliche Dateien (Direkte Links)
---------------------------------
-- Layouts:
-  - [_layouts/default.html](_layouts/default.html)
-  - [_layouts/email.html](_layouts/email.html)
-  - [_layouts/brief.html](_layouts/brief.html)
-- Content:
-  - `_posts/` directory: [`_posts/`]( _posts/ )
-  - `raw/` drafts: [`raw/`]( raw/ )
-  - `Spenden.md` — Spenden-Seite: [`Spenden.md`]( Spenden.md )
-  - `about.md` / `about.html`: [`about.md`]( about.md ), [`about.html`]( about.html )
-  - `warten.md` / `warten.html`: [`warten.md`]( warten.md ), [`warten.html`]( warten.html )
-- Assets:
-  - [`assets/js/notifications.js`]( assets/js/notifications.js )
-  - [`assets/css/style.css`]( assets/css/style.css ) (falls vorhanden)
-- Config:
-  - [`_config.yml`]( _config.yml )
-  - [`Gemfile`]( Gemfile )
-- PWA:
-  - [`manifest.json`]( manifest.json )
-  - [`service-worker.js`]( service-worker.js )
+Die Datei [`arbeitsnotizen.md`](arbeitsnotizen.md) enthält ältere persönliche Arbeitsnotizen. Sie wird zum Starten oder Bauen der Website nicht benötigt.
 
-Kontakt / Weiteres
-------------------
-Wenn du willst, kann ich:
-- das Layout aufräumen und JS in Dateien auslagern,
-- eine vorgeschlagene, bereinigte Ordnerstruktur anlegen (Beispiele für _includes / assets / pages),
-- die oben genannte Cleanup-Checklist in konkrete Git-Commit-Schritte aufteilen.
-
-Viel Erfolg beim Aufräumen — wenn du möchtest, erstelle ich auf Wunsch direkt die reorganisierte Struktur und die ausgelagerten JS-Dateien.
+zusätzlich
+http://127.0.0.1:4000/Jungscharfreizeit/2027.html
+http://127.0.0.1:4000/Lego/25/Videos.html
