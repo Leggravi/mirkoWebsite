@@ -1,49 +1,11 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <style>
-    body {
-      font-family: 'Helvetica', Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #222;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 2em;
-    }
+---
+layout: email-wrapper
+---
 
-    .email-container {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #fff;
-      padding: 2em;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
+<div class="email-post">
+  <h1>{{ page.title }}</h1>
+  <small style="display:block; margin-bottom:1em; color:#666; font-size:14px;">{{ page.date | date: "%d.%m.%Y" }}</small>
 
-    h1 { color: #469e75; font-size: 28px; margin-bottom: 0.5em; }
-    h2, h3 { color: #3caf75; }
-    p { margin-bottom: 1em; }
-    a { color: #1fa2ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1em; }
-    small { color: #666; font-size: 0.9em; }
-    blockquote { border-left: 4px solid #1fa2ff; margin: 1em 0; padding-left: 1em; color: #555; font-style: italic; }
-  </style>
-</head>
-<header>
-    <p style="font-size:0.9em; color:#666; margin-bottom:1.5em;">
-  Dies ist eine Kopie eines Inhalts von meiner Website <a href="https://leggravi.github.io/mirkoWebsite{{ page.url }}">leggravi.github.io</a>. Besuchen Sie die Website für das volle Erlebnis, weitere Artikel und mehr.
-</p>
-
-</header>
-<body>
-  <div class="email-container">
-    <h1>{{ page.title }}</h1>
-    <small>{{ page.date | date: "%d.%m.%Y" }}</small>
-    <div>
   {% capture updated_content %}
     {{ content }}
   {% endcapture %}
@@ -53,7 +15,8 @@
   {% assign updated_content = updated_content | replace: 'src="/', 'src="https://leggravi.github.io/mirkoWebsite/' %}
 
   {%- comment -%} prepare absolute URL for this post (used in video placeholders) {%- endcomment -%}
-  {% assign absolute_post_url = page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' %}
+  {% assign post_url = page.original_url | default: page.url %}
+  {% assign absolute_post_url = post_url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' %}
 
   {%- comment -%} Replace responsive YouTube iframe wrappers with a simple link for email clients - handles the common responsive embed pattern used in posts {%- endcomment -%}
   {% assign parts = updated_content | split: '<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">' %}
@@ -93,46 +56,3 @@
 
   {{ updated_content }}
 </div>
-  </div>
-</body>
-<footer style="margin-top:2em; padding:1em; border-top:2px solid #ddd; font-size:0.9em; line-height:1.6;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2em;">
-    
-    <!-- Logo -->
-    <div style="flex:0 0 auto;">
-      <img src="{{ 'https://leggravi.github.io/mirkoWebsite/assets/img/dipm-logo.png' | relative_url }}" alt="DIPM Logo" style="height:60px;width: 60px;">
-    </div>
-    
-    <!-- Kontaktinfos -->
-    <div style="flex:1 1 200px; min-width:220px;">
-      <b>Deutsche Indianer Pionier Mission (DIPM)</b><br>
-      Kirchbergstr. 37 · 72813 St. Johann<br>
-      Fon: 07122 18-0 · Fax: 07122 18-99<br>
-      <a href="mailto:dipm@dipm.de">dipm@dipm.de</a> · <a href="https://www.dipm.de" target="_blank">www.dipm.de</a>
-    </div>
-
-    <!-- Bankdaten -->
-    <div style="flex:1 1 200px; min-width:220px;">
-      <b>Spendenkonto</b><br>
-      Volksbank Ermstal-Alb eG<br>
-      BIC: GENODES1MTZ<br>
-      IBAN: <span id="iban">DE22 6409 1200 0049 5850 02</span><br>
-      Vermerk: <b>Mirko Hahn</b><br>
-    </div>
-  </div>
-
-  <section id="contact" style="margin-top:2em;">
-  <p>Kontakt:
-      📧 <a href="mailto:leggravi@gmail.com">leggravi@gmail.com </a>
-      | 💬 <a href="https://wa.me/491783844799" target="_blank">WhatsApp</a> (und zur Not <a href="https://signal.me/#p/+491783844799" target="_blank">Signal</a>)
-      |📱 Telefonnummer: <a href="tel:+491783844799">+49 178 3844799</a>
-    </p>
-</section>
-<hr style="border:none; border-top:1px solid #ddd; margin:2em 0;">
-<p style="font-size:0.85em; color:#666; line-height:1.4;">
-  Dies ist eine E-Mail-Kopie von <a href="{{ page.url | relative_url | prepend: 'https://leggravi.github.io/mirkoWebsite' }}">leggravi.github.io{{ page.url }}</a>. 
-  Besuchen Sie die Website für das volle Erlebnis, weitere Artikel und mehr über meine Projekte.
-</p>
-
-</footer>
-</html>

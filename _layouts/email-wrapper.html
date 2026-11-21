@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    body {
+      background-color: #eef7e1;
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    .email-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 600px;
+      width: 100%;
+    }
+    .email-body {
+      padding: 32px 40px;
+      color: #222222;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .email-intro {
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e1e8da;
+    }
+    .email-intro p {
+      margin: 0 0 1em;
+    }
+    .email-content {
+      margin-top: 24px;
+    }
+    h1 {
+      color: #469e75;
+      font-size: 28px;
+      margin: 0 0 0.75em;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h2, h3 {
+      color: #3caf75;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    p {
+      margin: 0 0 1em;
+    }
+    a {
+      color: #1fa2ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 0 0 1em;
+      display: block;
+    }
+    blockquote {
+      border-left: 4px solid #1fa2ff;
+      padding-left: 16px;
+      margin: 0 0 1em;
+      color: #555;
+      font-style: italic;
+    }
+    .email-closing {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e1e8da;
+    }
+    .email-footer {
+      padding: 16px 40px;
+      font-size: 13px;
+      color: #888888;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" style="padding: 30px 10px;">
+
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" class="email-card">
+
+          <tr>
+            <td class="email-body">
+
+              {% assign preview_text = page.email_preview | default: 'Hallo {{Name}}, ein neuer Rundbrief von Mirko ist da: Brasilien, Rückkehr nach Deutschland, neue Projekte und persönliche Erlebnisse. Viel Spaß beim Lesen!' %}
+              <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+                {{ preview_text }}
+              </div>
+
+              <div class="email-intro">
+                <p>{% raw %}Hallo {{Name}},{% endraw %}</p>
+                {% assign opening_text = page.email_opening | default: 'Nice, dass du meinen Rundbrief abonniert hast! Hier ein neues Update mit Geschichten, Bildern und persönlichen Eindrücken.' %}
+                <p>{{ opening_text | newline_to_br }}</p>
+              </div>
+
+              <div class="email-content">
+                {{ content }}
+              </div>
+
+              {% if page.email_closing %}
+              <div class="email-closing">
+                <p>{{ page.email_closing | newline_to_br }}</p>
+              </div>
+              {% endif %}
+
+              <p style="margin-top: 28px;">Viele Grüße,<br>Ravi</p>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td style="border-top: 1px solid #e0e0e0;"></td>
+          </tr>
+
+          <tr>
+            <td class="email-footer">
+              Keine weiteren E-Mails?
+              <a href="mailto:leggravi@gmail.com?subject=Abmelden" style="color:#888888;">Hier abmelden</a>.
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
+
+          <tr>
+            <td style="border-top: 1px solid #e0e0e0;"></td>
+          </tr>
+
+          <tr>
+            <td style="padding: 16px 40px; font-size:13px; color:#888888; text-align:center;">
+              Keine weiteren E-Mails?
+              <a href="mailto:leggravi@gmail.com?subject=Abmelden"
+                 style="color:#888888;">Hier abmelden</a>.
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

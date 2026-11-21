@@ -41,6 +41,7 @@ Wichtige Dateien & zentrale Funktionen
     - [`startPollen`]( _layouts/default.html ) / [`stopPollen`]( _layouts/default.html ) / [`handlePollenTheme`]( _layouts/default.html ) — Pollenpartikel (Theme "forest").
     - TOC-Generator / Scroll-Marker — erzeugt Inhaltsverzeichnis aus H2/H3 innerhalb `.content`.
   - [`_layouts/email.html`][ _layouts/email.html ] — E-Mail-kompatibles Layout (Kopie-Note, Footer).
+  - [`generate-email.sh`](generate-email.sh) — Automatisches E-Mail-Export-Skript für jeden Markdown-Post. Aufruf im Projektroot z. B. `./generate-email.sh _posts/2026-05-16-Back-to-Business.md`, oder ohne Parameter zur Dateiauswahl. Speichert die fertige E-Mail als `../<slug>_email.html`.
   - [`_layouts/brief.html`][ _layouts/brief.html ] — "Brief" (druckfreundlich / PDF) Layout.
 
 - Posts & Inhalte:
